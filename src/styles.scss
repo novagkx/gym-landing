@@ -380,25 +380,38 @@ template {
 // Основной код стилей
 
 .header {
-  width: 100%;
   background-color: $dark-purple;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding-inline: 30px;
+  // min-width: 1440px;
+  &__container {
+    display: flex;
+    align-items: center;
+  }
   &__logo {
     width: 120px;
     height: 80px;
-    margin-left: 40px;
+    margin-right: 50px;
   }
 
   &__ul {
     list-style-type: none;
     display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
   }
   &__li {
     margin-right: 20px;
   }
   &__li:last-child {
-    margin-right: 70px;
+    margin-right: 0px;
+  }
+  &__nav {
+    margin-right: 50px;
   }
   &__li,
   &__sign-in,
@@ -417,6 +430,8 @@ template {
     border-radius: 10px;
     width: 305px;
     height: 40px;
+    font-family: $font-family;
+    box-sizing: border-box;
   }
   .active {
     color: $pink;
@@ -440,10 +455,12 @@ template {
   &__circle {
     border-radius: 50%;
     background-color: $light-purple;
+    // margin-left: 14px;
   }
   &__circle:first-child {
     border: 1px solid #000;
     box-sizing: border-box;
+    margin-right: 14px;
   }
   &__search-icon {
     height: 18px;
@@ -453,12 +470,10 @@ template {
     position: absolute;
     cursor: pointer;
   }
-  &__circle {
-    margin-left: 14px;
-  }
 
   &__links {
     margin-left: 0px;
+    margin-right: 14px;
   }
   &__input-container {
     position: relative; //для позиционирования иконки поиска
@@ -474,13 +489,133 @@ template {
 // input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
 // input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
 input[type="search"] {
-    color: #fff;
-    outline: none;
-    text-indent: 20px; // отступ первой строки
-    font-size: 1rem;
+  color: #fff;
+  outline: none;
+  text-indent: 20px; // отступ первой строки
+  font-size: 1rem;
 }
 
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration { display: none;}
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+//первая секция (преимущества, условия)
+.advantages-section {
+  background-color: $light-purple;
+  padding-top: 90px;
+  box-sizing: border-box;
+  height: 500px;
+  background-image: 
+  url("src/images/smoke.png"),
+  url("src/images/sport-girl.png");
+  background-repeat: no-repeat no-repeat;
+  background-size: 1440px 500px, 360px 475px;
+  background-position: left top, right 155px top 9px;
+  &__container {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    margin-left: 232px;
+    max-width: 520px;
+  }
+  &__condition-list {
+    list-style-type: none;
+    display: flex;
+    background-color: #fff;
+    text-align: center;
+    margin: 0;
+    margin-inline: auto;
+    padding: 0;
+    max-width: 1144px;
+  }
+  &__info,
+  &__name,
+  &__h2 {
+    text-transform: uppercase;
+  }
+  &__info,
+  &__btn {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #fff;
+  }
+
+  &__name {
+    margin-top: 0px;
+    margin-bottom: 15px;
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 2.5rem;
+    letter-spacing: 0.05em;
+    color: #fff;
+  }
+  &__span {
+    color: $pink;
+  }
+  &__btn {
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 14px;
+    background-color: $pink;
+    font-weight: 600;
+    text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    max-width: 162px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  &__container-1 {
+    position: relative;
+  }
+  &__condition-container {
+    margin-top: 90px;
+    // margin-left: 108px;
+    .advantages-section__info {
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.35;
+      text-align: center;
+      color: #4b4e68;
+      text-transform: none;
+    }
+  }
+  &__item {
+    border: 1px solid #ea377b;
+    border-radius: 5px;
+    margin-block: 26px;
+    padding-top: 25px;
+    margin-right: 32px;
+  }
+  &__item:first-child{
+    margin-left: 30px;
+  }
+  &__h2 {
+    color: $dark-purple;
+    font-family: $font-family;
+    margin: 0;
+    margin-block:  10px;
+    font-size: 1.25rem;
+  }
+  &__info {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 25px;
+    padding-inline: 20px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
