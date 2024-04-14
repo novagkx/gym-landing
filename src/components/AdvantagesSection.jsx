@@ -1,19 +1,21 @@
+import MyButton from "./MyButton";
 export default function AdvantagesSection() {
   return (
     <>
+              <h1 className="visually-hidden">About our gym opportunities</h1>
       <section className="advantages-section">
         <div className="advantages-section__container-1">
           <div className="advantages-section__container">
-            <h1 className="visually-hidden">Advantages our company</h1>
+            <h2 className="visually-hidden">Advantages our company</h2>
             <p className="advantages-section__name">
               come &amp; create your own
               <span className="advantages-section__span"> new </span>
               body
             </p>
-            <p className="advantages-section__info">
+            <p className="advantages-section__description">
               faster,stronger fight to the end
             </p>
-            <button className="advantages-section__btn">More Details</button>
+            <MyButton>More Details</MyButton>
           </div>
           <div className="advantages-section__condition-container">
           <ul className="advantages-section__condition-list">
@@ -30,7 +32,7 @@ export default function AdvantagesSection() {
                   fill="#EA377B"
                 />
               </svg>
-              <h2 className="advantages-section__h2">free shipping</h2>
+              <h3 className="advantages-section__h3">free shipping</h3>
               <p className="advantages-section__info">
                 Contrary to popular belief ipsum is simply random.
               </p>
@@ -48,7 +50,7 @@ export default function AdvantagesSection() {
                   fill="#EA377B"
                 />
               </svg>
-              <h2 className="advantages-section__h2">instant payments</h2>
+              <h3 className="advantages-section__h3">instant payments</h3>
               <p className="advantages-section__info">
                 Contrary to popular belief ipsum is simply random.
               </p>
@@ -66,7 +68,7 @@ export default function AdvantagesSection() {
                   fill="#EA377B"
                 />
               </svg>
-              <h2 className="advantages-section__h2">exhange &amp; return</h2>
+              <h3 className="advantages-section__h3">exhange &amp; return</h3>
               <p className="advantages-section__info">
                 Contrary to popular belief ipsum is simply random.
               </p>
@@ -84,7 +86,7 @@ export default function AdvantagesSection() {
                   fill="#EA377B"
                 />
               </svg>
-              <h2 className="advantages-section__h2">customer service</h2>
+              <h3 className="advantages-section__h3">customer service</h3>
               <p className="advantages-section__info">
                 Contrary to popular belief ipsum is simply random.
               </p>
@@ -94,10 +96,6 @@ export default function AdvantagesSection() {
         </div>
         
       </section>
-
-      <section
-        style={{ backgroundColor: "#090d28", height: "500px" }}
-      ></section>
     </>
   );
 }

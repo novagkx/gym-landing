@@ -5,6 +5,7 @@ $light-purple: #1b1f3e;
 $pink: #ea377b;
 $color-gray: #aeafb7;
 $color-light-gray: #f5f5f5;
+$maxWidthContainer: 1360px;
 
 //Подключение шрифтов
 @font-face {
@@ -384,8 +385,7 @@ template {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-inline: 30px;
-  // min-width: 1440px;
+  padding-inline: 40px;
   &__container {
     display: flex;
     align-items: center;
@@ -393,7 +393,7 @@ template {
   &__logo {
     width: 120px;
     height: 80px;
-    margin-right: 50px;
+    margin-right: 70px;
   }
 
   &__ul {
@@ -404,14 +404,19 @@ template {
     padding: 0;
     margin: 0;
   }
-  &__li {
+  &__li{
     margin-right: 20px;
   }
   &__li:last-child {
     margin-right: 0px;
   }
   &__nav {
-    margin-right: 50px;
+    margin-right: 70px;
+  }
+  &__sign-in,
+  &__sign-up, &__link, &__link--active {
+    text-decoration: none;
+    color: currentColor;
   }
   &__li,
   &__sign-in,
@@ -433,13 +438,15 @@ template {
     font-family: $font-family;
     box-sizing: border-box;
   }
-  .active {
+  
+  &__link--active {
     color: $pink;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 1rem;
+    text-transform: uppercase;
   }
-  &__sign-in,
-  &__sign-up {
-    text-decoration: none;
-  }
+  
   &__icons {
     display: flex;
   }
@@ -455,7 +462,6 @@ template {
   &__circle {
     border-radius: 50%;
     background-color: $light-purple;
-    // margin-left: 14px;
   }
   &__circle:first-child {
     border: 1px solid #000;
@@ -474,15 +480,39 @@ template {
   &__links {
     margin-left: 0px;
     margin-right: 14px;
+    color: #fff;
   }
   &__input-container {
     position: relative; //для позиционирования иконки поиска
     margin-right: 30px;
   }
-  &__link {
-    text-decoration: none;
-    color: inherit; // наследуем цвет от li
+
+  &__link, &__sign-in, &__sign-up {
+    position: relative;
+  color: currentColor;
+  text-decoration: none;
   }
+
+  &__link:hover, &__sign-in:hover, &__sign-up:hover  {
+    color: currentColor;
+  }
+  &__link::before,  &__sign-in::before, &__sign-up::before  {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  &__link:hover::before, &__sign-in:hover::before, &__sign-up:hover::before {
+    transform: scaleX(1);
+  }
+
+
 }
 
 //Модификация инпута
@@ -508,9 +538,8 @@ input[type="search"]::-webkit-search-results-decoration {
   padding-top: 90px;
   box-sizing: border-box;
   height: 500px;
-  background-image: 
-  url("src/images/smoke.png"),
-  url("src/images/sport-girl.png");
+  background-image: url("src/images/smoke.png"),
+    url("src/images/sport-girl.png");
   background-repeat: no-repeat no-repeat;
   background-size: 1440px 500px, 360px 475px;
   background-position: left top, right 155px top 9px;
@@ -520,6 +549,15 @@ input[type="search"]::-webkit-search-results-decoration {
     flex-direction: column;
     margin-left: 232px;
     max-width: 520px;
+  }
+  &__description {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 30px;
   }
   &__condition-list {
     list-style-type: none;
@@ -533,11 +571,10 @@ input[type="search"]::-webkit-search-results-decoration {
   }
   &__info,
   &__name,
-  &__h2 {
+  &__h3 {
     text-transform: uppercase;
   }
-  &__info,
-  &__btn {
+  &__info {
     font-family: $font-family;
     font-weight: 500;
     font-size: 1.25rem;
@@ -556,24 +593,12 @@ input[type="search"]::-webkit-search-results-decoration {
   &__span {
     color: $pink;
   }
-  &__btn {
-    box-sizing: border-box;
-    border-radius: 10px;
-    padding: 14px;
-    background-color: $pink;
-    font-weight: 600;
-    text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    max-width: 162px;
-    border: none;
-    cursor: pointer;
-  }
-  
+
   &__container-1 {
     position: relative;
   }
   &__condition-container {
     margin-top: 90px;
-    // margin-left: 108px;
     .advantages-section__info {
       font-family: $font-family;
       font-weight: 400;
@@ -591,14 +616,14 @@ input[type="search"]::-webkit-search-results-decoration {
     padding-top: 25px;
     margin-right: 32px;
   }
-  &__item:first-child{
+  &__item:first-child {
     margin-left: 30px;
   }
-  &__h2 {
+  &__h3 {
     color: $dark-purple;
     font-family: $font-family;
     margin: 0;
-    margin-block:  10px;
+    margin-block: 10px;
     font-size: 1.25rem;
   }
   &__info {
@@ -618,4 +643,98 @@ input[type="search"]::-webkit-search-results-decoration {
   overflow: hidden;
   border: 0;
   clip: rect(0 0 0 0);
+}
+
+.main__btn {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #fff;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 14px;
+  background-color: $pink;
+  font-weight: 600;
+  text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  max-width: 162px;
+  border: none;
+  cursor: pointer;
+}
+.main__btn:hover{
+  color: $color-gray;
+  transition: 0.3s;
+}
+.sport-section {
+  background-color: $dark-purple;
+  padding-top: 187px;
+  padding-inline: 40px;
+  &__header {
+    margin: 0;
+    margin-bottom: 40px;
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 36px;
+    color: #f5f5f5;
+    opacity: 0.3;
+  }
+  &__container {
+    max-width: $maxWidthContainer;
+    margin-inline: auto;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 40px;
+    list-style-type: none;
+    padding: 0;
+  }
+  &__item {
+    position: relative;
+    img {
+      border-radius: 12px;
+    }
+  }
+  &__item:hover{
+    .sport-section__h3 {
+      transition: 0.3s;
+      color: $pink;
+    }
+  }
+  &__h3 {
+    text-transform: uppercase;
+    margin: 0;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 16px 55px;
+    background-color: rgba(75, 78, 104, 0.55);
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 36px;
+    color: #f5f5f5;
+    border-radius: 5px;
+  }
+
+}
+
+@media (max-width: 1439px) {
+  // если экран меньше 1440px, то уменьшаем оступы, чтобы всё влазило
+  .header {
+    &__logo {
+      margin-right: 50px;
+    }
+    &__nav {
+      margin-right: 50px;
+    }
+  }
+  .sport-section {
+    &__list {
+      column-gap: 30px;
+      row-gap: 20px;
+      list-style-type: none;
+    }
+  }
 }

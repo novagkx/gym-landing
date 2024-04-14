@@ -1,7 +1,7 @@
 const NavbarItem = ({ blockName, isActive, children }) => {
   return (
-    <li className={isActive ? (blockName + "__li active" )  : (blockName + "__li") }>
-      <a href="#" className={blockName + "__link"}>
+    <li className={blockName + "__li"}>
+      <a href="#" className= {isActive ? (blockName + "__link--active" )  : (blockName + "__link")}>
         {children}
       </a>
     </li>
