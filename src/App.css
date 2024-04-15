@@ -381,11 +381,11 @@ template {
   color: currentColor;
 }
 .header__li, .header__sign-in, .header__sign-up, .header__span {
-  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 1rem;
   color: #fff;
   text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
 }
 .header__input {
   background-color: #1b1f3e;
@@ -398,11 +398,11 @@ template {
           box-sizing: border-box;
 }
 .header__link--active {
-  color: #ea377b;
-  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 1rem;
+  color: #ea377b;
   text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
 }
 .header__icons {
   display: -webkit-box;
@@ -428,8 +428,8 @@ template {
   margin-right: 14px;
 }
 .header__search-icon {
-  height: 18px;
   width: 18px;
+  height: 18px;
   right: 20px;
   bottom: 10px;
   position: absolute;
@@ -513,11 +513,11 @@ input[type=search]::-webkit-search-results-decoration {
   max-width: 520px;
 }
 .advantages-section__description {
-  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 1.25rem;
   color: #fff;
   text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
   margin-top: 15px;
   margin-bottom: 30px;
 }
@@ -533,23 +533,25 @@ input[type=search]::-webkit-search-results-decoration {
   padding: 0;
   max-width: 1144px;
 }
-.advantages-section__info, .advantages-section__name, .advantages-section__h3 {
+.advantages-section__info, .advantages-section__h3 {
   text-transform: uppercase;
 }
 .advantages-section__info {
-  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 1.25rem;
   color: #fff;
+  text-transform: none;
+  font-family: "Montserrat", sans-serif;
 }
 .advantages-section__name {
-  margin-top: 0px;
-  margin-bottom: 15px;
-  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 2.5rem;
-  letter-spacing: 0.05em;
   color: #fff;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  letter-spacing: 0.05em;
 }
 .advantages-section__span {
   color: #ea377b;
@@ -561,13 +563,13 @@ input[type=search]::-webkit-search-results-decoration {
   margin-top: 90px;
 }
 .advantages-section__condition-container .advantages-section__info {
-  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1rem;
-  line-height: 1.35;
-  text-align: center;
   color: #4b4e68;
   text-transform: none;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.35;
+  text-align: center;
 }
 .advantages-section__item {
   border: 1px solid #ea377b;
@@ -605,23 +607,23 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 .main__btn {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.25rem;
   color: #fff;
+  text-transform: none;
+  font-family: "Montserrat", sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 10px;
   padding: 14px;
   background-color: #ea377b;
-  font-weight: 600;
   text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   max-width: 162px;
   border: none;
   cursor: pointer;
 }
 
-.main__btn:hover {
+.main__btn:hover, .category-section__link:hover {
   color: #aeafb7;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -635,10 +637,11 @@ input[type=search]::-webkit-search-results-decoration {
 .sport-section__header {
   margin: 0;
   margin-bottom: 40px;
-  font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 36px;
+  font-size: 2rem;
   color: #f5f5f5;
+  text-transform: none;
+  font-family: "Montserrat", sans-serif;
   opacity: 0.3;
 }
 .sport-section__container {
@@ -650,14 +653,15 @@ input[type=search]::-webkit-search-results-decoration {
   display: grid;
   -ms-grid-columns: 1fr 50px 1fr 50px 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 40px 1fr 40px 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 40px 1fr;
+  grid-template-rows: 1fr 1fr;
   -webkit-column-gap: 50px;
      -moz-column-gap: 50px;
           column-gap: 50px;
   row-gap: 40px;
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 .sport-section__list > *:nth-child(1) {
   -ms-grid-row: 1;
@@ -683,18 +687,6 @@ input[type=search]::-webkit-search-results-decoration {
   -ms-grid-row: 3;
   -ms-grid-column: 5;
 }
-.sport-section__list > *:nth-child(7) {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-}
-.sport-section__list > *:nth-child(8) {
-  -ms-grid-row: 5;
-  -ms-grid-column: 3;
-}
-.sport-section__list > *:nth-child(9) {
-  -ms-grid-row: 5;
-  -ms-grid-column: 5;
-}
 .sport-section__item {
   position: relative;
 }
@@ -707,7 +699,6 @@ input[type=search]::-webkit-search-results-decoration {
   color: #ea377b;
 }
 .sport-section__h3 {
-  text-transform: uppercase;
   margin: 0;
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
@@ -716,19 +707,100 @@ input[type=search]::-webkit-search-results-decoration {
   left: 50%;
   padding: 16px 55px;
   background-color: rgba(75, 78, 104, 0.55);
-  font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 36px;
+  font-size: 2rem;
   color: #f5f5f5;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
   border-radius: 5px;
+}
+
+.category-section {
+  background-color: #090d28;
+}
+.category-section__container {
+  max-width: 1360px;
+  margin-inline: auto;
+}
+.category-section__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  -webkit-column-gap: 50px;
+     -moz-column-gap: 50px;
+          column-gap: 50px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 0;
+  margin: 0;
+}
+.category-section__main-header {
+  margin: 0;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #f5f5f5;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+.category-section__info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.category-section__link {
+  font-weight: 400;
+  font-size: 2rem;
+  color: #f5f5f5;
+  text-transform: none;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+.category-section__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  background-color: #1b1f3e;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  width: 300px;
+}
+.category-section__header {
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #f5f5f5;
+  text-transform: none;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.category-section__img {
+  margin-top: 20px;
 }
 
 @media (max-width: 1439px) {
   .header__logo {
-    margin-right: 50px;
+    margin-right: 40px;
   }
   .header__nav {
     margin-right: 50px;
+  }
+  .sport-section {
+    padding-bottom: 40px;
   }
   .sport-section__list {
     -webkit-column-gap: 30px;
@@ -736,5 +808,13 @@ input[type=search]::-webkit-search-results-decoration {
             column-gap: 30px;
     row-gap: 20px;
     list-style-type: none;
+  }
+  .category-section__info-container {
+    margin-inline: 20px;
+  }
+  .category-section__list {
+    -webkit-column-gap: 17px;
+       -moz-column-gap: 17px;
+            column-gap: 17px;
   }
 }

@@ -5,6 +5,7 @@ import './App.css'
 import Header from './components/Header'
 import AdvantagesSection from './components/AdvantagesSection'
 import TrainingProgramsSection from './components/TrainingProgramsSection'
+import CategorySection from './components/CategorySection'
 function App() {
 
 
@@ -14,6 +15,7 @@ function App() {
      <main className='main'>
      <AdvantagesSection/>
       <TrainingProgramsSection/>
+      <CategorySection/>
      </main>
      </>
   )
