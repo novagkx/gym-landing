@@ -7,6 +7,19 @@ $color-gray: #aeafb7;
 $color-light-gray: #f5f5f5;
 $maxWidthContainer: 1360px;
 
+//Объявление миксинов (для однотипных элементов)
+@mixin text ($font-weight, $font-size, $color, $text-transform:none ) {
+  font-weight: $font-weight;
+  font-size: $font-size;
+  color: $color;
+  text-transform: $text-transform;
+  font-family: $font-family;
+}
+@mixin size ($width, $height) {
+  width: $width;
+  height: $height;
+}
+
 //Подключение шрифтов
 @font-face {
   font-family: "Montserrat";
@@ -391,8 +404,7 @@ template {
     align-items: center;
   }
   &__logo {
-    width: 120px;
-    height: 80px;
+    @include size(120px, 80px);
     margin-right: 70px;
   }
 
@@ -422,29 +434,20 @@ template {
   &__sign-in,
   &__sign-up,
   &__span {
-    font-family: $font-family;
-    font-weight: 500;
-    font-size: 1rem;
-    color: #fff;
-    text-transform: uppercase;
+    @include text(500, 1rem, #fff, uppercase);
   }
 
   &__input {
     background-color: $light-purple;
     border: none;
     border-radius: 10px;
-    width: 305px;
-    height: 40px;
+    @include size(305px, 40px);
     font-family: $font-family;
     box-sizing: border-box;
   }
   
   &__link--active {
-    color: $pink;
-    font-family: $font-family;
-    font-weight: 500;
-    font-size: 1rem;
-    text-transform: uppercase;
+    @include text(500, 1rem, $pink, uppercase)
   }
   
   &__icons {
@@ -455,8 +458,7 @@ template {
     cursor: pointer;
     display: block;
     padding: 3px; // расширяем область нажатия
-    width: 24px;
-    height: 24px; // размеры из-за svg
+    @include size(24px, 24px); // размеры для svg
     border-radius: 50%;
   }
   &__circle {
@@ -469,8 +471,7 @@ template {
     margin-right: 14px;
   }
   &__search-icon {
-    height: 18px;
-    width: 18px;
+    @include size(18px, 18px);
     right: 20px;
     bottom: 10px;
     position: absolute;
@@ -500,8 +501,7 @@ template {
     content: "";
     position: absolute;
     display: block;
-    width: 100%;
-    height: 2px;
+    @include size(100%, 2px);
     bottom: 0;
     left: 0;
     background-color: currentColor;
@@ -511,8 +511,6 @@ template {
   &__link:hover::before, &__sign-in:hover::before, &__sign-up:hover::before {
     transform: scaleX(1);
   }
-
-
 }
 
 //Модификация инпута
@@ -551,11 +549,7 @@ input[type="search"]::-webkit-search-results-decoration {
     max-width: 520px;
   }
   &__description {
-    font-family: $font-family;
-    font-weight: 500;
-    font-size: 1.25rem;
-    color: #fff;
-    text-transform: uppercase;
+    @include text(500, 1.25rem, #fff, uppercase);
     margin-top: 15px;
     margin-bottom: 30px;
   }
@@ -570,25 +564,18 @@ input[type="search"]::-webkit-search-results-decoration {
     max-width: 1144px;
   }
   &__info,
-  &__name,
   &__h3 {
     text-transform: uppercase;
   }
   &__info {
-    font-family: $font-family;
-    font-weight: 500;
-    font-size: 1.25rem;
-    color: #fff;
+    @include text(500, 1.25rem, #fff)
   }
 
   &__name {
+    @include text(600, 2.5rem, #fff, uppercase);
     margin-top: 0px;
     margin-bottom: 15px;
-    font-family: $font-family;
-    font-weight: 600;
-    font-size: 2.5rem;
     letter-spacing: 0.05em;
-    color: #fff;
   }
   &__span {
     color: $pink;
@@ -600,13 +587,9 @@ input[type="search"]::-webkit-search-results-decoration {
   &__condition-container {
     margin-top: 90px;
     .advantages-section__info {
-      font-family: $font-family;
-      font-weight: 400;
-      font-size: 1rem;
+      @include text(400, 1rem, #4b4e68, none);
       line-height: 1.35;
       text-align: center;
-      color: #4b4e68;
-      text-transform: none;
     }
   }
   &__item {
@@ -636,8 +619,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .visually-hidden {
   position: absolute;
-  width: 1px;
-  height: 1px;
+ @include size(1px, 1px);
   margin: -1px;
   padding: 0;
   overflow: hidden;
@@ -646,21 +628,17 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .main__btn {
-  font-family: $font-family;
-  font-weight: 500;
-  font-size: 1.25rem;
-  color: #fff;
+  @include text (600, 1.25rem, #fff);
   box-sizing: border-box;
   border-radius: 10px;
   padding: 14px;
   background-color: $pink;
-  font-weight: 600;
   text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   max-width: 162px;
   border: none;
   cursor: pointer;
 }
-.main__btn:hover{
+.main__btn:hover, .category-section__link:hover{
   color: $color-gray;
   transition: 0.3s;
 }
@@ -671,10 +649,7 @@ input[type="search"]::-webkit-search-results-decoration {
   &__header {
     margin: 0;
     margin-bottom: 40px;
-    font-family: $font-family;
-    font-weight: 600;
-    font-size: 36px;
-    color: #f5f5f5;
+    @include text(600, 2rem, #f5f5f5);
     opacity: 0.3;
   }
   &__container {
@@ -684,11 +659,12 @@ input[type="search"]::-webkit-search-results-decoration {
   &__list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     column-gap: 50px;
     row-gap: 40px;
     list-style-type: none;
     padding: 0;
+    margin: 0;
   }
   &__item {
     position: relative;
@@ -703,7 +679,6 @@ input[type="search"]::-webkit-search-results-decoration {
     }
   }
   &__h3 {
-    text-transform: uppercase;
     margin: 0;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -711,30 +686,84 @@ input[type="search"]::-webkit-search-results-decoration {
     left: 50%;
     padding: 16px 55px;
     background-color: rgba(75, 78, 104, 0.55);
-    font-family: $font-family;
-    font-weight: 600;
-    font-size: 36px;
-    color: #f5f5f5;
+    @include text(600, 2rem, #f5f5f5,uppercase);
     border-radius: 5px;
   }
 
 }
 
+.category-section{
+  background-color: $dark-purple;
+  &__container {
+    max-width: $maxWidthContainer;
+    margin-inline: auto;
+  }
+  &__list {
+    display: flex;
+    list-style-type: none;
+    column-gap: 50px;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+  }
+  &__main-header {
+    margin:0;
+    @include text(600, 2rem, #f5f5f5, uppercase);
+  }
+  &__info-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    align-items: center;
+  }
+  &__link {
+    @include text(400, 2rem, #f5f5f5);
+    text-decoration: none;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: $light-purple;
+    align-items: center;
+    border-radius: 5px;
+    width: 300px;
+  }
+  &__header {
+    @include text(400, 1.5rem, #f5f5f5);
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  &__img {
+    margin-top: 20px;
+  }
+}
+
+
 @media (max-width: 1439px) {
   // если экран меньше 1440px, то уменьшаем оступы, чтобы всё влазило
   .header {
     &__logo {
-      margin-right: 50px;
+      margin-right: 40px;
     }
     &__nav {
       margin-right: 50px;
     }
   }
   .sport-section {
+    padding-bottom: 40px;
     &__list {
       column-gap: 30px;
       row-gap: 20px;
       list-style-type: none;
+    }
+  }
+  .category-section {
+    &__info-container {
+      margin-inline: 20px;
+    }
+    &__list {
+      column-gap: 17px;
     }
   }
 }
