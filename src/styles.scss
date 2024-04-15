@@ -638,7 +638,7 @@ input[type="search"]::-webkit-search-results-decoration {
   border: none;
   cursor: pointer;
 }
-.main__btn:hover, .category-section__link:hover{
+.main__btn:hover, .category-section__link:hover, .product-section__link:hover{
   color: $color-gray;
   transition: 0.3s;
 }
@@ -649,7 +649,7 @@ input[type="search"]::-webkit-search-results-decoration {
   &__header {
     margin: 0;
     margin-bottom: 40px;
-    @include text(600, 2rem, #f5f5f5);
+    @include text(600, 2rem, $color-light-gray);
     opacity: 0.3;
   }
   &__container {
@@ -686,14 +686,18 @@ input[type="search"]::-webkit-search-results-decoration {
     left: 50%;
     padding: 16px 55px;
     background-color: rgba(75, 78, 104, 0.55);
-    @include text(600, 2rem, #f5f5f5,uppercase);
+    @include text(600, 2rem, $color-light-gray,uppercase);
     border-radius: 5px;
   }
-
+  a {
+    display: block;
+    @include size(100%, 100%);
+  }
 }
 
 .category-section{
   background-color: $dark-purple;
+  padding-bottom: 40px;
   &__container {
     max-width: $maxWidthContainer;
     margin-inline: auto;
@@ -705,10 +709,41 @@ input[type="search"]::-webkit-search-results-decoration {
     justify-content: space-evenly;
     padding: 0;
     margin: 0;
+
   }
+  
+  &__item {
+    background-color: $light-purple;
+    border-radius: 5px;
+    width: 300px;
+    a {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      @include size(100%, 100%);
+      text-decoration: none;
+      color: currentColor;
+    }
+    a:hover {
+      .category-section__header{color: $color-gray;
+        transition: 0.3s;}
+
+    }
+  }
+  &__header {
+    margin: 0;
+    margin-bottom: 20px;
+    @include text(400, 1.5rem, $color-light-gray);
+  }
+  &__img {
+    margin-top: 20px;
+  }
+}
+
+.category-section, .product-section {
   &__main-header {
     margin:0;
-    @include text(600, 2rem, #f5f5f5, uppercase);
+    @include text(600, 2rem, $color-light-gray, uppercase);
   }
   &__info-container {
     display: flex;
@@ -717,29 +752,55 @@ input[type="search"]::-webkit-search-results-decoration {
     align-items: center;
   }
   &__link {
-    @include text(400, 2rem, #f5f5f5);
+    @include text(400, 2rem, $color-light-gray);
     text-decoration: none;
   }
+}
 
-  &__item {
-    display: flex;
-    flex-direction: column-reverse;
-    background-color: $light-purple;
-    align-items: center;
-    border-radius: 5px;
-    width: 300px;
+.product-section {
+  background-color: $dark-purple;
+  &__container {
+    max-width: $maxWidthContainer;
+    margin-inline: auto;
   }
-  &__header {
-    @include text(400, 1.5rem, #f5f5f5);
+  &__list {
+    display: flex;
+    list-style-type: none;
+    column-gap: 44px;
+    padding: 0;
     margin: 0;
-    margin-bottom: 20px;
+    justify-content: center;
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    @include size(424px, 539px);
   }
   &__img {
-    margin-top: 20px;
+    margin-top: 52px;
+    margin-bottom: 20px;
+  }
+  &__header {
+    margin: 0;
+    margin-bottom: 20px;
+    @include text(500, 1.5rem, $color-light-gray)
+  }
+  &__price {
+    display: block;
+    margin-bottom: 20px;
+    @include text(500, 1.5rem, $color-light-gray)
   }
 }
 
 
+
+
+
+// Адаптивность
 @media (max-width: 1439px) {
   // если экран меньше 1440px, то уменьшаем оступы, чтобы всё влазило
   .header {
@@ -764,6 +825,14 @@ input[type="search"]::-webkit-search-results-decoration {
     }
     &__list {
       column-gap: 17px;
+    }
+  }
+  .product-section {
+    &__info-container {
+      margin-inline: 20px;
+    }
+    &__list {
+      column-gap: 20px;
     }
   }
 }
