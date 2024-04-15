@@ -6,6 +6,7 @@ import Header from './components/Header'
 import AdvantagesSection from './components/AdvantagesSection'
 import TrainingProgramsSection from './components/TrainingProgramsSection'
 import CategorySection from './components/CategorySection'
+import ProductSection from './components/ProductSection'
 function App() {
 
 
@@ -16,6 +17,7 @@ function App() {
      <AdvantagesSection/>
       <TrainingProgramsSection/>
       <CategorySection/>
+      <ProductSection/>
      </main>
      </>
   )
