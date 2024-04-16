@@ -5,6 +5,7 @@ export default function AdvantagesSection() {
               <h1 className="visually-hidden">About our gym opportunities</h1>
       <section className="advantages-section">
         <div className="advantages-section__container-1">
+          <div className="advantages-section__container-2">
           <div className="advantages-section__container">
             <h2 className="visually-hidden">Advantages our company</h2>
             <p className="advantages-section__name">
@@ -92,6 +93,7 @@ export default function AdvantagesSection() {
               </p>
             </li>
           </ul>
+        </div>
         </div>
         </div>
         
