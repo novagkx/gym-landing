@@ -638,7 +638,7 @@ input[type="search"]::-webkit-search-results-decoration {
   border: none;
   cursor: pointer;
 }
-.main__btn:hover, .category-section__link:hover, .product-section__link:hover{
+.main__btn:hover, .category-section__link:hover, .product-section__link:hover, .trending-section__link:hover, .popular-section__link:hover{
   color: $color-gray;
   transition: 0.3s;
 }
@@ -740,7 +740,7 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 
-.category-section, .product-section {
+.category-section, .product-section, .popular-section, .trending-section {
   &__main-header {
     margin:0;
     @include text(600, 2rem, $color-light-gray, uppercase);
@@ -757,7 +757,7 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 
-.product-section {
+.product-section, .trending-section, .popular-section {
   background-color: $dark-purple;
   &__container {
     max-width: $maxWidthContainer;
@@ -770,6 +770,7 @@ input[type="search"]::-webkit-search-results-decoration {
     padding: 0;
     margin: 0;
     justify-content: center;
+    padding-bottom: 40px;
   }
   &__item {
     position: relative;
@@ -779,9 +780,10 @@ input[type="search"]::-webkit-search-results-decoration {
     border: 1px solid #d9d9d9;
     border-radius: 5px;
     @include size(424px, 539px);
+    box-sizing: border-box;
+    padding-block: 52px;
   }
   &__img {
-    margin-top: 52px;
     margin-bottom: 20px;
   }
   &__header {
@@ -827,7 +829,7 @@ input[type="search"]::-webkit-search-results-decoration {
       column-gap: 17px;
     }
   }
-  .product-section {
+  .product-section, .trending-section, .popular-section {
     &__info-container {
       margin-inline: 20px;
     }

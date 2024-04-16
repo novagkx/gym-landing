@@ -1,6 +1,6 @@
-const MyButton = ({children, margin}) => {
+const MyButton = ({children}) => {
     return (
-        <button style={{marginBottom: margin}} className="main__btn">{children}</button>
+        <button  className="main__btn">{children}</button>
     )
 }
 export default MyButton;
