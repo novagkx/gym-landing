@@ -8,14 +8,14 @@ $color-light-gray: #f5f5f5;
 $maxWidthContainer: 1360px;
 
 //Объявление миксинов (для однотипных элементов)
-@mixin text ($font-weight, $font-size, $color, $text-transform:none ) {
+@mixin text($font-weight, $font-size, $color, $text-transform: none) {
   font-weight: $font-weight;
   font-size: $font-size;
   color: $color;
   text-transform: $text-transform;
   font-family: $font-family;
 }
-@mixin size ($width, $height) {
+@mixin size($width, $height) {
   width: $width;
   height: $height;
 }
@@ -416,7 +416,7 @@ template {
     padding: 0;
     margin: 0;
   }
-  &__li{
+  &__li {
     margin-right: 20px;
   }
   &__li:last-child {
@@ -426,7 +426,9 @@ template {
     margin-right: 70px;
   }
   &__sign-in,
-  &__sign-up, &__link, &__link--active {
+  &__sign-up,
+  &__link,
+  &__link--active {
     text-decoration: none;
     color: currentColor;
   }
@@ -445,11 +447,11 @@ template {
     font-family: $font-family;
     box-sizing: border-box;
   }
-  
+
   &__link--active {
-    @include text(500, 1rem, $pink, uppercase)
+    @include text(500, 1rem, $pink, uppercase);
   }
-  
+
   &__icons {
     display: flex;
   }
@@ -488,16 +490,22 @@ template {
     margin-right: 30px;
   }
 
-  &__link, &__sign-in, &__sign-up {
+  &__link,
+  &__sign-in,
+  &__sign-up {
     position: relative;
-  color: currentColor;
-  text-decoration: none;
+    color: currentColor;
+    text-decoration: none;
   }
 
-  &__link:hover, &__sign-in:hover, &__sign-up:hover  {
+  &__link:hover,
+  &__sign-in:hover,
+  &__sign-up:hover {
     color: currentColor;
   }
-  &__link::before,  &__sign-in::before, &__sign-up::before  {
+  &__link::before,
+  &__sign-in::before,
+  &__sign-up::before {
     content: "";
     position: absolute;
     display: block;
@@ -508,7 +516,9 @@ template {
     transform: scaleX(0);
     transition: transform 0.3s ease;
   }
-  &__link:hover::before, &__sign-in:hover::before, &__sign-up:hover::before {
+  &__link:hover::before,
+  &__sign-in:hover::before,
+  &__sign-up:hover::before {
     transform: scaleX(1);
   }
 }
@@ -568,7 +578,7 @@ input[type="search"]::-webkit-search-results-decoration {
     text-transform: uppercase;
   }
   &__info {
-    @include text(500, 1.25rem, #fff)
+    @include text(500, 1.25rem, #fff);
   }
 
   &__name {
@@ -619,7 +629,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .visually-hidden {
   position: absolute;
- @include size(1px, 1px);
+  @include size(1px, 1px);
   margin: -1px;
   padding: 0;
   overflow: hidden;
@@ -628,7 +638,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .main__btn {
-  @include text (600, 1.25rem, #fff);
+  @include text(600, 1.25rem, #fff);
   box-sizing: border-box;
   border-radius: 10px;
   padding: 14px;
@@ -638,7 +648,11 @@ input[type="search"]::-webkit-search-results-decoration {
   border: none;
   cursor: pointer;
 }
-.main__btn:hover, .category-section__link:hover, .product-section__link:hover, .trending-section__link:hover, .popular-section__link:hover{
+.main__btn:hover,
+.category-section__link:hover,
+.product-section__link:hover,
+.trending-section__link:hover,
+.popular-section__link:hover {
   color: $color-gray;
   transition: 0.3s;
 }
@@ -672,7 +686,7 @@ input[type="search"]::-webkit-search-results-decoration {
       border-radius: 12px;
     }
   }
-  &__item:hover{
+  &__item:hover {
     .sport-section__h3 {
       transition: 0.3s;
       color: $pink;
@@ -686,7 +700,7 @@ input[type="search"]::-webkit-search-results-decoration {
     left: 50%;
     padding: 16px 55px;
     background-color: rgba(75, 78, 104, 0.55);
-    @include text(600, 2rem, $color-light-gray,uppercase);
+    @include text(600, 2rem, $color-light-gray, uppercase);
     border-radius: 5px;
   }
   a {
@@ -695,7 +709,7 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 
-.category-section{
+.category-section {
   background-color: $dark-purple;
   padding-bottom: 40px;
   &__container {
@@ -709,9 +723,8 @@ input[type="search"]::-webkit-search-results-decoration {
     justify-content: space-evenly;
     padding: 0;
     margin: 0;
-
   }
-  
+
   &__item {
     background-color: $light-purple;
     border-radius: 5px;
@@ -725,9 +738,10 @@ input[type="search"]::-webkit-search-results-decoration {
       color: currentColor;
     }
     a:hover {
-      .category-section__header{color: $color-gray;
-        transition: 0.3s;}
-
+      .category-section__header {
+        color: $color-gray;
+        transition: 0.3s;
+      }
     }
   }
   &__header {
@@ -740,9 +754,12 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 
-.category-section, .product-section, .popular-section, .trending-section {
+.category-section,
+.product-section,
+.popular-section,
+.trending-section {
   &__main-header {
-    margin:0;
+    margin: 0;
     @include text(600, 2rem, $color-light-gray, uppercase);
   }
   &__info-container {
@@ -757,7 +774,9 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 
-.product-section, .trending-section, .popular-section {
+.product-section,
+.trending-section,
+.popular-section {
   background-color: $dark-purple;
   &__container {
     max-width: $maxWidthContainer;
@@ -789,18 +808,57 @@ input[type="search"]::-webkit-search-results-decoration {
   &__header {
     margin: 0;
     margin-bottom: 20px;
-    @include text(500, 1.5rem, $color-light-gray)
+    @include text(500, 1.5rem, $color-light-gray);
   }
   &__price {
     display: block;
     margin-bottom: 20px;
-    @include text(500, 1.5rem, $color-light-gray)
+    @include text(500, 1.5rem, $color-light-gray);
   }
 }
 
+.about-us-section, .choose-us-section {
+  background-color: $dark-purple;
+  padding-bottom: 40px;
+  &__container {
+    max-width: $maxWidthContainer;
+    margin-inline: auto;
+    display: flex;
+  }
+  &__text {
+    @include text(400, 1.5rem, $color-gray);
+    line-height: 2;
+    margin: 0;
+  }
+  &__img img {
+    @include size(654px, 453px);
+    border: 1px solid #000;
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+  &__main-header {
+    margin: 0;
+    margin-bottom: 15px;
+    @include text(600, 2rem, $color-light-gray, uppercase);
+  }
+  &__description {
+    margin-right: 25px;
+  }
+}
+.choose-us-section {
+ &__container{
+  flex-direction: row-reverse;
+  img {
+    margin-right: 25px;
+  }
+  }
+  &__description {
+    margin-right: 0px;
+  }
 
+  
 
-
+}
 
 // Адаптивность
 @media (max-width: 1439px) {
@@ -829,12 +887,19 @@ input[type="search"]::-webkit-search-results-decoration {
       column-gap: 17px;
     }
   }
-  .product-section, .trending-section, .popular-section {
+  .product-section,
+  .trending-section,
+  .popular-section {
     &__info-container {
       margin-inline: 20px;
     }
     &__list {
       column-gap: 20px;
+    }
+  }
+  .about-us-section {
+    &__container {
+      margin-inline: 45px;
     }
   }
 }
