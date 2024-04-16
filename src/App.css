@@ -334,18 +334,21 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-inline: 40px;
 }
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: normal;
+      -ms-flex-pack: normal;
+          justify-content: normal;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -356,16 +359,19 @@ template {
   margin-right: 70px;
 }
 .header__ul {
-  list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: normal;
+      -ms-flex-pack: normal;
+          justify-content: normal;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
 }
 .header__li {
   margin-right: 20px;
@@ -496,7 +502,7 @@ input[type=search]::-webkit-search-results-decoration {
   background-image: url("src/images/smoke.png"), url("src/images/sport-girl.png");
   background-repeat: no-repeat no-repeat;
   background-size: 1440px 500px, 360px 475px;
-  background-position: left top, right 155px top 9px;
+  background-position: center, calc(50% + 175px) center;
 }
 .advantages-section__container {
   display: -webkit-box;
@@ -505,6 +511,9 @@ input[type=search]::-webkit-search-results-decoration {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -522,15 +531,15 @@ input[type=search]::-webkit-search-results-decoration {
   margin-bottom: 30px;
 }
 .advantages-section__condition-list {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background-color: #fff;
   text-align: center;
-  margin: 0;
   margin-inline: auto;
-  padding: 0;
   max-width: 1144px;
 }
 .advantages-section__info, .advantages-section__h3 {
@@ -668,9 +677,9 @@ input[type=search]::-webkit-search-results-decoration {
      -moz-column-gap: 50px;
           column-gap: 50px;
   row-gap: 40px;
-  list-style-type: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 .sport-section__list > *:nth-child(1) {
   -ms-grid-row: 1;
@@ -709,11 +718,6 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .sport-section__h3 {
   margin: 0;
-  position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
   padding: 16px 55px;
   background-color: rgba(75, 78, 104, 0.55);
   font-weight: 600;
@@ -722,6 +726,11 @@ input[type=search]::-webkit-search-results-decoration {
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   border-radius: 5px;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 }
 .sport-section a {
   display: block;
@@ -744,15 +753,18 @@ input[type=search]::-webkit-search-results-decoration {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin: 0;
+  padding: 0;
   list-style-type: none;
   -webkit-column-gap: 50px;
      -moz-column-gap: 50px;
           column-gap: 50px;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  padding: 0;
-  margin: 0;
 }
 .category-section__item,
 .facilities-section__item {
@@ -765,13 +777,16 @@ input[type=search]::-webkit-search-results-decoration {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: normal;
+      -ms-flex-pack: normal;
+          justify-content: normal;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 100%;
   height: 100%;
   text-decoration: none;
@@ -823,10 +838,10 @@ input[type=search]::-webkit-search-results-decoration {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 40px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 40px;
 }
 .category-section__link,
 .product-section__link,
@@ -858,31 +873,37 @@ input[type=search]::-webkit-search-results-decoration {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin: 0;
+  padding: 0;
   list-style-type: none;
   -webkit-column-gap: 44px;
      -moz-column-gap: 44px;
           column-gap: 44px;
-  padding: 0;
-  margin: 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   padding-bottom: 40px;
 }
 .product-section__item,
 .trending-section__item,
 .popular-section__item {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: normal;
+      -ms-flex-pack: normal;
+          justify-content: normal;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   border: 1px solid #d9d9d9;
   border-radius: 5px;
   width: 424px;
@@ -997,8 +1018,9 @@ input[type=search]::-webkit-search-results-decoration {
   -webkit-column-gap: 52px;
      -moz-column-gap: 52px;
           column-gap: 52px;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .footer {
@@ -1167,6 +1189,6 @@ input[type=search]::-webkit-search-results-decoration {
             column-gap: 10px;
   }
   .footer {
-    padding-inline: 50px;
+    padding-inline: 45px;
   }
 }

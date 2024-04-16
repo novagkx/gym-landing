@@ -1,3 +1,5 @@
+import { sportsVarieties } from "../data";
+import TrainingItem from "./TrainingItem";
 export default function TrainingProgramsSection() {
   return (
     <section className="sport-section">
@@ -6,45 +8,8 @@ export default function TrainingProgramsSection() {
           Explore Our Dynamic Training Programs
         </h2>
         <ul className="sport-section__list">
-          <li className="sport-section__item">
-            <a href="#" >
-            <h3 className="sport-section__h3">yoga</h3>
-            <img style={{width: "420px", height:"235px"}} src="src/images/yoga.jpg" alt="" />
-            </a>
-            
-          </li>
-          
-          <li className="sport-section__item">
-          <a href="#" >
-            <h3 className="sport-section__h3">fitness</h3>
-            <img style={{width: "420px", height:"235px"}} src="src/images/fitness.jpg" alt="" />
-            </a>
-          </li>
+          {sportsVarieties.map((item)=><TrainingItem key={item.src} src={item.src} alt={item.alt}>{item.name}</TrainingItem>)}
 
-          <li className="sport-section__item">
-          <a href="#" >
-            <h3 className="sport-section__h3">cardio</h3>
-            <img style={{width: "420px", height:"235px"}} src="src/images/cardio.jpg" alt="" />
-            </a>
-          </li>
-          <li className="sport-section__item">
-          <a href="#" >
-            <h3 className="sport-section__h3">zumba</h3>
-            <img style={{width: "420px", height:"235px"}} src="src/images/zumba.jpg" alt="" />
-            </a>
-          </li>
-          <li className="sport-section__item">
-          <a href="#" >
-            <h3 className="sport-section__h3">workout</h3>
-            <img style={{width: "420px", height:"235px"}} src="src/images/workout.jpg" alt="" />
-            </a>
-          </li>
-          <li className="sport-section__item">
-          <a href="#" >
-            <h3 className="sport-section__h3">bodybuiding</h3>
-            <img style={{width: "420px", height:"235px"}} src="src/images/bodybuilding.jpg" alt="" />
-            </a>
-          </li>
         </ul>
       </div>
     </section>
