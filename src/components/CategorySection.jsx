@@ -1,49 +1,25 @@
 import HeadersBlock from "./HeadersBlock";
 
-export default function CategorySection() {
+export default function CategorySection({blockName, title, info}) {
   return (
-    <section className="category-section">
-      <div className="category-section__container">
-        <HeadersBlock blockName={"category-section"} title={"category"}/>
-        <div className="category-section__list-container">
-          <ul className="category-section__list">
-            <li className="category-section__item">
-            <a href="#">
-              <h3 className="category-section__header">Protein & Nutrition</h3>
-              <img
-                className="category-section__img"
-                src="src/images/Protein.svg"
-                alt=""
-              />
-              </a>
-            </li>
-            <li className="category-section__item">
-            <a href="#"><h3 className="category-section__header">Sports Outfit</h3>
-              <img
-                className="category-section__img"
-                src="src/images/outfit.svg"
-                alt=""
-              />
-              </a>
-            </li>
-            <li className="category-section__item">
-            <a href="#"><h3 className="category-section__header">Sports Bags</h3>
-              <img
-                className="category-section__img"
-                src="src/images/bags.svg"
-                alt=""
-              />
-              </a>
-            </li>
-            <li className="category-section__item">
-            <a href="#"><h3 className="category-section__header">GYM Accessories</h3>
-              <img
-                className="category-section__img"
-                src="src/images/accessories.svg"
-                alt=""
-              />
-              </a>
-            </li>
+    <section className={blockName}>
+      <div className={blockName +"__container"}>
+        <HeadersBlock blockName={blockName} title={title}/>
+        <div className={blockName + "__list-container"}>
+          <ul className={blockName + "__list"}>
+            {info.map((item) => 
+              <li key={item.header} className={blockName +"__item"}>
+              <a key={item.src} href="#">
+                <h3 key={item.alt}className={blockName +"__header"}>{item.header}</h3>
+                <img key={item.id}
+                  className={blockName +"__img"}
+                  src={item.src}
+                  alt={item.alt}
+                />
+                </a>
+              </li>
+            )}
+          
           </ul>
         </div>
       </div>

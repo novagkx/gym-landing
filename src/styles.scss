@@ -649,7 +649,7 @@ input[type="search"]::-webkit-search-results-decoration {
   cursor: pointer;
 }
 .main__btn:hover,
-.category-section__link:hover,
+.category-section__link:hover, .facilities-section__link:hover,
 .product-section__link:hover,
 .trending-section__link:hover,
 .popular-section__link:hover {
@@ -709,7 +709,7 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 
-.category-section {
+.category-section, .facilities-section {
   background-color: $dark-purple;
   padding-bottom: 40px;
   &__container {
@@ -738,7 +738,7 @@ input[type="search"]::-webkit-search-results-decoration {
       color: currentColor;
     }
     a:hover {
-      .category-section__header {
+      .category-section__header, .facilities-section__header {
         color: $color-gray;
         transition: 0.3s;
       }
@@ -757,7 +757,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .category-section,
 .product-section,
 .popular-section,
-.trending-section {
+.trending-section, .facilities-section {
   &__main-header {
     margin: 0;
     @include text(600, 2rem, $color-light-gray, uppercase);
@@ -855,9 +855,30 @@ input[type="search"]::-webkit-search-results-decoration {
   &__description {
     margin-right: 0px;
   }
+}
 
-  
-
+.facilities-section {
+  &__link {
+    display: none;
+  }
+  &__item {
+    img {
+      padding-top: 25px;
+      padding-bottom: 10px;
+      margin-top: 0;
+    }
+   }
+   &__header {
+    margin-bottom: 0;
+    padding-bottom: 25px;
+  }
+ 
+  &__list {
+    display: flex;
+    column-gap: 52px;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 // Адаптивность
@@ -897,9 +918,18 @@ input[type="search"]::-webkit-search-results-decoration {
       column-gap: 20px;
     }
   }
-  .about-us-section {
+  .about-us-section, .choose-us-section {
     &__container {
       margin-inline: 45px;
     }
   }
+  .facilities-section {
+    &__info-container {
+      margin-inline: 25px;
+    }
+    &__list {
+      column-gap: 10px;
+    }
+  }
+
 }
