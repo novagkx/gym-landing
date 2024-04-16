@@ -7,7 +7,7 @@ $color-gray: #aeafb7;
 $color-light-gray: #f5f5f5;
 $maxWidthContainer: 1360px;
 
-//Объявление миксинов (для однотипных элементов)
+// Announcement of mixin (for similar elements)
 @mixin text($font-weight, $font-size, $color, $text-transform: none) {
   font-weight: $font-weight;
   font-size: $font-size;
@@ -19,8 +19,25 @@ $maxWidthContainer: 1360px;
   width: $width;
   height: $height;
 }
+@mixin centering{
+  position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
 
-//Подключение шрифтов
+@mixin flex-container ($display, $justify-content: normal, $align-items: stretch){
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+@mixin reset-list {
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+// Connecting
 @font-face {
   font-family: "Montserrat";
   font-weight: 600;
@@ -391,17 +408,15 @@ template {
   display: none;
 }
 
-// Основной код стилей
+// Main styles
 
 .header {
   background-color: $dark-purple;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include flex-container(flex, space-between, center);
   padding-inline: 40px;
+
   &__container {
-    display: flex;
-    align-items: center;
+    @include flex-container(flex, $align-items: center); // we don't need use the justify-content, then ...
   }
   &__logo {
     @include size(120px, 80px);
@@ -409,12 +424,9 @@ template {
   }
 
   &__ul {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
+    @include flex-container(flex, $align-items: center);
+    @include reset-list();
     text-align: center;
-    padding: 0;
-    margin: 0;
   }
   &__li {
     margin-right: 20px;
@@ -523,7 +535,7 @@ template {
   }
 }
 
-//Модификация инпута
+//Modifiction of input
 // input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
 // input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
 input[type="search"] {
@@ -540,7 +552,7 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
-//первая секция (преимущества, условия)
+//First section (advantages, conditions)
 .advantages-section {
   background-color: $light-purple;
   padding-top: 90px;
@@ -550,11 +562,12 @@ input[type="search"]::-webkit-search-results-decoration {
     url("src/images/sport-girl.png");
   background-repeat: no-repeat no-repeat;
   background-size: 1440px 500px, 360px 475px;
-  background-position: left top, right 155px top 9px;
+  background-position: center, calc(50% + 175px) center; // position in the center of the section as in figma 
 
   &__container {
-    display: flex;
-    justify-content: start;
+    @include flex-container(flex, $justify-content: start);
+    // display: flex;
+    // justify-content: start;
     flex-direction: column;
     margin-left: 232px;
     max-width: 520px;
@@ -565,13 +578,11 @@ input[type="search"]::-webkit-search-results-decoration {
     margin-bottom: 30px;
   }
   &__condition-list {
-    list-style-type: none;
+    @include reset-list();
     display: flex;
     background-color: #fff;
     text-align: center;
-    margin: 0;
     margin-inline: auto;
-    padding: 0;
     max-width: 1144px;
   }
   &__info,
@@ -682,9 +693,7 @@ input[type="search"]::-webkit-search-results-decoration {
     grid-template-rows: 1fr 1fr;
     column-gap: 50px;
     row-gap: 40px;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    @include reset-list();
   }
   &__item {
     position: relative;
@@ -700,14 +709,11 @@ input[type="search"]::-webkit-search-results-decoration {
   }
   &__h3 {
     margin: 0;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
     padding: 16px 55px;
     background-color: rgba(75, 78, 104, 0.55);
     @include text(600, 2rem, $color-light-gray, uppercase);
     border-radius: 5px;
+    @include centering();
   }
   a {
     display: block;
@@ -724,12 +730,10 @@ input[type="search"]::-webkit-search-results-decoration {
     margin-inline: auto;
   }
   &__list {
-    display: flex;
-    list-style-type: none;
+    @include flex-container(flex, space-evenly);
+    @include reset-list();
     column-gap: 50px;
-    justify-content: space-evenly;
-    padding: 0;
-    margin: 0;
+  
   }
 
   &__item {
@@ -737,9 +741,8 @@ input[type="search"]::-webkit-search-results-decoration {
     border-radius: 5px;
     width: 300px;
     a {
-      display: flex;
+      @include flex-container(flex, $align-items: center);
       flex-direction: column-reverse;
-      align-items: center;
       @include size(100%, 100%);
       text-decoration: none;
       color: currentColor;
@@ -772,10 +775,8 @@ input[type="search"]::-webkit-search-results-decoration {
     @include text(600, 2rem, $color-light-gray, uppercase);
   }
   &__info-container {
-    display: flex;
-    justify-content: space-between;
+    @include flex-container(flex, space-between, center);
     margin-bottom: 40px;
-    align-items: center;
   }
   &__link {
     @include text(400, 2rem, $color-light-gray);
@@ -792,19 +793,15 @@ input[type="search"]::-webkit-search-results-decoration {
     margin-inline: auto;
   }
   &__list {
-    display: flex;
-    list-style-type: none;
+    @include flex-container(flex, center);
+    @include reset-list();
     column-gap: 44px;
-    padding: 0;
-    margin: 0;
-    justify-content: center;
     padding-bottom: 40px;
   }
   &__item {
+    @include flex-container(flex, $align-items: center);
     position: relative;
-    display: flex;
     flex-direction: column;
-    align-items: center;
     border: 1px solid #d9d9d9;
     border-radius: 5px;
     @include size(424px, 539px);
@@ -886,8 +883,7 @@ input[type="search"]::-webkit-search-results-decoration {
   &__list {
     display: flex;
     column-gap: 52px;
-    padding: 0;
-    margin: 0;
+    @include reset-list();
   }
 }
 
@@ -918,7 +914,6 @@ input[type="search"]::-webkit-search-results-decoration {
     padding: 0;
     display: flex;
     flex-direction: column;
-    // align-items: start;
   }
   &__company-list, &__support-list {
     margin-right: 130px;
@@ -928,7 +923,6 @@ input[type="search"]::-webkit-search-results-decoration {
     display: flex;
     column-gap: 14px;
     padding: 0;
-    // align-items: start;
   }
   &__social-link {
     display: block;
@@ -937,10 +931,7 @@ input[type="search"]::-webkit-search-results-decoration {
     background-color: #4b4e68;
     position: relative;
     svg {
-      position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
+      @include centering();
     }
   }
   &__header {
@@ -1043,6 +1034,6 @@ input[type="search"]::-webkit-search-results-decoration {
     }
   }
   .footer {
-    padding-inline: 50px;
+    padding-inline: 45px;
   }
 }
