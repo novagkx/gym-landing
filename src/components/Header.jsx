@@ -27,7 +27,7 @@ const Header = () => {
 
       <div className="header__icons">
         <div className="header__circle">
-          <a className="header__basket">
+          <a className="header__basket" href="#">
             <svg
               width="24"
               height="24"
@@ -51,7 +51,7 @@ const Header = () => {
           </a>
         </div>
         <div className="header__circle">
-          <a className="header__favorites">
+          <a className="header__favorites" href="#">
             <svg
               width="24"
               height="24"
