@@ -19,22 +19,26 @@ $maxWidthContainer: 1360px;
   width: $width;
   height: $height;
 }
-@mixin centering{
+@mixin centering {
   position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 }
 
-@mixin flex-container ($display, $justify-content: normal, $align-items: stretch){
+@mixin flex-container(
+  $display,
+  $justify-content: normal,
+  $align-items: stretch
+) {
   display: $display;
   justify-content: $justify-content;
   align-items: $align-items;
 }
 @mixin reset-list {
-margin: 0;
-padding: 0;
-list-style-type: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 // Connecting
@@ -414,9 +418,16 @@ template {
   background-color: $dark-purple;
   @include flex-container(flex, space-between, center);
   padding-inline: 40px;
-
+  &__container-1,
   &__container {
-    @include flex-container(flex, $align-items: center); // we don't need use the justify-content, then ...
+    @include flex-container(
+      flex,
+      $align-items: center
+    ); // we don't need use the justify-content, then ...
+  }
+  &__container-1 {
+    max-width: $maxWidthContainer;
+    margin-inline: auto;
   }
   &__logo {
     @include size(120px, 80px);
@@ -447,7 +458,8 @@ template {
   &__li,
   &__sign-in,
   &__sign-up,
-  &__span {
+  &__span,
+  &__link--active {
     @include text(500, 1rem, #fff, uppercase);
   }
 
@@ -459,9 +471,11 @@ template {
     font-family: $font-family;
     box-sizing: border-box;
   }
-
+  &__input::placeholder {
+    font-size: 1rem;
+  }
   &__link--active {
-    @include text(500, 1rem, $pink, uppercase);
+    color: $pink;
   }
 
   &__icons {
@@ -562,12 +576,10 @@ input[type="search"]::-webkit-search-results-decoration {
     url("src/images/sport-girl.png");
   background-repeat: no-repeat no-repeat;
   background-size: 1440px 500px, 360px 475px;
-  background-position: center, calc(50% + 175px) center; // position in the center of the section as in figma 
+  background-position: center, calc(50% + 175px) center; // position in the center of the section as in figma
 
   &__container {
     @include flex-container(flex, $justify-content: start);
-    // display: flex;
-    // justify-content: start;
     flex-direction: column;
     margin-left: 232px;
     max-width: 520px;
@@ -582,9 +594,14 @@ input[type="search"]::-webkit-search-results-decoration {
     display: flex;
     background-color: #fff;
     text-align: center;
-    margin-inline: auto;
     max-width: 1144px;
+    margin-inline: auto;
   }
+  &__condition-container {
+    max-width: $maxWidthContainer;
+    margin-inline: auto;
+  }
+
   &__info,
   &__h3 {
     text-transform: uppercase;
@@ -627,6 +644,16 @@ input[type="search"]::-webkit-search-results-decoration {
   }
   &__item:first-child {
     margin-left: 30px;
+    padding-top: 15px;
+    h3 {
+    margin-top: 0px;
+    }}
+
+    &__item:last-child {
+    padding-top: 15px;
+    h3 {
+    margin-top: 10px;
+    }
   }
   &__h3 {
     color: $dark-purple;
@@ -677,6 +704,7 @@ input[type="search"]::-webkit-search-results-decoration {
   background-color: $dark-purple;
   padding-top: 187px;
   padding-inline: 40px;
+  padding-bottom: 40px;
   &__header {
     margin: 0;
     margin-bottom: 40px;
@@ -689,7 +717,7 @@ input[type="search"]::-webkit-search-results-decoration {
   }
   &__list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 420px 420px 420px;
     grid-template-rows: 1fr 1fr;
     column-gap: 50px;
     row-gap: 40px;
@@ -699,6 +727,8 @@ input[type="search"]::-webkit-search-results-decoration {
     position: relative;
     img {
       border-radius: 12px;
+      width: 420px;
+      height: 235px;
     }
   }
   &__item:hover {
@@ -730,10 +760,9 @@ input[type="search"]::-webkit-search-results-decoration {
     margin-inline: auto;
   }
   &__list {
-    @include flex-container(flex, space-evenly);
+    @include flex-container(flex, center);
     @include reset-list();
     column-gap: 50px;
-  
   }
 
   &__item {
@@ -915,9 +944,9 @@ input[type="search"]::-webkit-search-results-decoration {
     display: flex;
     flex-direction: column;
   }
-  &__company-list, &__support-list {
+  &__company-list,
+  &__support-list {
     margin-right: 130px;
-
   }
   &__social-list {
     display: flex;
@@ -951,7 +980,9 @@ input[type="search"]::-webkit-search-results-decoration {
     h2 {
       margin-bottom: 17px;
     }
-    ul {width: 105px;}
+    ul {
+      width: 105px;
+    }
   }
   &__social {
     h2 {
@@ -959,12 +990,12 @@ input[type="search"]::-webkit-search-results-decoration {
     }
   }
   &__link {
-    @include text (400, 1rem, #a1a1a1);
+    @include text(400, 1rem, #a1a1a1);
     text-decoration: none;
     line-height: 1.57;
     margin-bottom: 5px;
   }
-  &__link:last-child{
+  &__link:last-child {
     margin-bottom: 0;
   }
   &__info {
@@ -978,62 +1009,174 @@ input[type="search"]::-webkit-search-results-decoration {
     color: $color-light-gray;
     transition: 0.3s;
   }
-
 }
 
-
-// Адаптивность
-@media (max-width: 1439px) {
-  // если экран меньше 1440px, то уменьшаем оступы, чтобы всё влазило
+//adaptive for big screens
+@media (min-width: 1600px) {
+  $maxWidthContainer: 1500px;
   .header {
-    &__logo {
-      margin-right: 40px;
+    &__li,
+    &__sign-in,
+    &__sign-up,
+    &__span,
+    &__link--active {
+      @include text(500, 1.25rem, #fff, uppercase);
     }
-    &__nav {
-      margin-right: 50px;
+    &__link--active {
+      color: $pink;
+    }
+    &__input::placeholder {
+      font-size: 1.25rem;
     }
   }
   .sport-section {
-    padding-bottom: 40px;
+    padding-top: 210px;
+    &__container {
+      max-width: $maxWidthContainer;
+    }
     &__list {
-      column-gap: 30px;
-      row-gap: 20px;
-      list-style-type: none;
+      column-gap: 120px;
+      row-gap: 60px;
     }
   }
+
   .category-section {
-    &__info-container {
-      margin-inline: 20px;
+    &__container {
+      max-width: $maxWidthContainer;
     }
     &__list {
-      column-gap: 17px;
+      column-gap: 100px;
     }
   }
   .product-section,
   .trending-section,
   .popular-section {
-    &__info-container {
-      margin-inline: 20px;
+    &__container {
+      max-width: $maxWidthContainer;
     }
     &__list {
-      column-gap: 20px;
+      column-gap: 114px;
     }
   }
   .about-us-section,
   .choose-us-section {
     &__container {
-      margin-inline: 45px;
+      max-width: $maxWidthContainer;
     }
   }
   .facilities-section {
-    &__info-container {
-      margin-inline: 25px;
+    &__container {
+      max-width: $maxWidthContainer;
     }
     &__list {
-      column-gap: 10px;
+      column-gap: 100px;
+    }
+  }
+  .header,
+  .footer {
+    &__container-1 {
+      max-width: $maxWidthContainer;
     }
   }
   .footer {
-    padding-inline: 45px;
+    &__company-list ul,
+    &__support-list ul {
+      width: 190px;
+    }
+    &__header {
+      width: 230px;
+    }
+    &__description {
+      font-size: 1.25rem;
+    }
+    &__header {
+      font-size: 1.5rem;
+    }
+    &__link {
+      font-size: 1.25rem;
+    }
+    &__info {
+      margin-right: 90px;
+    }
   }
 }
+
+// adaptive for 1250 < x < 1439
+@media (max-width: 1439px) {
+  $maxWidthContainer: 1200px;
+  .header {
+    &__input-container,
+    &__input {
+      width: 200px;
+    }
+    &__logo,
+    &__nav {
+      margin-right: 30px;
+    }
+    &__li,
+    &__sign-in,
+    &__sign-up,
+    &__span,
+    &__link--active {
+      @include text(500, 0.9rem, #fff, uppercase);
+    }
+    &__link--active {
+      color: $pink;
+    }
+    &__input::placeholder {
+      font-size: 1rem;
+    }
+  }
+  .advantages-section {
+    &__condition-container {
+      max-width: $maxWidthContainer;
+    }
+    &__h3 {
+    font-size: 1rem;
+    }
+    &__item {
+    margin-right: 15px;
+    }
+    &__item:last-child {
+    margin-left: 0;
+    margin-right: 30px;}
+    &__condition-list {
+    max-width: 1050px;}
+  }
+
+  .advantages-section__condition-container {
+  .advantages-section__info {
+    font-size: 0.9rem;
+  }
+  }
+  .sport-section {
+    &__header {
+      text-align: center;
+    }
+    &__list {
+      grid-template-columns: 420px 420px;
+      grid-template-rows: 1fr 1fr 1fr;
+      justify-content: center;
+      column-gap: 50px;
+    }
+  }
+
+  .about-us-section, .choose-us-section {
+    &__text {
+      font-size: 1.25rem;
+    }
+  }
+  .product-section, .trending-section, .popular-section, .facilities-section, .category-section, .sport-section, .about-us-section, .choose-us-section {
+    &__container {
+      max-width: $maxWidthContainer;
+    }
+  }
+  
+  .footer{
+    &__container-1 {
+      max-width: $maxWidthContainer;
+    }
+  }
+}
+
+//adaptive for < 1249 ...

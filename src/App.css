@@ -193,7 +193,6 @@ button,
 [type=reset],
 [type=submit] {
   -webkit-appearance: button;
-  appearance: button;
 }
 
 /**
@@ -279,7 +278,6 @@ textarea {
    */
 [type=search] {
   -webkit-appearance: textfield; /* 1 */
-  appearance: textfield;
   outline-offset: -2px; /* 2 */
 }
 
@@ -344,7 +342,7 @@ template {
           align-items: center;
   padding-inline: 40px;
 }
-.header__container {
+.header__container-1, .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -354,6 +352,10 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.header__container-1 {
+  max-width: 1360px;
+  margin-inline: auto;
 }
 .header__logo {
   width: 120px;
@@ -388,7 +390,7 @@ template {
   text-decoration: none;
   color: currentColor;
 }
-.header__li, .header__sign-in, .header__sign-up, .header__span {
+.header__li, .header__sign-in, .header__sign-up, .header__span, .header__link--active {
   font-weight: 500;
   font-size: 1rem;
   color: #fff;
@@ -405,12 +407,23 @@ template {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.header__link--active {
-  font-weight: 500;
+.header__input::-webkit-input-placeholder {
   font-size: 1rem;
+}
+.header__input::-moz-placeholder {
+  font-size: 1rem;
+}
+.header__input:-ms-input-placeholder {
+  font-size: 1rem;
+}
+.header__input::-ms-input-placeholder {
+  font-size: 1rem;
+}
+.header__input::placeholder {
+  font-size: 1rem;
+}
+.header__link--active {
   color: #ea377b;
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
 }
 .header__icons {
   display: -webkit-box;
@@ -541,8 +554,12 @@ input[type=search]::-webkit-search-results-decoration {
   display: flex;
   background-color: #fff;
   text-align: center;
-  margin-inline: auto;
   max-width: 1144px;
+  margin-inline: auto;
+}
+.advantages-section__condition-container {
+  max-width: 1360px;
+  margin-inline: auto;
 }
 .advantages-section__info, .advantages-section__h3 {
   text-transform: uppercase;
@@ -595,6 +612,16 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .advantages-section__item:first-child {
   margin-left: 30px;
+  padding-top: 15px;
+}
+.advantages-section__item:first-child h3 {
+  margin-top: 0px;
+}
+.advantages-section__item:last-child {
+  padding-top: 15px;
+}
+.advantages-section__item:last-child h3 {
+  margin-top: 10px;
 }
 .advantages-section__h3 {
   color: #090d28;
@@ -653,6 +680,7 @@ input[type=search]::-webkit-search-results-decoration {
   background-color: #090d28;
   padding-top: 187px;
   padding-inline: 40px;
+  padding-bottom: 40px;
 }
 .sport-section__header {
   margin: 0;
@@ -671,8 +699,8 @@ input[type=search]::-webkit-search-results-decoration {
 .sport-section__list {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 50px 1fr 50px 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: 420px 50px 420px 50px 420px;
+  grid-template-columns: 420px 420px 420px;
   -ms-grid-rows: 1fr 40px 1fr;
   grid-template-rows: 1fr 1fr;
   -webkit-column-gap: 50px;
@@ -685,50 +713,35 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .sport-section__list > *:nth-child(1) {
   -ms-grid-row: 1;
-  grid-row: 1;
   -ms-grid-column: 1;
-  grid-column: 1;
 }
 .sport-section__list > *:nth-child(2) {
   -ms-grid-row: 1;
-  grid-row: 1;
-  
   -ms-grid-column: 3;
-  grid-column: 3;
 }
 .sport-section__list > *:nth-child(3) {
-  
   -ms-grid-row: 1;
-  grid-row: 1;
   -ms-grid-column: 5;
-  grid-column: 5;
 }
 .sport-section__list > *:nth-child(4) {
-  
   -ms-grid-row: 3;
-  grid-row: 1;
   -ms-grid-column: 1;
-  grid-column: 1;
 }
 .sport-section__list > *:nth-child(5) {
-  
   -ms-grid-row: 3;
-  grid-row: 1;
   -ms-grid-column: 3;
-  grid-column: 3;
 }
 .sport-section__list > *:nth-child(6) {
- 
   -ms-grid-row: 3;
-  grid-row: 1;
   -ms-grid-column: 5;
-  grid-column: 5;
 }
 .sport-section__item {
   position: relative;
 }
 .sport-section__item img {
   border-radius: 12px;
+  width: 420px;
+  height: 235px;
 }
 .sport-section__item:hover .sport-section__h3 {
   -webkit-transition: 0.3s;
@@ -772,9 +785,9 @@ input[type=search]::-webkit-search-results-decoration {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
@@ -1158,56 +1171,196 @@ input[type=search]::-webkit-search-results-decoration {
   transition: 0.3s;
 }
 
-@media (max-width: 1439px) {
-  .header__logo {
-    margin-right: 40px;
+@media (min-width: 1600px) {
+  .header__li, .header__sign-in, .header__sign-up, .header__span, .header__link--active {
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
   }
-  .header__nav {
-    margin-right: 50px;
+  .header__link--active {
+    color: #ea377b;
+  }
+  .header__input::-webkit-input-placeholder {
+    font-size: 1.25rem;
+  }
+  .header__input::-moz-placeholder {
+    font-size: 1.25rem;
+  }
+  .header__input:-ms-input-placeholder {
+    font-size: 1.25rem;
+  }
+  .header__input::-ms-input-placeholder {
+    font-size: 1.25rem;
+  }
+  .header__input::placeholder {
+    font-size: 1.25rem;
   }
   .sport-section {
-    padding-bottom: 40px;
+    padding-top: 210px;
+  }
+  .sport-section__container {
+    max-width: 1500px;
   }
   .sport-section__list {
-    -webkit-column-gap: 30px;
-       -moz-column-gap: 30px;
-            column-gap: 30px;
-    row-gap: 20px;
-    list-style-type: none;
+    -webkit-column-gap: 120px;
+       -moz-column-gap: 120px;
+            column-gap: 120px;
+    row-gap: 60px;
   }
-  .category-section__info-container {
-    margin-inline: 20px;
+  .category-section__container {
+    max-width: 1500px;
   }
   .category-section__list {
-    -webkit-column-gap: 17px;
-       -moz-column-gap: 17px;
-            column-gap: 17px;
+    -webkit-column-gap: 100px;
+       -moz-column-gap: 100px;
+            column-gap: 100px;
   }
-  .product-section__info-container,
-  .trending-section__info-container,
-  .popular-section__info-container {
-    margin-inline: 20px;
+  .product-section__container,
+  .trending-section__container,
+  .popular-section__container {
+    max-width: 1500px;
   }
   .product-section__list,
   .trending-section__list,
   .popular-section__list {
-    -webkit-column-gap: 20px;
-       -moz-column-gap: 20px;
-            column-gap: 20px;
+    -webkit-column-gap: 114px;
+       -moz-column-gap: 114px;
+            column-gap: 114px;
   }
   .about-us-section__container,
   .choose-us-section__container {
-    margin-inline: 45px;
+    max-width: 1500px;
   }
-  .facilities-section__info-container {
-    margin-inline: 25px;
+  .facilities-section__container {
+    max-width: 1500px;
   }
   .facilities-section__list {
-    -webkit-column-gap: 10px;
-       -moz-column-gap: 10px;
-            column-gap: 10px;
+    -webkit-column-gap: 100px;
+       -moz-column-gap: 100px;
+            column-gap: 100px;
   }
-  .footer {
-    padding-inline: 45px;
+  .header__container-1,
+  .footer__container-1 {
+    max-width: 1500px;
+  }
+  .footer__company-list ul, .footer__support-list ul {
+    width: 190px;
+  }
+  .footer__header {
+    width: 230px;
+  }
+  .footer__description {
+    font-size: 1.25rem;
+  }
+  .footer__header {
+    font-size: 1.5rem;
+  }
+  .footer__link {
+    font-size: 1.25rem;
+  }
+  .footer__info {
+    margin-right: 90px;
+  }
+}
+@media (max-width: 1439px) {
+  .header__input-container, .header__input {
+    width: 200px;
+  }
+  .header__logo, .header__nav {
+    margin-right: 30px;
+  }
+  .header__li, .header__sign-in, .header__sign-up, .header__span, .header__link--active {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+  }
+  .header__link--active {
+    color: #ea377b;
+  }
+  .header__input::-webkit-input-placeholder {
+    font-size: 1rem;
+  }
+  .header__input::-moz-placeholder {
+    font-size: 1rem;
+  }
+  .header__input:-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  .header__input::-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  .header__input::placeholder {
+    font-size: 1rem;
+  }
+  .advantages-section__condition-container {
+    max-width: 1200px;
+  }
+  .advantages-section__h3 {
+    font-size: 1rem;
+  }
+  .advantages-section__item {
+    margin-right: 15px;
+  }
+  .advantages-section__item:last-child {
+    margin-left: 0;
+    margin-right: 30px;
+  }
+  .advantages-section__condition-list {
+    max-width: 1050px;
+  }
+  .advantages-section__condition-container .advantages-section__info {
+    font-size: 0.9rem;
+  }
+  .sport-section__header {
+    text-align: center;
+  }
+  .sport-section__list {
+    -ms-grid-columns: 420px 50px 420px;
+    grid-template-columns: 420px 420px;
+    -ms-grid-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-column-gap: 50px;
+       -moz-column-gap: 50px;
+            column-gap: 50px;
+  }
+  .sport-section__list > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .sport-section__list > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .sport-section__list > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .sport-section__list > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+  .sport-section__list > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .sport-section__list > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .about-us-section__text, .choose-us-section__text {
+    font-size: 1.25rem;
+  }
+  .product-section__container, .trending-section__container, .popular-section__container, .facilities-section__container, .category-section__container, .sport-section__container, .about-us-section__container, .choose-us-section__container {
+    max-width: 1200px;
+  }
+  .footer__container-1 {
+    max-width: 1200px;
   }
 }
