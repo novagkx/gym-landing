@@ -3,7 +3,8 @@ import SearchInput from "./SerchInput";
 const Header = () => {
   return (
     <header className="header">
-      <img
+      <div className="header__container-1">
+        <img
         className="header__logo"
         src="src/images/gym-logo.svg"
         alt="Логотип сайта"
@@ -73,6 +74,7 @@ const Header = () => {
             </svg>
           </a>
         </div>
+      </div>
       </div>
       </div>
     </header>
