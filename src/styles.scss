@@ -414,6 +414,40 @@ template {
 
 // Main styles
 
+.header,
+.footer {
+  &__container-1 {
+    max-width: $maxWidthContainer;
+    margin-inline: auto;
+  }
+}
+.product-section,
+.trending-section,
+.popular-section,
+.sport-section,
+.facilities-section,
+.category-section,
+.about-us-section,
+.choose-us-section {
+  &__container {
+    max-width: $maxWidthContainer;
+    margin-inline: auto;
+  }
+}
+.about-us-section,
+.choose-us-section {
+  &__container {
+    display: flex;
+  }
+}
+.advantages-section {
+  &__condition-container,
+  &__container-2 {
+    max-width: $maxWidthContainer;
+    margin-inline: auto;
+  }
+}
+
 .header {
   background-color: $dark-purple;
   @include flex-container(flex, space-between, center);
@@ -425,10 +459,7 @@ template {
       $align-items: center
     ); // we don't need use the justify-content, then ...
   }
-  &__container-1 {
-    max-width: $maxWidthContainer;
-    margin-inline: auto;
-  }
+
   &__logo {
     @include size(120px, 80px);
     margin-right: 70px;
@@ -597,17 +628,12 @@ input[type="search"]::-webkit-search-results-decoration {
     max-width: 1144px;
     margin-inline: auto;
   }
-  &__condition-container {
-    max-width: $maxWidthContainer;
-    margin-inline: auto;
-  }
 
-  &__info,
   &__h3 {
     text-transform: uppercase;
   }
   &__info {
-    @include text(500, 1.25rem, #fff);
+    @include text(500, 1.25rem, #fff, uppercase);
   }
 
   &__name {
@@ -623,10 +649,7 @@ input[type="search"]::-webkit-search-results-decoration {
   &__container-1 {
     position: relative;
   }
-  &__container-2 {
-    max-width: $maxWidthContainer;
-    margin-inline: auto;
-  }
+
   &__condition-container {
     margin-top: 90px;
     .advantages-section__info {
@@ -642,17 +665,34 @@ input[type="search"]::-webkit-search-results-decoration {
     padding-top: 25px;
     margin-right: 32px;
   }
-  &__item:first-child {
-    margin-left: 30px;
-    padding-top: 15px;
-    h3 {
-    margin-top: 0px;
-    }}
+  // &__item:first-child {
+  //   margin-left: 30px;
+  //   padding-top: 15px;
+  //   h3 {
+  //     margin-top: 0px;
+  //   }
+  // }
 
-    &__item:last-child {
-    padding-top: 15px;
-    h3 {
-    margin-top: 10px;
+  // &__item:last-child {
+  //   padding-top: 15px;
+  //   h3 {
+  //     margin-top: 10px;
+  //   }
+  // }
+
+  &__item {
+    &:first-child {
+      margin-left: 30px;
+      padding-top: 15px;
+      h3 {
+        margin-top: 0px;
+      }
+    }
+    &:last-child {
+      padding-top: 15px;
+      h3 {
+        margin-top: 10px;
+      }
     }
   }
   &__h3 {
@@ -704,17 +744,13 @@ input[type="search"]::-webkit-search-results-decoration {
   background-color: $dark-purple;
   padding-top: 187px;
   padding-inline: 40px;
-  padding-bottom: 40px;
   &__header {
     margin: 0;
     margin-bottom: 40px;
     @include text(600, 2rem, $color-light-gray);
     opacity: 0.3;
   }
-  &__container {
-    max-width: $maxWidthContainer;
-    margin-inline: auto;
-  }
+
   &__list {
     display: grid;
     grid-template-columns: 420px 420px 420px;
@@ -724,14 +760,16 @@ input[type="search"]::-webkit-search-results-decoration {
     @include reset-list();
   }
   &__item {
-    position: relative;
     img {
       border-radius: 12px;
       width: 420px;
       height: 235px;
     }
   }
-  &__item:hover {
+  a {
+    position: relative;
+  }
+  a:hover {
     .sport-section__h3 {
       transition: 0.3s;
       color: $pink;
@@ -746,19 +784,16 @@ input[type="search"]::-webkit-search-results-decoration {
     @include centering();
   }
   a {
-    display: block;
-    @include size(100%, 100%);
+    // display: block;
+    // @include size(100%, 100%);
+    display: inline-block;
   }
 }
 
 .category-section,
 .facilities-section {
   background-color: $dark-purple;
-  padding-bottom: 40px;
-  &__container {
-    max-width: $maxWidthContainer;
-    margin-inline: auto;
-  }
+
   &__list {
     @include flex-container(flex, center);
     @include reset-list();
@@ -817,15 +852,11 @@ input[type="search"]::-webkit-search-results-decoration {
 .trending-section,
 .popular-section {
   background-color: $dark-purple;
-  &__container {
-    max-width: $maxWidthContainer;
-    margin-inline: auto;
-  }
+
   &__list {
     @include flex-container(flex, center);
     @include reset-list();
     column-gap: 44px;
-    padding-bottom: 40px;
   }
   &__item {
     @include flex-container(flex, $align-items: center);
@@ -837,34 +868,32 @@ input[type="search"]::-webkit-search-results-decoration {
     box-sizing: border-box;
     padding-block: 52px;
   }
-  &__img {
-    margin-bottom: 20px;
-  }
   &__header {
     margin: 0;
-    margin-bottom: 20px;
     @include text(500, 1.5rem, $color-light-gray);
   }
   &__price {
     display: block;
-    margin-bottom: 20px;
     @include text(500, 1.5rem, $color-light-gray);
+  }
+  &__img,
+  &__header,
+  &__price {
+    margin-bottom: 20px;
   }
 }
 
 .about-us-section,
 .choose-us-section {
   background-color: $dark-purple;
-  padding-bottom: 40px;
-  &__container {
-    max-width: $maxWidthContainer;
-    margin-inline: auto;
-    display: flex;
+
+  &__text,
+  &__main-header {
+    margin: 0;
   }
   &__text {
     @include text(400, 1.5rem, $color-gray);
     line-height: 2;
-    margin: 0;
   }
   &__img img {
     @include size(654px, 453px);
@@ -873,7 +902,6 @@ input[type="search"]::-webkit-search-results-decoration {
     margin-bottom: 10px;
   }
   &__main-header {
-    margin: 0;
     margin-bottom: 15px;
     @include text(600, 2rem, $color-light-gray, uppercase);
   }
@@ -918,16 +946,12 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .footer {
   background-color: $light-purple;
-  padding-bottom: 40px;
   &__description {
     @include text(400, 1rem, #a1a1a1);
     line-height: 1.57;
     margin: 0;
   }
-  &__container-1 {
-    max-width: $maxWidthContainer;
-    margin-inline: auto;
-  }
+
   &__container {
     display: flex;
   }
@@ -938,10 +962,15 @@ input[type="search"]::-webkit-search-results-decoration {
   &__gym-logo {
     @include size(224px, 149px);
   }
-  &__info,
-  &__list {
+
+  &__list,
+  &__social-list,
+  &__info {
     padding: 0;
     display: flex;
+  }
+  &__info,
+  &__list {
     flex-direction: column;
   }
   &__company-list,
@@ -949,9 +978,7 @@ input[type="search"]::-webkit-search-results-decoration {
     margin-right: 130px;
   }
   &__social-list {
-    display: flex;
     column-gap: 14px;
-    padding: 0;
   }
   &__social-link {
     display: block;
@@ -1011,9 +1038,43 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 
+.sport-section,
+.footer,
+.about-us-section,
+.choose-us-section,
+.product-section,
+.trending-section,
+.popular-section,
+.category-section,
+.facilities-section,
+.sport-section {
+  padding-bottom: 40px;
+}
+
+
 //adaptive for big screens
 @media (min-width: 1600px) {
   $maxWidthContainer: 1500px;
+  .sport-section,
+  .category-section,
+  .product-section,
+  .trending-section,
+  .popular-section,
+  .about-us-section,
+  .choose-us-section,
+  .facilities-section {
+    &__container {
+      max-width: $maxWidthContainer;
+    }
+  }
+
+  .header,
+  .footer {
+    &__container-1 {
+      max-width: $maxWidthContainer;
+    }
+  }
+
   .header {
     &__li,
     &__sign-in,
@@ -1031,19 +1092,14 @@ input[type="search"]::-webkit-search-results-decoration {
   }
   .sport-section {
     padding-top: 210px;
-    &__container {
-      max-width: $maxWidthContainer;
-    }
     &__list {
       column-gap: 120px;
       row-gap: 60px;
     }
   }
 
-  .category-section {
-    &__container {
-      max-width: $maxWidthContainer;
-    }
+  .category-section,
+  .facilities-section {
     &__list {
       column-gap: 100px;
     }
@@ -1051,31 +1107,8 @@ input[type="search"]::-webkit-search-results-decoration {
   .product-section,
   .trending-section,
   .popular-section {
-    &__container {
-      max-width: $maxWidthContainer;
-    }
     &__list {
       column-gap: 114px;
-    }
-  }
-  .about-us-section,
-  .choose-us-section {
-    &__container {
-      max-width: $maxWidthContainer;
-    }
-  }
-  .facilities-section {
-    &__container {
-      max-width: $maxWidthContainer;
-    }
-    &__list {
-      column-gap: 100px;
-    }
-  }
-  .header,
-  .footer {
-    &__container-1 {
-      max-width: $maxWidthContainer;
     }
   }
   .footer {
@@ -1086,14 +1119,12 @@ input[type="search"]::-webkit-search-results-decoration {
     &__header {
       width: 230px;
     }
-    &__description {
+    &__description,
+    &__link {
       font-size: 1.25rem;
     }
     &__header {
       font-size: 1.5rem;
-    }
-    &__link {
-      font-size: 1.25rem;
     }
     &__info {
       margin-right: 90px;
@@ -1132,47 +1163,61 @@ input[type="search"]::-webkit-search-results-decoration {
       max-width: $maxWidthContainer;
     }
     &__h3 {
-    font-size: 1rem;
+      font-size: 1rem;
     }
     &__item {
-    margin-right: 15px;
+      margin-right: 15px;
     }
     &__item:last-child {
-    margin-left: 0;
-    margin-right: 30px;}
+      margin-left: 0;
+      margin-right: 30px;
+    }
     &__condition-list {
-    max-width: 1050px;}
+      max-width: 1050px;
+    }
   }
 
   .advantages-section__condition-container {
-  .advantages-section__info {
-    font-size: 0.9rem;
-  }
+    .advantages-section__info {
+      font-size: 0.9rem;
+    }
   }
   .sport-section {
     &__header {
       text-align: center;
     }
     &__list {
-      grid-template-columns: 420px 420px;
+      // grid-template-columns: 420px 420px;
+      grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 столбца, равномерно распределенные */
       grid-template-rows: 1fr 1fr 1fr;
       justify-content: center;
       column-gap: 50px;
     }
+    &__item {
+      text-align: center;
+    }
   }
 
-  .about-us-section, .choose-us-section {
+  .about-us-section,
+  .choose-us-section {
     &__text {
       font-size: 1.25rem;
     }
   }
-  .product-section, .trending-section, .popular-section, .facilities-section, .category-section, .sport-section, .about-us-section, .choose-us-section {
+  .product-section,
+  .trending-section,
+  .popular-section,
+  .facilities-section,
+  .category-section,
+  .sport-section,
+  .about-us-section,
+  .choose-us-section {
     &__container {
       max-width: $maxWidthContainer;
     }
   }
-  
-  .footer{
+
+  .footer {
     &__container-1 {
       max-width: $maxWidthContainer;
     }
