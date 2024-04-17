@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Montserrat";
   font-weight: 600;
@@ -329,6 +330,36 @@ template {
   display: none;
 }
 
+.header__container-1,
+.footer__container-1 {
+  max-width: 1360px;
+  margin-inline: auto;
+}
+
+.product-section__container,
+.trending-section__container,
+.popular-section__container,
+.sport-section__container,
+.facilities-section__container,
+.category-section__container,
+.about-us-section__container,
+.choose-us-section__container {
+  max-width: 1360px;
+  margin-inline: auto;
+}
+
+.about-us-section__container,
+.choose-us-section__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.advantages-section__condition-container, .advantages-section__container-2 {
+  max-width: 1360px;
+  margin-inline: auto;
+}
+
 .header {
   background-color: #090d28;
   display: -webkit-box;
@@ -352,10 +383,6 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-.header__container-1 {
-  max-width: 1360px;
-  margin-inline: auto;
 }
 .header__logo {
   width: 120px;
@@ -557,18 +584,14 @@ input[type=search]::-webkit-search-results-decoration {
   max-width: 1144px;
   margin-inline: auto;
 }
-.advantages-section__condition-container {
-  max-width: 1360px;
-  margin-inline: auto;
-}
-.advantages-section__info, .advantages-section__h3 {
+.advantages-section__h3 {
   text-transform: uppercase;
 }
 .advantages-section__info {
   font-weight: 500;
   font-size: 1.25rem;
   color: #fff;
-  text-transform: none;
+  text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
 }
 .advantages-section__name {
@@ -586,10 +609,6 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .advantages-section__container-1 {
   position: relative;
-}
-.advantages-section__container-2 {
-  max-width: 1360px;
-  margin-inline: auto;
 }
 .advantages-section__condition-container {
   margin-top: 90px;
@@ -680,7 +699,6 @@ input[type=search]::-webkit-search-results-decoration {
   background-color: #090d28;
   padding-top: 187px;
   padding-inline: 40px;
-  padding-bottom: 40px;
 }
 .sport-section__header {
   margin: 0;
@@ -691,10 +709,6 @@ input[type=search]::-webkit-search-results-decoration {
   text-transform: none;
   font-family: "Montserrat", sans-serif;
   opacity: 0.3;
-}
-.sport-section__container {
-  max-width: 1360px;
-  margin-inline: auto;
 }
 .sport-section__list {
   display: -ms-grid;
@@ -735,15 +749,15 @@ input[type=search]::-webkit-search-results-decoration {
   -ms-grid-row: 3;
   -ms-grid-column: 5;
 }
-.sport-section__item {
-  position: relative;
-}
 .sport-section__item img {
   border-radius: 12px;
   width: 420px;
   height: 235px;
 }
-.sport-section__item:hover .sport-section__h3 {
+.sport-section a {
+  position: relative;
+}
+.sport-section a:hover .sport-section__h3 {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   color: #ea377b;
@@ -765,20 +779,12 @@ input[type=search]::-webkit-search-results-decoration {
   left: 50%;
 }
 .sport-section a {
-  display: block;
-  width: 100%;
-  height: 100%;
+  display: inline-block;
 }
 
 .category-section,
 .facilities-section {
   background-color: #090d28;
-  padding-bottom: 40px;
-}
-.category-section__container,
-.facilities-section__container {
-  max-width: 1360px;
-  margin-inline: auto;
 }
 .category-section__list,
 .facilities-section__list {
@@ -893,12 +899,6 @@ input[type=search]::-webkit-search-results-decoration {
 .popular-section {
   background-color: #090d28;
 }
-.product-section__container,
-.trending-section__container,
-.popular-section__container {
-  max-width: 1360px;
-  margin-inline: auto;
-}
 .product-section__list,
 .trending-section__list,
 .popular-section__list {
@@ -917,7 +917,6 @@ input[type=search]::-webkit-search-results-decoration {
   -webkit-column-gap: 44px;
      -moz-column-gap: 44px;
           column-gap: 44px;
-  padding-bottom: 40px;
 }
 .product-section__item,
 .trending-section__item,
@@ -944,16 +943,10 @@ input[type=search]::-webkit-search-results-decoration {
           box-sizing: border-box;
   padding-block: 52px;
 }
-.product-section__img,
-.trending-section__img,
-.popular-section__img {
-  margin-bottom: 20px;
-}
 .product-section__header,
 .trending-section__header,
 .popular-section__header {
   margin: 0;
-  margin-bottom: 20px;
   font-weight: 500;
   font-size: 1.5rem;
   color: #f5f5f5;
@@ -964,26 +957,30 @@ input[type=search]::-webkit-search-results-decoration {
 .trending-section__price,
 .popular-section__price {
   display: block;
-  margin-bottom: 20px;
   font-weight: 500;
   font-size: 1.5rem;
   color: #f5f5f5;
   text-transform: none;
   font-family: "Montserrat", sans-serif;
 }
+.product-section__img, .product-section__header, .product-section__price,
+.trending-section__img,
+.trending-section__header,
+.trending-section__price,
+.popular-section__img,
+.popular-section__header,
+.popular-section__price {
+  margin-bottom: 20px;
+}
 
 .about-us-section,
 .choose-us-section {
   background-color: #090d28;
-  padding-bottom: 40px;
 }
-.about-us-section__container,
-.choose-us-section__container {
-  max-width: 1360px;
-  margin-inline: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.about-us-section__text, .about-us-section__main-header,
+.choose-us-section__text,
+.choose-us-section__main-header {
+  margin: 0;
 }
 .about-us-section__text,
 .choose-us-section__text {
@@ -993,7 +990,6 @@ input[type=search]::-webkit-search-results-decoration {
   text-transform: none;
   font-family: "Montserrat", sans-serif;
   line-height: 2;
-  margin: 0;
 }
 .about-us-section__img img,
 .choose-us-section__img img {
@@ -1005,7 +1001,6 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .about-us-section__main-header,
 .choose-us-section__main-header {
-  margin: 0;
   margin-bottom: 15px;
   font-weight: 600;
   font-size: 2rem;
@@ -1057,7 +1052,6 @@ input[type=search]::-webkit-search-results-decoration {
 
 .footer {
   background-color: #1b1f3e;
-  padding-bottom: 40px;
 }
 .footer__description {
   font-weight: 400;
@@ -1067,10 +1061,6 @@ input[type=search]::-webkit-search-results-decoration {
   font-family: "Montserrat", sans-serif;
   line-height: 1.57;
   margin: 0;
-}
-.footer__container-1 {
-  max-width: 1360px;
-  margin-inline: auto;
 }
 .footer__container {
   display: -webkit-box;
@@ -1084,11 +1074,13 @@ input[type=search]::-webkit-search-results-decoration {
   width: 224px;
   height: 149px;
 }
-.footer__info, .footer__list {
+.footer__list, .footer__social-list, .footer__info {
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.footer__info, .footer__list {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1098,13 +1090,9 @@ input[type=search]::-webkit-search-results-decoration {
   margin-right: 130px;
 }
 .footer__social-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-column-gap: 14px;
      -moz-column-gap: 14px;
           column-gap: 14px;
-  padding: 0;
 }
 .footer__social-link {
   display: block;
@@ -1171,7 +1159,34 @@ input[type=search]::-webkit-search-results-decoration {
   transition: 0.3s;
 }
 
+.sport-section,
+.footer,
+.about-us-section,
+.choose-us-section,
+.product-section,
+.trending-section,
+.popular-section,
+.category-section,
+.facilities-section,
+.sport-section {
+  padding-bottom: 40px;
+}
+
 @media (min-width: 1600px) {
+  .sport-section__container,
+  .category-section__container,
+  .product-section__container,
+  .trending-section__container,
+  .popular-section__container,
+  .about-us-section__container,
+  .choose-us-section__container,
+  .facilities-section__container {
+    max-width: 1500px;
+  }
+  .header__container-1,
+  .footer__container-1 {
+    max-width: 1500px;
+  }
   .header__li, .header__sign-in, .header__sign-up, .header__span, .header__link--active {
     font-weight: 500;
     font-size: 1.25rem;
@@ -1200,27 +1215,17 @@ input[type=search]::-webkit-search-results-decoration {
   .sport-section {
     padding-top: 210px;
   }
-  .sport-section__container {
-    max-width: 1500px;
-  }
   .sport-section__list {
     -webkit-column-gap: 120px;
        -moz-column-gap: 120px;
             column-gap: 120px;
     row-gap: 60px;
   }
-  .category-section__container {
-    max-width: 1500px;
-  }
-  .category-section__list {
+  .category-section__list,
+  .facilities-section__list {
     -webkit-column-gap: 100px;
        -moz-column-gap: 100px;
             column-gap: 100px;
-  }
-  .product-section__container,
-  .trending-section__container,
-  .popular-section__container {
-    max-width: 1500px;
   }
   .product-section__list,
   .trending-section__list,
@@ -1229,36 +1234,17 @@ input[type=search]::-webkit-search-results-decoration {
        -moz-column-gap: 114px;
             column-gap: 114px;
   }
-  .about-us-section__container,
-  .choose-us-section__container {
-    max-width: 1500px;
-  }
-  .facilities-section__container {
-    max-width: 1500px;
-  }
-  .facilities-section__list {
-    -webkit-column-gap: 100px;
-       -moz-column-gap: 100px;
-            column-gap: 100px;
-  }
-  .header__container-1,
-  .footer__container-1 {
-    max-width: 1500px;
-  }
   .footer__company-list ul, .footer__support-list ul {
     width: 190px;
   }
   .footer__header {
     width: 230px;
   }
-  .footer__description {
+  .footer__description, .footer__link {
     font-size: 1.25rem;
   }
   .footer__header {
     font-size: 1.5rem;
-  }
-  .footer__link {
-    font-size: 1.25rem;
   }
   .footer__info {
     margin-right: 90px;
@@ -1319,8 +1305,8 @@ input[type=search]::-webkit-search-results-decoration {
     text-align: center;
   }
   .sport-section__list {
-    -ms-grid-columns: 420px 50px 420px;
-    grid-template-columns: 420px 420px;
+    -ms-grid-columns: minmax(0, 1fr) 50px minmax(0, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 столбца, равномерно распределенные */
     -ms-grid-rows: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     -webkit-box-pack: center;
@@ -1354,10 +1340,21 @@ input[type=search]::-webkit-search-results-decoration {
     -ms-grid-row: 3;
     -ms-grid-column: 3;
   }
-  .about-us-section__text, .choose-us-section__text {
+  .sport-section__item {
+    text-align: center;
+  }
+  .about-us-section__text,
+  .choose-us-section__text {
     font-size: 1.25rem;
   }
-  .product-section__container, .trending-section__container, .popular-section__container, .facilities-section__container, .category-section__container, .sport-section__container, .about-us-section__container, .choose-us-section__container {
+  .product-section__container,
+  .trending-section__container,
+  .popular-section__container,
+  .facilities-section__container,
+  .category-section__container,
+  .sport-section__container,
+  .about-us-section__container,
+  .choose-us-section__container {
     max-width: 1200px;
   }
   .footer__container-1 {
