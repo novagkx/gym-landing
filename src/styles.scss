@@ -484,7 +484,7 @@ template {
   }
 
   &__li:last-child {
-    margin-right: 0px;
+    margin-right: 0;
   }
 
   &__nav {
@@ -557,7 +557,7 @@ template {
   }
 
   &__links {
-    margin-left: 0px;
+    margin-left: 0;
     margin-right: 14px;
     color: #fff;
   }
@@ -663,7 +663,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
   &__name {
     @include text(600, 2.5rem, #fff, uppercase);
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 15px;
     letter-spacing: 0.05em;
   }
@@ -715,7 +715,7 @@ input[type="search"]::-webkit-search-results-decoration {
       padding-top: 15px;
 
       h3 {
-        margin-top: 0px;
+        margin-top: 0;
       }
     }
 
@@ -737,8 +737,8 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 
   &__info {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
     padding-bottom: 25px;
     padding-inline: 20px;
   }
@@ -782,8 +782,7 @@ input[type="search"]::-webkit-search-results-decoration {
   padding-inline: 40px;
 
   &__header {
-    margin: 0;
-    margin-bottom: 40px;
+    margin: 0 0 40px;
     @include text(600, 2rem, $color-light-gray);
     opacity: 0.3;
   }
@@ -805,9 +804,6 @@ input[type="search"]::-webkit-search-results-decoration {
     }
   }
 
-  a {
-    position: relative;
-  }
 
   a:hover {
     .sport-section__h3 {
@@ -826,9 +822,9 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 
   a {
-    // display: block;
-    // @include size(100%, 100%);
     display: inline-block;
+    position: relative;
+    border-radius: 12px;
   }
 }
 
@@ -866,12 +862,12 @@ input[type="search"]::-webkit-search-results-decoration {
 
   &__header {
     margin: 0;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
     @include text(400, 1.5rem, $color-light-gray);
   }
 
   &__img {
-    margin-top: 20px;
+    padding-top: 20px;
   }
 }
 
@@ -976,7 +972,7 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 
   &__description {
-    margin-right: 0px;
+    margin-right: 0;
   }
 }
 
@@ -1313,6 +1309,9 @@ input[type="search"]::-webkit-search-results-decoration {
       max-width: $maxWidthContainer;
     }
   }
+  .sport-section__container {
+    max-width: $maxWidthContainer - 250px;
+  }
   .footer {
     &__container-1 {
       max-width: $maxWidthContainer;
@@ -1321,12 +1320,12 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 //adaptive for 1024 < x< 1281 ...
-@media (max-width: 1280px){
+@media (max-width: 1280px) {
   $maxWidthContainer: 950px;
-  .about-us-section__container, .facilities-section__container, .choose-us-section__container, .advantages-section__condition-container, .category-section__container, .product-section__container,.popular-section__container, .trending-section__container {
+  .about-us-section__container, .facilities-section__container, .choose-us-section__container, .advantages-section__condition-container, .category-section__container, .product-section__container, .popular-section__container, .trending-section__container {
     max-width: $maxWidthContainer;
   }
-  .sport-section__list, .sport-section__container{
+  .sport-section__list, .sport-section__container {
     max-width: $maxWidthContainer - 80px;
   }
   .main__btn {
@@ -1334,112 +1333,132 @@ input[type="search"]::-webkit-search-results-decoration {
     padding: 14px;
     max-width: 130px;
   }
-  .header{
+
+  .header {
     &__logo {
       @include size(75px, 50px);
     }
-    &__link, &__sign-in, &__sign-up, &__span, &__link--active {
+
+    &__link, &__sign-in, &__sign-up, &__span, &__link--active, input[type="search"] {
       font-size: 0.8rem;
     }
+
     &__circle {
       @include size(24px, 24px);
+
       svg {
         @include size(18px, 18px);
       }
     }
+
     &__input, &__input-container {
       @include size(160px, 30px);
     }
-    input[type="search"] {
-      font-size: 0.8rem;
-    }
+
     &__input::placeholder {
       font-size: 0.9rem;
     }
+
     &__search-icon {
-      svg{
+      svg {
         @include size(14px, 14px);
       }
+
       bottom: 4px;
     }
+
     &__input-container, &__nav, &__logo {
       margin-right: 20px;
     }
   }
   .advantages-section {
     background-position: center, calc(50% + 260px) center;
+
     &__name {
       font-size: 2rem;
     }
+
     &__description {
       font-size: 1rem;
     }
+
     &__condition-list {
       max-width: $maxWidthContainer - 200px;
     }
+
     &__item {
       svg {
         @include size(40px, 40px);
       }
     }
+
     &__condition-container, &__info {
       padding-inline: 10px;
       padding-bottom: 15px;
     }
+
     &__h3 {
-      font-size: 0.9rem ;
+      font-size: 0.9rem;
     }
+
     &__condition-container &__info {
       font-size: 0.8rem;
     }
+
     &__item {
       margin-right: 15px;
       padding-top: 15px;
       margin-block: 18px;
     }
+
     &__item:first-child {
       svg {
         padding-bottom: 10px;
       }
+
       margin-left: 20px;
     }
+
     &__item:last-child {
       margin-right: 20px;
     }
   }
   .sport-section {
     padding-top: 130px;
+
     &__header {
       font-size: 1.75rem;
     }
+
     &__h3 {
       font-size: 1.5rem;
     }
+
     &__list {
       column-gap: 40px;
     }
   }
-  .category-section,.facilities-section {
+
+  .category-section, .facilities-section, .product-section, .trending-section, .popular-section {
     &__main-header, &__link {
       font-size: 1.75rem;
     }
+
     &__header {
       font-size: 1.25rem;
     }
   }
-
-  .product-section, .trending-section, .popular-section {
-    &__main-header, &__link {
-      font-size: 1.75rem;
-    }
-    &__header, &__price {
+  .category-section, .facilities-section, .product-section {
+    &__price {
       font-size: 1.25rem;
     }
   }
-  .about-us-section,.choose-us-section {
+
+  .about-us-section, .choose-us-section {
     &__main-header {
       font-size: 1.75rem;
     }
+
     &__text {
       font-size: 1rem;
     }
@@ -1448,15 +1467,19 @@ input[type="search"]::-webkit-search-results-decoration {
     &__container-1 {
       max-width: $maxWidthContainer;
     }
+
     &__gym-logo {
       @include size(155px, 110px);
     }
+
     &__description, &__link {
       font-size: 0.9rem;
     }
+
     &__header {
       font-size: 1rem;
     }
+
     &__info, &__company-list, &__support-list {
       margin-right: 50px;
     }
@@ -1464,6 +1487,148 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 //adaptive for 768 < x < 1024
+@media (max-width: 1024px) {
+  $maxWidthContainer: 700px;
+  .category-section__main-header, .category-section__link, .facilities-section__main-header, .facilities-section__link {
+    font-size: 1.35rem;
+  }
+  .header {
+    &__container-1 {
+      position: relative;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    &__nav {
+      width: 100%;
+      position: absolute;
+      top: 60px;
+    }
+
+    &__input, &__input-container {
+      width: 250px;
+    }
+  }
+  .advantages-section {
+    &__container {
+      margin-left: 15%;
+    }
+  }
+  .sport-section {
+    &__list {
+      max-width: $maxWidthContainer - 80px;
+      margin-inline: auto;
+    }
+
+    &__item {
+      img {
+        @include size(300px, 168px);
+      }
+
+      &:last-child {
+        h3 {
+          font-size: 1.35rem;
+          padding-inline: 30px;
+        }
+      }
+    }
+  }
+  .category-section, .facilities-section {
+    &__img {
+      @include size(75px, 75px);
+    }
+
+    &__list {
+      column-gap: 25px;
+    }
+
+    &__item {
+      h3 {
+        margin-top: 10px;
+      }
+    }
+
+    &__item:last-child {
+      h3 {
+        padding-bottom: 18px;
+      }
+    }
+
+    &__header {
+      font-size: 0.85rem;
+    }
+  }
+  .facilities-section__item:last-child h3 {
+    padding-bottom: 25px;
+  }
+  .product-section, .trending-section, .popular-section, .category-section, .facilities-section {
+    &__container {
+      max-width: $maxWidthContainer;
+    }
+
+    img {
+      @include size(130px, 130px);
+    }
+
+    &__item {
+      height: 100%;
+    }
+
+    &__header {
+      font-size: 1rem;
+    }
+
+    &__price {
+      font-size: 0.8rem;
+    }
+  }
+  .main__btn {
+    max-width: 110px;
+    padding: 12px;
+    font-size: 0.75rem;
+  }
+  .product-section__main-header, .product-section__link, .trending-section__main-header, .trending-section__link, .popular-section__main-header, .popular-section__link {
+    font-size: 1.35rem;
+  }
+  .about-us-section, .choose-us-section {
+    &__container {
+      max-width: $maxWidthContainer;
+    }
+
+    img {
+      @include size(320px, 222px);
+    }
+
+    &__text {
+      font-size: 0.8rem;
+    }
+
+    &__main-header {
+      font-size: 1.35rem;
+    }
+  }
+  .footer {
+    &__info {
+      img {
+        @include size(100px, 73px);
+      }
+    }
+
+    &__container-1 {
+      max-width: $maxWidthContainer;
+      position: relative;
+    }
+
+    &__company-list, &__info {
+      margin-right: 15px;
+    }
+
+    &__social {
+      position: absolute;
+      transform: translateX(55%);
+    }
+  }
+}
 
 //adaptive for 480 < x < 768
 //adaptive for 320 < x < 480

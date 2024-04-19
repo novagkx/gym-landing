@@ -366,7 +366,7 @@ template {
   .header__li {
     margin-right: 20px; }
   .header__li:last-child {
-    margin-right: 0px; }
+    margin-right: 0; }
   .header__nav {
     margin-right: 70px; }
   .header__sign-in, .header__sign-up, .header__link, .header__link--active {
@@ -414,7 +414,7 @@ template {
     position: absolute;
     cursor: pointer; }
   .header__links {
-    margin-left: 0px;
+    margin-left: 0;
     margin-right: 14px;
     color: #fff; }
   .header__input-container {
@@ -499,7 +499,7 @@ input[type="search"]::-webkit-search-results-decoration {
     color: #fff;
     text-transform: uppercase;
     font-family: "Montserrat", sans-serif;
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 15px;
     letter-spacing: 0.05em; }
   .advantages-section__span {
@@ -526,7 +526,7 @@ input[type="search"]::-webkit-search-results-decoration {
     margin-left: 30px;
     padding-top: 15px; }
     .advantages-section__item:first-child h3 {
-      margin-top: 0px; }
+      margin-top: 0; }
   .advantages-section__item:last-child {
     padding-top: 15px; }
     .advantages-section__item:last-child h3 {
@@ -538,8 +538,8 @@ input[type="search"]::-webkit-search-results-decoration {
     margin-block: 10px;
     font-size: 1.25rem; }
   .advantages-section__info {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
     padding-bottom: 25px;
     padding-inline: 20px; }
 
@@ -582,8 +582,7 @@ input[type="search"]::-webkit-search-results-decoration {
   padding-top: 187px;
   padding-inline: 40px; }
   .sport-section__header {
-    margin: 0;
-    margin-bottom: 40px;
+    margin: 0 0 40px;
     font-weight: 600;
     font-size: 2rem;
     color: #f5f5f5;
@@ -603,8 +602,6 @@ input[type="search"]::-webkit-search-results-decoration {
     border-radius: 12px;
     width: 420px;
     height: 235px; }
-  .sport-section a {
-    position: relative; }
   .sport-section a:hover .sport-section__h3 {
     transition: 0.3s;
     color: #ea377b; }
@@ -623,7 +620,9 @@ input[type="search"]::-webkit-search-results-decoration {
     top: 50%;
     left: 50%; }
   .sport-section a {
-    display: inline-block; }
+    display: inline-block;
+    position: relative;
+    border-radius: 12px; }
 
 .category-section,
 .facilities-section {
@@ -661,7 +660,7 @@ input[type="search"]::-webkit-search-results-decoration {
   .category-section__header,
   .facilities-section__header {
     margin: 0;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
     font-weight: 400;
     font-size: 1.5rem;
     color: #f5f5f5;
@@ -669,7 +668,7 @@ input[type="search"]::-webkit-search-results-decoration {
     font-family: "Montserrat", sans-serif; }
   .category-section__img,
   .facilities-section__img {
-    margin-top: 20px; }
+    padding-top: 20px; }
 
 .category-section__main-header,
 .product-section__main-header,
@@ -797,7 +796,7 @@ input[type="search"]::-webkit-search-results-decoration {
   .choose-us-section__container img {
     margin-right: 25px; }
 .choose-us-section__description {
-  margin-right: 0px; }
+  margin-right: 0; }
 
 .facilities-section__link {
   display: none; }
@@ -1010,6 +1009,9 @@ input[type="search"]::-webkit-search-results-decoration {
   .choose-us-section__container {
     max-width: 1200px; }
 
+  .sport-section__container {
+    max-width: 950px; }
+
   .footer__container-1 {
     max-width: 1200px; } }
 @media (max-width: 1280px) {
@@ -1027,7 +1029,7 @@ input[type="search"]::-webkit-search-results-decoration {
   .header__logo {
     width: 75px;
     height: 50px; }
-  .header__link, .header__sign-in, .header__sign-up, .header__span, .header__link--active {
+  .header__link, .header__sign-in, .header__sign-up, .header__span, .header__link--active, .header input[type="search"] {
     font-size: 0.8rem; }
   .header__circle {
     width: 24px;
@@ -1038,8 +1040,6 @@ input[type="search"]::-webkit-search-results-decoration {
   .header__input, .header__input-container {
     width: 160px;
     height: 30px; }
-  .header input[type="search"] {
-    font-size: 0.8rem; }
   .header__input::placeholder {
     font-size: 0.9rem; }
   .header__search-icon {
@@ -1088,14 +1088,12 @@ input[type="search"]::-webkit-search-results-decoration {
     .sport-section__list {
       column-gap: 40px; }
 
-  .category-section__main-header, .category-section__link, .facilities-section__main-header, .facilities-section__link {
+  .category-section__main-header, .category-section__link, .facilities-section__main-header, .facilities-section__link, .product-section__main-header, .product-section__link, .trending-section__main-header, .trending-section__link, .popular-section__main-header, .popular-section__link {
     font-size: 1.75rem; }
-  .category-section__header, .facilities-section__header {
+  .category-section__header, .facilities-section__header, .product-section__header, .trending-section__header, .popular-section__header {
     font-size: 1.25rem; }
 
-  .product-section__main-header, .product-section__link, .trending-section__main-header, .trending-section__link, .popular-section__main-header, .popular-section__link {
-    font-size: 1.75rem; }
-  .product-section__header, .product-section__price, .trending-section__header, .trending-section__price, .popular-section__header, .popular-section__price {
+  .category-section__price, .facilities-section__price, .product-section__price {
     font-size: 1.25rem; }
 
   .about-us-section__main-header, .choose-us-section__main-header {
@@ -1114,5 +1112,89 @@ input[type="search"]::-webkit-search-results-decoration {
     font-size: 1rem; }
   .footer__info, .footer__company-list, .footer__support-list {
     margin-right: 50px; } }
+@media (max-width: 1024px) {
+  .category-section__main-header, .category-section__link, .facilities-section__main-header, .facilities-section__link {
+    font-size: 1.35rem; }
+
+  .header__container-1 {
+    position: relative;
+    width: 100%;
+    justify-content: space-between; }
+  .header__nav {
+    width: 100%;
+    position: absolute;
+    top: 60px; }
+  .header__input, .header__input-container {
+    width: 250px; }
+
+  .advantages-section__container {
+    margin-left: 15%; }
+
+  .sport-section__list {
+    max-width: 620px;
+    margin-inline: auto; }
+  .sport-section__item img {
+    width: 300px;
+    height: 168px; }
+  .sport-section__item:last-child h3 {
+    font-size: 1.35rem;
+    padding-inline: 30px; }
+
+  .category-section__img, .facilities-section__img {
+    width: 75px;
+    height: 75px; }
+  .category-section__list, .facilities-section__list {
+    column-gap: 25px; }
+  .category-section__item h3, .facilities-section__item h3 {
+    margin-top: 10px; }
+  .category-section__item:last-child h3, .facilities-section__item:last-child h3 {
+    padding-bottom: 18px; }
+  .category-section__header, .facilities-section__header {
+    font-size: 0.85rem; }
+
+  .facilities-section__item:last-child h3 {
+    padding-bottom: 25px; }
+
+  .product-section__container, .trending-section__container, .popular-section__container, .category-section__container, .facilities-section__container {
+    max-width: 700px; }
+  .product-section img, .trending-section img, .popular-section img, .category-section img, .facilities-section img {
+    width: 130px;
+    height: 130px; }
+  .product-section__item, .trending-section__item, .popular-section__item, .category-section__item, .facilities-section__item {
+    height: 100%; }
+  .product-section__header, .trending-section__header, .popular-section__header, .category-section__header, .facilities-section__header {
+    font-size: 1rem; }
+  .product-section__price, .trending-section__price, .popular-section__price, .category-section__price, .facilities-section__price {
+    font-size: 0.8rem; }
+
+  .main__btn {
+    max-width: 110px;
+    padding: 12px;
+    font-size: 0.75rem; }
+
+  .product-section__main-header, .product-section__link, .trending-section__main-header, .trending-section__link, .popular-section__main-header, .popular-section__link {
+    font-size: 1.35rem; }
+
+  .about-us-section__container, .choose-us-section__container {
+    max-width: 700px; }
+  .about-us-section img, .choose-us-section img {
+    width: 320px;
+    height: 222px; }
+  .about-us-section__text, .choose-us-section__text {
+    font-size: 0.8rem; }
+  .about-us-section__main-header, .choose-us-section__main-header {
+    font-size: 1.35rem; }
+
+  .footer__info img {
+    width: 100px;
+    height: 73px; }
+  .footer__container-1 {
+    max-width: 700px;
+    position: relative; }
+  .footer__company-list, .footer__info {
+    margin-right: 15px; }
+  .footer__social {
+    position: absolute;
+    transform: translateX(55%); } }
 
 /*# sourceMappingURL=App.css.map */

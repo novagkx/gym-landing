@@ -1,7 +1,7 @@
-import {sportsVarieties} from "../data";
+import {sportsVarieties, sportsVarieties1024} from "../data";
 import TrainingItem from "./TrainingItem";
 
-export default function TrainingProgramsSection() {
+export default function TrainingProgramsSection({isSmall}) {
     return (
         <section className="sport-section">
             <div className="sport-section__container">
@@ -9,13 +9,10 @@ export default function TrainingProgramsSection() {
                     Explore Our Dynamic Training Programs
                 </h2>
                 <ul className="sport-section__list">
-                    {sportsVarieties.map((item) => <TrainingItem key={item.src} src={item.src}
-                                                                          alt={item.alt}>{item.name}</TrainingItem>)}
-                    {/*{isSmall*/}
-                    {/*    ? sportsVarieties1024.map((item) => <TrainingItem key={item.src} src={item.src}*/}
-                    {/*                                                  alt={item.alt}>{item.name}</TrainingItem>)*/}
-                    {/*    : sportsVarieties.map((item) => <TrainingItem key={item.src} src={item.src}*/}
-                    {/*                                                      alt={item.alt}>{item.name}</TrainingItem>)}*/}
+                    {isSmall && sportsVarieties1024.map((item) => <TrainingItem key={item.src} src={item.src}
+                                                                                alt={item.alt}>{item.name}</TrainingItem>)}
+                    {!isSmall && sportsVarieties.map((item) => <TrainingItem key={item.src} src={item.src}
+                                                                             alt={item.alt}>{item.name}</TrainingItem>)}
 
 
                 </ul>
