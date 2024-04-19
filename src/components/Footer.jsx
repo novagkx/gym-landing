@@ -5,10 +5,10 @@ const Footer = () => {
     <div className="footer__container-1">
     <div className="footer__container">
         <div className="footer__info">
-            <img src="src/images/gym-logo-footer.svg" alt="" className="footer__gym-logo" />
+            <img src="src/images/gym-logo-footer.svg" alt="gym logo" className="footer__gym-logo" />
             <p className="footer__description">Welcome to [Your Gym Name], where fitness meets passion,
-and every drop of sweat tells a story of dedication. Our gym isn't 
-just a place to work out; it's a community, a lifestyle, and 
+and every drop of sweat tells a story of dedication. Our gym isn&apos;t
+just a place to work out; it&apos;s a community, a lifestyle, and
 a commitment to your well-being.</p>
         </div>
         <div className="footer__company-list">
