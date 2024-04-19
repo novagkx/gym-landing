@@ -120,6 +120,8 @@ export const supportInfo = [
   { info: "Help Center" },
   { info: "How it works" },
 ];
+
+
 export const sportsVarieties = [
   { name: "yoga", src:"src/images/yoga.jpg", alt:"picture of a girl doing yoga" },
   { name: "fitness", src: "src/images/fitness.jpg", alt:"picture of a girl doing fitness" },
@@ -128,3 +130,11 @@ export const sportsVarieties = [
   { name: "workout", src: "src/images/workout.jpg", alt:"picture of a girl doing deadlift"},
   { name: "bodybuilding", src: "src/images/bodybuilding.jpg", alt:"picture of a man posing his muscles"},
 ];
+// export const sportsVarieties1024 = [
+//   { name: "yoga", src:"src/images/yoga360.jpg", alt:"picture of a girl doing yoga" },
+//   { name: "fitness", src: "src/images/fitness360.jpg", alt:"picture of a girl doing fitness" },
+//   { name: "cardio", src: "src/images/cardio360.jpg", alt:"picture of a man doing cardio at the bicycle exercise machine"},
+//   { name: "zumba", src: "src/images/zumba360.jpg", alt:"picture of many guys do zumba sport"},
+//   { name: "workout", src: "src/images/workout360.jpg", alt:"picture of a girl doing deadlift"},
+//   { name: "bodybuilding", src: "src/images/bodybuilding360.jpg", alt:"picture of a man posing his muscles"},
+// ];

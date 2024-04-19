@@ -15,10 +15,12 @@ $maxWidthContainer: 1360px;
   text-transform: $text-transform;
   font-family: $font-family;
 }
+
 @mixin size($width, $height) {
   width: $width;
   height: $height;
 }
+
 @mixin centering {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -35,6 +37,7 @@ $maxWidthContainer: 1360px;
   justify-content: $justify-content;
   align-items: $align-items;
 }
+
 @mixin reset-list {
   margin: 0;
   padding: 0;
@@ -59,6 +62,7 @@ $maxWidthContainer: 1360px;
   font-weight: 400;
   src: url("fonts/Montserrat-Regular.woff2") format("woff2");
 }
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -421,6 +425,7 @@ template {
     margin-inline: auto;
   }
 }
+
 .product-section,
 .trending-section,
 .popular-section,
@@ -434,12 +439,14 @@ template {
     margin-inline: auto;
   }
 }
+
 .about-us-section,
 .choose-us-section {
   &__container {
     display: flex;
   }
 }
+
 .advantages-section {
   &__condition-container,
   &__container-2 {
@@ -452,11 +459,12 @@ template {
   background-color: $dark-purple;
   @include flex-container(flex, space-between, center);
   padding-inline: 40px;
+
   &__container-1,
   &__container {
     @include flex-container(
-      flex,
-      $align-items: center
+                    flex,
+            $align-items: center
     ); // we don't need use the justify-content, then ...
   }
 
@@ -470,15 +478,19 @@ template {
     @include reset-list();
     text-align: center;
   }
+
   &__li {
     margin-right: 20px;
   }
+
   &__li:last-child {
     margin-right: 0px;
   }
+
   &__nav {
     margin-right: 70px;
   }
+
   &__sign-in,
   &__sign-up,
   &__link,
@@ -486,6 +498,7 @@ template {
     text-decoration: none;
     color: currentColor;
   }
+
   &__li,
   &__sign-in,
   &__sign-up,
@@ -502,9 +515,11 @@ template {
     font-family: $font-family;
     box-sizing: border-box;
   }
+
   &__input::placeholder {
     font-size: 1rem;
   }
+
   &__link--active {
     color: $pink;
   }
@@ -512,6 +527,7 @@ template {
   &__icons {
     display: flex;
   }
+
   &__basket,
   &__favorites {
     cursor: pointer;
@@ -520,15 +536,18 @@ template {
     @include size(24px, 24px); // размеры для svg
     border-radius: 50%;
   }
+
   &__circle {
     border-radius: 50%;
     background-color: $light-purple;
   }
+
   &__circle:first-child {
     border: 1px solid #000;
     box-sizing: border-box;
     margin-right: 14px;
   }
+
   &__search-icon {
     @include size(18px, 18px);
     right: 20px;
@@ -542,6 +561,7 @@ template {
     margin-right: 14px;
     color: #fff;
   }
+
   &__input-container {
     position: relative; //для позиционирования иконки поиска
     margin-right: 30px;
@@ -560,6 +580,7 @@ template {
   &__sign-up:hover {
     color: currentColor;
   }
+
   &__link::before,
   &__sign-in::before,
   &__sign-up::before {
@@ -573,6 +594,7 @@ template {
     transform: scaleX(0);
     transition: transform 0.3s ease;
   }
+
   &__link:hover::before,
   &__sign-in:hover::before,
   &__sign-up:hover::before {
@@ -604,7 +626,7 @@ input[type="search"]::-webkit-search-results-decoration {
   box-sizing: border-box;
   height: 500px;
   background-image: url("src/images/smoke.png"),
-    url("src/images/sport-girl.png");
+  url("src/images/sport-girl.png");
   background-repeat: no-repeat no-repeat;
   background-size: 1440px 500px, 360px 475px;
   background-position: center, calc(50% + 175px) center; // position in the center of the section as in figma
@@ -615,11 +637,13 @@ input[type="search"]::-webkit-search-results-decoration {
     margin-left: 232px;
     max-width: 520px;
   }
+
   &__description {
     @include text(500, 1.25rem, #fff, uppercase);
     margin-top: 15px;
     margin-bottom: 30px;
   }
+
   &__condition-list {
     @include reset-list();
     display: flex;
@@ -632,6 +656,7 @@ input[type="search"]::-webkit-search-results-decoration {
   &__h3 {
     text-transform: uppercase;
   }
+
   &__info {
     @include text(500, 1.25rem, #fff, uppercase);
   }
@@ -642,6 +667,7 @@ input[type="search"]::-webkit-search-results-decoration {
     margin-bottom: 15px;
     letter-spacing: 0.05em;
   }
+
   &__span {
     color: $pink;
   }
@@ -652,12 +678,14 @@ input[type="search"]::-webkit-search-results-decoration {
 
   &__condition-container {
     margin-top: 90px;
+
     .advantages-section__info {
       @include text(400, 1rem, #4b4e68, none);
       line-height: 1.35;
       text-align: center;
     }
   }
+
   &__item {
     border: 1px solid #ea377b;
     border-radius: 5px;
@@ -665,6 +693,7 @@ input[type="search"]::-webkit-search-results-decoration {
     padding-top: 25px;
     margin-right: 32px;
   }
+
   // &__item:first-child {
   //   margin-left: 30px;
   //   padding-top: 15px;
@@ -684,17 +713,21 @@ input[type="search"]::-webkit-search-results-decoration {
     &:first-child {
       margin-left: 30px;
       padding-top: 15px;
+
       h3 {
         margin-top: 0px;
       }
     }
+
     &:last-child {
       padding-top: 15px;
+
       h3 {
         margin-top: 10px;
       }
     }
   }
+
   &__h3 {
     color: $dark-purple;
     font-family: $font-family;
@@ -702,6 +735,7 @@ input[type="search"]::-webkit-search-results-decoration {
     margin-block: 10px;
     font-size: 1.25rem;
   }
+
   &__info {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -731,6 +765,7 @@ input[type="search"]::-webkit-search-results-decoration {
   border: none;
   cursor: pointer;
 }
+
 .main__btn:hover,
 .category-section__link:hover,
 .facilities-section__link:hover,
@@ -740,10 +775,12 @@ input[type="search"]::-webkit-search-results-decoration {
   color: $color-gray;
   transition: 0.3s;
 }
+
 .sport-section {
   background-color: $dark-purple;
   padding-top: 187px;
   padding-inline: 40px;
+
   &__header {
     margin: 0;
     margin-bottom: 40px;
@@ -759,6 +796,7 @@ input[type="search"]::-webkit-search-results-decoration {
     row-gap: 40px;
     @include reset-list();
   }
+
   &__item {
     img {
       border-radius: 12px;
@@ -766,15 +804,18 @@ input[type="search"]::-webkit-search-results-decoration {
       height: 235px;
     }
   }
+
   a {
     position: relative;
   }
+
   a:hover {
     .sport-section__h3 {
       transition: 0.3s;
       color: $pink;
     }
   }
+
   &__h3 {
     margin: 0;
     padding: 16px 55px;
@@ -783,6 +824,7 @@ input[type="search"]::-webkit-search-results-decoration {
     border-radius: 5px;
     @include centering();
   }
+
   a {
     // display: block;
     // @include size(100%, 100%);
@@ -804,6 +846,7 @@ input[type="search"]::-webkit-search-results-decoration {
     background-color: $light-purple;
     border-radius: 5px;
     width: 300px;
+
     a {
       @include flex-container(flex, $align-items: center);
       flex-direction: column-reverse;
@@ -811,6 +854,7 @@ input[type="search"]::-webkit-search-results-decoration {
       text-decoration: none;
       color: currentColor;
     }
+
     a:hover {
       .category-section__header,
       .facilities-section__header {
@@ -819,11 +863,13 @@ input[type="search"]::-webkit-search-results-decoration {
       }
     }
   }
+
   &__header {
     margin: 0;
     margin-bottom: 20px;
     @include text(400, 1.5rem, $color-light-gray);
   }
+
   &__img {
     margin-top: 20px;
   }
@@ -838,10 +884,12 @@ input[type="search"]::-webkit-search-results-decoration {
     margin: 0;
     @include text(600, 2rem, $color-light-gray, uppercase);
   }
+
   &__info-container {
     @include flex-container(flex, space-between, center);
     margin-bottom: 40px;
   }
+
   &__link {
     @include text(400, 2rem, $color-light-gray);
     text-decoration: none;
@@ -858,6 +906,7 @@ input[type="search"]::-webkit-search-results-decoration {
     @include reset-list();
     column-gap: 44px;
   }
+
   &__item {
     @include flex-container(flex, $align-items: center);
     position: relative;
@@ -868,14 +917,17 @@ input[type="search"]::-webkit-search-results-decoration {
     box-sizing: border-box;
     padding-block: 52px;
   }
+
   &__header {
     margin: 0;
     @include text(500, 1.5rem, $color-light-gray);
   }
+
   &__price {
     display: block;
     @include text(500, 1.5rem, $color-light-gray);
   }
+
   &__img,
   &__header,
   &__price {
@@ -891,31 +943,38 @@ input[type="search"]::-webkit-search-results-decoration {
   &__main-header {
     margin: 0;
   }
+
   &__text {
     @include text(400, 1.5rem, $color-gray);
     line-height: 2;
   }
+
   &__img img {
     @include size(654px, 453px);
     border: 1px solid #000;
     border-radius: 12px;
     margin-bottom: 10px;
   }
+
   &__main-header {
     margin-bottom: 15px;
     @include text(600, 2rem, $color-light-gray, uppercase);
   }
+
   &__description {
     margin-right: 25px;
   }
 }
+
 .choose-us-section {
   &__container {
     flex-direction: row-reverse;
+
     img {
       margin-right: 25px;
     }
   }
+
   &__description {
     margin-right: 0px;
   }
@@ -925,6 +984,7 @@ input[type="search"]::-webkit-search-results-decoration {
   &__link {
     display: none;
   }
+
   &__item {
     img {
       padding-top: 25px;
@@ -932,6 +992,7 @@ input[type="search"]::-webkit-search-results-decoration {
       margin-top: 0;
     }
   }
+
   &__header {
     margin-bottom: 0;
     padding-bottom: 25px;
@@ -946,6 +1007,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .footer {
   background-color: $light-purple;
+
   &__description {
     @include text(400, 1rem, #a1a1a1);
     line-height: 1.57;
@@ -955,10 +1017,12 @@ input[type="search"]::-webkit-search-results-decoration {
   &__container {
     display: flex;
   }
+
   &__social-list,
   &__list {
     list-style-type: none;
   }
+
   &__gym-logo {
     @include size(224px, 149px);
   }
@@ -969,69 +1033,85 @@ input[type="search"]::-webkit-search-results-decoration {
     padding: 0;
     display: flex;
   }
+
   &__info,
   &__list {
     flex-direction: column;
   }
+
   &__company-list,
   &__support-list {
     margin-right: 130px;
   }
+
   &__social-list {
     column-gap: 14px;
   }
+
   &__social-link {
     display: block;
     @include size(30px, 30px);
     border-radius: 50%;
     background-color: #4b4e68;
     position: relative;
+
     svg {
       @include centering();
     }
   }
+
   &__header {
     margin-top: 40px;
     @include text(500, 1.25rem, #d9d9d9);
     line-height: 1.57;
   }
+
   &__company-list {
     h2 {
       margin-bottom: 26px;
     }
+
     ul {
       width: 150px;
     }
   }
+
   &__support-list {
     h2 {
       margin-bottom: 17px;
     }
+
     ul {
       width: 105px;
     }
   }
+
   &__social {
     h2 {
       margin-bottom: 10px;
     }
   }
+
   &__link {
     @include text(400, 1rem, #a1a1a1);
     text-decoration: none;
     line-height: 1.57;
     margin-bottom: 5px;
   }
+
   &__link:last-child {
     margin-bottom: 0;
   }
+
   &__info {
     margin-right: 130px;
+
     img {
       margin-top: 40px;
       margin-bottom: 25px;
     }
   }
+
   &__link:hover {
     color: $color-light-gray;
     transition: 0.3s;
@@ -1083,15 +1163,18 @@ input[type="search"]::-webkit-search-results-decoration {
     &__link--active {
       @include text(500, 1.25rem, #fff, uppercase);
     }
+
     &__link--active {
       color: $pink;
     }
+
     &__input::placeholder {
       font-size: 1.25rem;
     }
   }
   .sport-section {
     padding-top: 210px;
+
     &__list {
       column-gap: 120px;
       row-gap: 60px;
@@ -1116,16 +1199,20 @@ input[type="search"]::-webkit-search-results-decoration {
     &__support-list ul {
       width: 190px;
     }
+
     &__header {
       width: 230px;
     }
+
     &__description,
     &__link {
       font-size: 1.25rem;
     }
+
     &__header {
       font-size: 1.5rem;
     }
+
     &__info {
       margin-right: 90px;
     }
@@ -1140,10 +1227,12 @@ input[type="search"]::-webkit-search-results-decoration {
     &__input {
       width: 200px;
     }
+
     &__logo,
     &__nav {
       margin-right: 30px;
     }
+
     &__li,
     &__sign-in,
     &__sign-up,
@@ -1151,9 +1240,11 @@ input[type="search"]::-webkit-search-results-decoration {
     &__link--active {
       @include text(500, 0.9rem, #fff, uppercase);
     }
+
     &__link--active {
       color: $pink;
     }
+
     &__input::placeholder {
       font-size: 1rem;
     }
@@ -1162,16 +1253,20 @@ input[type="search"]::-webkit-search-results-decoration {
     &__condition-container {
       max-width: $maxWidthContainer;
     }
+
     &__h3 {
       font-size: 1rem;
     }
+
     &__item {
       margin-right: 15px;
     }
+
     &__item:last-child {
       margin-left: 0;
       margin-right: 30px;
     }
+
     &__condition-list {
       max-width: 1050px;
     }
@@ -1186,6 +1281,7 @@ input[type="search"]::-webkit-search-results-decoration {
     &__header {
       text-align: center;
     }
+
     &__list {
       // grid-template-columns: 420px 420px;
       grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 столбца, равномерно распределенные */
@@ -1193,6 +1289,7 @@ input[type="search"]::-webkit-search-results-decoration {
       justify-content: center;
       column-gap: 50px;
     }
+
     &__item {
       text-align: center;
     }
@@ -1216,7 +1313,6 @@ input[type="search"]::-webkit-search-results-decoration {
       max-width: $maxWidthContainer;
     }
   }
-
   .footer {
     &__container-1 {
       max-width: $maxWidthContainer;
@@ -1224,4 +1320,150 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 
-//adaptive for < 1249 ...
+//adaptive for 1024 < x< 1281 ...
+@media (max-width: 1280px){
+  $maxWidthContainer: 950px;
+  .about-us-section__container, .facilities-section__container, .choose-us-section__container, .advantages-section__condition-container, .category-section__container, .product-section__container,.popular-section__container, .trending-section__container {
+    max-width: $maxWidthContainer;
+  }
+  .sport-section__list, .sport-section__container{
+    max-width: $maxWidthContainer - 80px;
+  }
+  .main__btn {
+    font-size: 0.9rem;
+    padding: 14px;
+    max-width: 130px;
+  }
+  .header{
+    &__logo {
+      @include size(75px, 50px);
+    }
+    &__link, &__sign-in, &__sign-up, &__span, &__link--active {
+      font-size: 0.8rem;
+    }
+    &__circle {
+      @include size(24px, 24px);
+      svg {
+        @include size(18px, 18px);
+      }
+    }
+    &__input, &__input-container {
+      @include size(160px, 30px);
+    }
+    input[type="search"] {
+      font-size: 0.8rem;
+    }
+    &__input::placeholder {
+      font-size: 0.9rem;
+    }
+    &__search-icon {
+      svg{
+        @include size(14px, 14px);
+      }
+      bottom: 4px;
+    }
+    &__input-container, &__nav, &__logo {
+      margin-right: 20px;
+    }
+  }
+  .advantages-section {
+    background-position: center, calc(50% + 260px) center;
+    &__name {
+      font-size: 2rem;
+    }
+    &__description {
+      font-size: 1rem;
+    }
+    &__condition-list {
+      max-width: $maxWidthContainer - 200px;
+    }
+    &__item {
+      svg {
+        @include size(40px, 40px);
+      }
+    }
+    &__condition-container, &__info {
+      padding-inline: 10px;
+      padding-bottom: 15px;
+    }
+    &__h3 {
+      font-size: 0.9rem ;
+    }
+    &__condition-container &__info {
+      font-size: 0.8rem;
+    }
+    &__item {
+      margin-right: 15px;
+      padding-top: 15px;
+      margin-block: 18px;
+    }
+    &__item:first-child {
+      svg {
+        padding-bottom: 10px;
+      }
+      margin-left: 20px;
+    }
+    &__item:last-child {
+      margin-right: 20px;
+    }
+  }
+  .sport-section {
+    padding-top: 130px;
+    &__header {
+      font-size: 1.75rem;
+    }
+    &__h3 {
+      font-size: 1.5rem;
+    }
+    &__list {
+      column-gap: 40px;
+    }
+  }
+  .category-section,.facilities-section {
+    &__main-header, &__link {
+      font-size: 1.75rem;
+    }
+    &__header {
+      font-size: 1.25rem;
+    }
+  }
+
+  .product-section, .trending-section, .popular-section {
+    &__main-header, &__link {
+      font-size: 1.75rem;
+    }
+    &__header, &__price {
+      font-size: 1.25rem;
+    }
+  }
+  .about-us-section,.choose-us-section {
+    &__main-header {
+      font-size: 1.75rem;
+    }
+    &__text {
+      font-size: 1rem;
+    }
+  }
+  .footer {
+    &__container-1 {
+      max-width: $maxWidthContainer;
+    }
+    &__gym-logo {
+      @include size(155px, 110px);
+    }
+    &__description, &__link {
+      font-size: 0.9rem;
+    }
+    &__header {
+      font-size: 1rem;
+    }
+    &__info, &__company-list, &__support-list {
+      margin-right: 50px;
+    }
+  }
+}
+
+//adaptive for 768 < x < 1024
+
+//adaptive for 480 < x < 768
+//adaptive for 320 < x < 480

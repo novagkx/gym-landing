@@ -2,18 +2,15 @@
 @font-face {
   font-family: "Montserrat";
   font-weight: 600;
-  src: url("fonts/Montserrat-SemiBold.woff2") format("woff2");
-}
+  src: url("fonts/Montserrat-SemiBold.woff2") format("woff2"); }
 @font-face {
   font-family: "Montserrat";
   font-weight: 500;
-  src: url("fonts/Montserrat-Medium.woff2") format("woff2");
-}
+  src: url("fonts/Montserrat-Medium.woff2") format("woff2"); }
 @font-face {
   font-family: "Montserrat";
   font-weight: 400;
-  src: url("fonts/Montserrat-Regular.woff2") format("woff2");
-}
+  src: url("fonts/Montserrat-Regular.woff2") format("woff2"); }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -22,9 +19,10 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-}
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
 
 /* Sections
      ========================================================================== */
@@ -33,15 +31,13 @@ html {
    */
 body {
   color: #aeafb7;
-  margin: 0;
-}
+  margin: 0; }
 
 /**
    * Render the `main` element consistently in IE.
    */
 main {
-  display: block;
-}
+  display: block; }
 
 /**
    * Correct the font size and margin on `h1` elements within `section` and
@@ -49,8 +45,7 @@ main {
    */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
-}
+  margin: 0.67em 0; }
 
 /* Grouping content
      ========================================================================== */
@@ -59,20 +54,22 @@ h1 {
    * 2. Show the overflow in Edge and IE.
    */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
-}
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
 
 /**
    * 1. Correct the inheritance and scaling of font size in all browsers.
    * 2. Correct the odd `em` font sizing in all browsers.
    */
 pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
 
 /* Text-level semantics
      ========================================================================== */
@@ -80,27 +77,26 @@ pre {
    * Remove the gray background on active links in IE 10.
    */
 a {
-  background-color: transparent;
-}
+  background-color: transparent; }
 
 /**
    * 1. Remove the bottom border in Chrome 57-
    * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
    */
 abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
-}
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
 
 /**
    * Add the correct font weight in Chrome, Edge, and Safari.
    */
 b,
 strong {
-  font-weight: bolder;
-}
+  font-weight: bolder; }
 
 /**
    * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -109,16 +105,16 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
 
 /**
    * Add the correct font size in all browsers.
    */
 small {
-  font-size: 80%;
-}
+  font-size: 80%; }
 
 /**
    * Prevent `sub` and `sup` elements from affecting the line height in
@@ -129,16 +125,13 @@ sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
 sub {
-  bottom: -0.25em;
-}
+  bottom: -0.25em; }
 
 sup {
-  top: -0.5em;
-}
+  top: -0.5em; }
 
 /* Embedded content
      ========================================================================== */
@@ -146,8 +139,7 @@ sup {
    * Remove the border on images inside links in IE 10.
    */
 img {
-  border-style: none;
-}
+  border-style: none; }
 
 /* Forms
      ========================================================================== */
@@ -160,11 +152,14 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
-}
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
 
 /**
    * Show the overflow in IE.
@@ -173,8 +168,7 @@ textarea {
 button,
 input {
   /* 1 */
-  overflow: visible;
-}
+  overflow: visible; }
 
 /**
    * Remove the inheritance of text transform in Edge, Firefox, and IE.
@@ -183,46 +177,41 @@ input {
 button,
 select {
   /* 1 */
-  text-transform: none;
-}
+  text-transform: none; }
 
 /**
    * Correct the inability to style clickable types in iOS and Safari.
    */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
-  -webkit-appearance: button;
-}
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
 
 /**
    * Remove the inner border and padding in Firefox.
    */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
-  padding: 0;
-}
+  padding: 0; }
 
 /**
    * Restore the focus styles unset by the previous rule.
    */
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
 
 /**
    * Correct the padding in Firefox.
    */
 fieldset {
-  padding: 0.35em 0.75em 0.625em;
-}
+  padding: 0.35em 0.75em 0.625em; }
 
 /**
    * 1. Correct the text wrapping in Edge and IE.
@@ -231,72 +220,74 @@ fieldset {
    *    `fieldset` elements in all browsers.
    */
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
-}
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
 
 /**
    * Add the correct vertical alignment in Chrome, Firefox, and Opera.
    */
 progress {
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
 /**
    * Remove the default vertical scrollbar in IE 10+.
    */
 textarea {
-  overflow: auto;
-}
+  overflow: auto; }
 
 /**
    * 1. Add the correct box sizing in IE 10.
    * 2. Remove the padding in IE 10.
    */
-[type=checkbox],
-[type=radio] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
-}
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
 
 /**
    * Correct the cursor style of increment and decrement buttons in Chrome.
    */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
-  height: auto;
-}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
 
 /**
    * 1. Correct the odd appearance in Chrome and Safari.
    * 2. Correct the outline style in Safari.
    */
-[type=search] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
-}
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
 
 /**
    * Remove the inner padding in Chrome and Safari on macOS.
    */
-[type=search]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
 
 /**
    * 1. Correct the inability to style clickable types in iOS and Safari.
    * 2. Change font properties to `inherit` in Safari.
    */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
-}
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
 
 /* Interactive
      ========================================================================== */
@@ -304,15 +295,13 @@ textarea {
    * Add the correct display in Edge, IE 10+, and Firefox.
    */
 details {
-  display: block;
-}
+  display: block; }
 
 /*
    * Add the correct display in all browsers.
    */
 summary {
-  display: list-item;
-}
+  display: list-item; }
 
 /* Misc
      ========================================================================== */
@@ -320,21 +309,18 @@ summary {
    * Add the correct display in IE 10+.
    */
 template {
-  display: none;
-}
+  display: none; }
 
 /**
    * Add the correct display in IE 10.
    */
 [hidden] {
-  display: none;
-}
+  display: none; }
 
 .header__container-1,
 .footer__container-1 {
   max-width: 1360px;
-  margin-inline: auto;
-}
+  margin-inline: auto; }
 
 .product-section__container,
 .trending-section__container,
@@ -345,316 +331,217 @@ template {
 .about-us-section__container,
 .choose-us-section__container {
   max-width: 1360px;
-  margin-inline: auto;
-}
+  margin-inline: auto; }
 
 .about-us-section__container,
 .choose-us-section__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
+  display: flex; }
 
 .advantages-section__condition-container, .advantages-section__container-2 {
   max-width: 1360px;
-  margin-inline: auto;
-}
+  margin-inline: auto; }
 
 .header {
   background-color: #090d28;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-inline: 40px;
-}
-.header__container-1, .header__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: normal;
-      -ms-flex-pack: normal;
-          justify-content: normal;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.header__logo {
-  width: 120px;
-  height: 80px;
-  margin-right: 70px;
-}
-.header__ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: normal;
-      -ms-flex-pack: normal;
-          justify-content: normal;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  text-align: center;
-}
-.header__li {
-  margin-right: 20px;
-}
-.header__li:last-child {
-  margin-right: 0px;
-}
-.header__nav {
-  margin-right: 70px;
-}
-.header__sign-in, .header__sign-up, .header__link, .header__link--active {
-  text-decoration: none;
-  color: currentColor;
-}
-.header__li, .header__sign-in, .header__sign-up, .header__span, .header__link--active {
-  font-weight: 500;
-  font-size: 1rem;
-  color: #fff;
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-}
-.header__input {
-  background-color: #1b1f3e;
-  border: none;
-  border-radius: 10px;
-  width: 305px;
-  height: 40px;
-  font-family: "Montserrat", sans-serif;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-.header__input::-webkit-input-placeholder {
-  font-size: 1rem;
-}
-.header__input::-moz-placeholder {
-  font-size: 1rem;
-}
-.header__input:-ms-input-placeholder {
-  font-size: 1rem;
-}
-.header__input::-ms-input-placeholder {
-  font-size: 1rem;
-}
-.header__input::placeholder {
-  font-size: 1rem;
-}
-.header__link--active {
-  color: #ea377b;
-}
-.header__icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.header__basket, .header__favorites {
-  cursor: pointer;
-  display: block;
-  padding: 3px;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-}
-.header__circle {
-  border-radius: 50%;
-  background-color: #1b1f3e;
-}
-.header__circle:first-child {
-  border: 1px solid #000;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin-right: 14px;
-}
-.header__search-icon {
-  width: 18px;
-  height: 18px;
-  right: 20px;
-  bottom: 10px;
-  position: absolute;
-  cursor: pointer;
-}
-.header__links {
-  margin-left: 0px;
-  margin-right: 14px;
-  color: #fff;
-}
-.header__input-container {
-  position: relative;
-  margin-right: 30px;
-}
-.header__link, .header__sign-in, .header__sign-up {
-  position: relative;
-  color: currentColor;
-  text-decoration: none;
-}
-.header__link:hover, .header__sign-in:hover, .header__sign-up:hover {
-  color: currentColor;
-}
-.header__link::before, .header__sign-in::before, .header__sign-up::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: currentColor;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-}
-.header__link:hover::before, .header__sign-in:hover::before, .header__sign-up:hover::before {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-}
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 40px; }
+  .header__container-1, .header__container {
+    display: flex;
+    justify-content: normal;
+    align-items: center; }
+  .header__logo {
+    width: 120px;
+    height: 80px;
+    margin-right: 70px; }
+  .header__ul {
+    display: flex;
+    justify-content: normal;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center; }
+  .header__li {
+    margin-right: 20px; }
+  .header__li:last-child {
+    margin-right: 0px; }
+  .header__nav {
+    margin-right: 70px; }
+  .header__sign-in, .header__sign-up, .header__link, .header__link--active {
+    text-decoration: none;
+    color: currentColor; }
+  .header__li, .header__sign-in, .header__sign-up, .header__span, .header__link--active {
+    font-weight: 500;
+    font-size: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif; }
+  .header__input {
+    background-color: #1b1f3e;
+    border: none;
+    border-radius: 10px;
+    width: 305px;
+    height: 40px;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box; }
+  .header__input::placeholder {
+    font-size: 1rem; }
+  .header__link--active {
+    color: #ea377b; }
+  .header__icons {
+    display: flex; }
+  .header__basket, .header__favorites {
+    cursor: pointer;
+    display: block;
+    padding: 3px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%; }
+  .header__circle {
+    border-radius: 50%;
+    background-color: #1b1f3e; }
+  .header__circle:first-child {
+    border: 1px solid #000;
+    box-sizing: border-box;
+    margin-right: 14px; }
+  .header__search-icon {
+    width: 18px;
+    height: 18px;
+    right: 20px;
+    bottom: 10px;
+    position: absolute;
+    cursor: pointer; }
+  .header__links {
+    margin-left: 0px;
+    margin-right: 14px;
+    color: #fff; }
+  .header__input-container {
+    position: relative;
+    margin-right: 30px; }
+  .header__link, .header__sign-in, .header__sign-up {
+    position: relative;
+    color: currentColor;
+    text-decoration: none; }
+  .header__link:hover, .header__sign-in:hover, .header__sign-up:hover {
+    color: currentColor; }
+  .header__link::before, .header__sign-in::before, .header__sign-up::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transition: transform 0.3s ease; }
+  .header__link:hover::before, .header__sign-in:hover::before, .header__sign-up:hover::before {
+    transform: scaleX(1); }
 
-input[type=search] {
+input[type="search"] {
   color: #fff;
   outline: none;
   text-indent: 20px;
-  font-size: 1rem;
-}
+  font-size: 1rem; }
 
-input[type=search]::-webkit-search-decoration,
-input[type=search]::-webkit-search-cancel-button,
-input[type=search]::-webkit-search-results-button,
-input[type=search]::-webkit-search-results-decoration {
-  display: none;
-}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none; }
 
 .advantages-section {
   background-color: #1b1f3e;
   padding-top: 90px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   height: 500px;
   background-image: url("src/images/smoke.png"), url("src/images/sport-girl.png");
   background-repeat: no-repeat no-repeat;
   background-size: 1440px 500px, 360px 475px;
-  background-position: center, calc(50% + 175px) center;
-}
-.advantages-section__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-left: 232px;
-  max-width: 520px;
-}
-.advantages-section__description {
-  font-weight: 500;
-  font-size: 1.25rem;
-  color: #fff;
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-  margin-top: 15px;
-  margin-bottom: 30px;
-}
-.advantages-section__condition-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #fff;
-  text-align: center;
-  max-width: 1144px;
-  margin-inline: auto;
-}
-.advantages-section__h3 {
-  text-transform: uppercase;
-}
-.advantages-section__info {
-  font-weight: 500;
-  font-size: 1.25rem;
-  color: #fff;
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-}
-.advantages-section__name {
-  font-weight: 600;
-  font-size: 2.5rem;
-  color: #fff;
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-  margin-top: 0px;
-  margin-bottom: 15px;
-  letter-spacing: 0.05em;
-}
-.advantages-section__span {
-  color: #ea377b;
-}
-.advantages-section__container-1 {
-  position: relative;
-}
-.advantages-section__condition-container {
-  margin-top: 90px;
-}
-.advantages-section__condition-container .advantages-section__info {
-  font-weight: 400;
-  font-size: 1rem;
-  color: #4b4e68;
-  text-transform: none;
-  font-family: "Montserrat", sans-serif;
-  line-height: 1.35;
-  text-align: center;
-}
-.advantages-section__item {
-  border: 1px solid #ea377b;
-  border-radius: 5px;
-  margin-block: 26px;
-  padding-top: 25px;
-  margin-right: 32px;
-}
-.advantages-section__item:first-child {
-  margin-left: 30px;
-  padding-top: 15px;
-}
-.advantages-section__item:first-child h3 {
-  margin-top: 0px;
-}
-.advantages-section__item:last-child {
-  padding-top: 15px;
-}
-.advantages-section__item:last-child h3 {
-  margin-top: 10px;
-}
-.advantages-section__h3 {
-  color: #090d28;
-  font-family: "Montserrat", sans-serif;
-  margin: 0;
-  margin-block: 10px;
-  font-size: 1.25rem;
-}
-.advantages-section__info {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-bottom: 25px;
-  padding-inline: 20px;
-}
+  background-position: center, calc(50% + 175px) center; }
+  .advantages-section__container {
+    display: flex;
+    justify-content: start;
+    align-items: stretch;
+    flex-direction: column;
+    margin-left: 232px;
+    max-width: 520px; }
+  .advantages-section__description {
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 15px;
+    margin-bottom: 30px; }
+  .advantages-section__condition-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    background-color: #fff;
+    text-align: center;
+    max-width: 1144px;
+    margin-inline: auto; }
+  .advantages-section__h3 {
+    text-transform: uppercase; }
+  .advantages-section__info {
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif; }
+  .advantages-section__name {
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    letter-spacing: 0.05em; }
+  .advantages-section__span {
+    color: #ea377b; }
+  .advantages-section__container-1 {
+    position: relative; }
+  .advantages-section__condition-container {
+    margin-top: 90px; }
+    .advantages-section__condition-container .advantages-section__info {
+      font-weight: 400;
+      font-size: 1rem;
+      color: #4b4e68;
+      text-transform: none;
+      font-family: "Montserrat", sans-serif;
+      line-height: 1.35;
+      text-align: center; }
+  .advantages-section__item {
+    border: 1px solid #ea377b;
+    border-radius: 5px;
+    margin-block: 26px;
+    padding-top: 25px;
+    margin-right: 32px; }
+  .advantages-section__item:first-child {
+    margin-left: 30px;
+    padding-top: 15px; }
+    .advantages-section__item:first-child h3 {
+      margin-top: 0px; }
+  .advantages-section__item:last-child {
+    padding-top: 15px; }
+    .advantages-section__item:last-child h3 {
+      margin-top: 10px; }
+  .advantages-section__h3 {
+    color: #090d28;
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    margin-block: 10px;
+    font-size: 1.25rem; }
+  .advantages-section__info {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 25px;
+    padding-inline: 20px; }
 
 .visually-hidden {
   position: absolute;
@@ -664,8 +551,7 @@ input[type=search]::-webkit-search-results-decoration {
   padding: 0;
   overflow: hidden;
   border: 0;
-  clip: rect(0 0 0 0);
-}
+  clip: rect(0 0 0 0); }
 
 .main__btn {
   font-weight: 600;
@@ -673,16 +559,14 @@ input[type=search]::-webkit-search-results-decoration {
   color: #fff;
   text-transform: none;
   font-family: "Montserrat", sans-serif;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-radius: 10px;
   padding: 14px;
   background-color: #ea377b;
   text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   max-width: 162px;
   border: none;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 .main__btn:hover,
 .category-section__link:hover,
@@ -691,167 +575,101 @@ input[type=search]::-webkit-search-results-decoration {
 .trending-section__link:hover,
 .popular-section__link:hover {
   color: #aeafb7;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
+  transition: 0.3s; }
 
 .sport-section {
   background-color: #090d28;
   padding-top: 187px;
-  padding-inline: 40px;
-}
-.sport-section__header {
-  margin: 0;
-  margin-bottom: 40px;
-  font-weight: 600;
-  font-size: 2rem;
-  color: #f5f5f5;
-  text-transform: none;
-  font-family: "Montserrat", sans-serif;
-  opacity: 0.3;
-}
-.sport-section__list {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 420px 50px 420px 50px 420px;
-  grid-template-columns: 420px 420px 420px;
-  -ms-grid-rows: 1fr 40px 1fr;
-  grid-template-rows: 1fr 1fr;
-  -webkit-column-gap: 50px;
-     -moz-column-gap: 50px;
-          column-gap: 50px;
-  row-gap: 40px;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-.sport-section__list > *:nth-child(1) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-}
-.sport-section__list > *:nth-child(2) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-}
-.sport-section__list > *:nth-child(3) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 5;
-}
-.sport-section__list > *:nth-child(4) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-}
-.sport-section__list > *:nth-child(5) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-}
-.sport-section__list > *:nth-child(6) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 5;
-}
-.sport-section__item img {
-  border-radius: 12px;
-  width: 420px;
-  height: 235px;
-}
-.sport-section a {
-  position: relative;
-}
-.sport-section a:hover .sport-section__h3 {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  color: #ea377b;
-}
-.sport-section__h3 {
-  margin: 0;
-  padding: 16px 55px;
-  background-color: rgba(75, 78, 104, 0.55);
-  font-weight: 600;
-  font-size: 2rem;
-  color: #f5f5f5;
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-  border-radius: 5px;
-  position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-}
-.sport-section a {
-  display: inline-block;
-}
+  padding-inline: 40px; }
+  .sport-section__header {
+    margin: 0;
+    margin-bottom: 40px;
+    font-weight: 600;
+    font-size: 2rem;
+    color: #f5f5f5;
+    text-transform: none;
+    font-family: "Montserrat", sans-serif;
+    opacity: 0.3; }
+  .sport-section__list {
+    display: grid;
+    grid-template-columns: 420px 420px 420px;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 40px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+  .sport-section__item img {
+    border-radius: 12px;
+    width: 420px;
+    height: 235px; }
+  .sport-section a {
+    position: relative; }
+  .sport-section a:hover .sport-section__h3 {
+    transition: 0.3s;
+    color: #ea377b; }
+  .sport-section__h3 {
+    margin: 0;
+    padding: 16px 55px;
+    background-color: rgba(75, 78, 104, 0.55);
+    font-weight: 600;
+    font-size: 2rem;
+    color: #f5f5f5;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 5px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%; }
+  .sport-section a {
+    display: inline-block; }
 
 .category-section,
 .facilities-section {
-  background-color: #090d28;
-}
-.category-section__list,
-.facilities-section__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  -webkit-column-gap: 50px;
-     -moz-column-gap: 50px;
-          column-gap: 50px;
-}
-.category-section__item,
-.facilities-section__item {
-  background-color: #1b1f3e;
-  border-radius: 5px;
-  width: 300px;
-}
-.category-section__item a,
-.facilities-section__item a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: normal;
-      -ms-flex-pack: normal;
-          justify-content: normal;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  color: currentColor;
-}
-.category-section__item a:hover .category-section__header,
-.category-section__item a:hover .facilities-section__header,
-.facilities-section__item a:hover .category-section__header,
-.facilities-section__item a:hover .facilities-section__header {
-  color: #aeafb7;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-.category-section__header,
-.facilities-section__header {
-  margin: 0;
-  margin-bottom: 20px;
-  font-weight: 400;
-  font-size: 1.5rem;
-  color: #f5f5f5;
-  text-transform: none;
-  font-family: "Montserrat", sans-serif;
-}
-.category-section__img,
-.facilities-section__img {
-  margin-top: 20px;
-}
+  background-color: #090d28; }
+  .category-section__list,
+  .facilities-section__list {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    column-gap: 50px; }
+  .category-section__item,
+  .facilities-section__item {
+    background-color: #1b1f3e;
+    border-radius: 5px;
+    width: 300px; }
+    .category-section__item a,
+    .facilities-section__item a {
+      display: flex;
+      justify-content: normal;
+      align-items: center;
+      flex-direction: column-reverse;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: currentColor; }
+    .category-section__item a:hover .category-section__header,
+    .category-section__item a:hover .facilities-section__header,
+    .facilities-section__item a:hover .category-section__header,
+    .facilities-section__item a:hover .facilities-section__header {
+      color: #aeafb7;
+      transition: 0.3s; }
+  .category-section__header,
+  .facilities-section__header {
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #f5f5f5;
+    text-transform: none;
+    font-family: "Montserrat", sans-serif; }
+  .category-section__img,
+  .facilities-section__img {
+    margin-top: 20px; }
 
 .category-section__main-header,
 .product-section__main-header,
@@ -863,24 +681,16 @@ input[type=search]::-webkit-search-results-decoration {
   font-size: 2rem;
   color: #f5f5f5;
   text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-}
+  font-family: "Montserrat", sans-serif; }
 .category-section__info-container,
 .product-section__info-container,
 .popular-section__info-container,
 .trending-section__info-container,
 .facilities-section__info-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 40px;
-}
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px; }
 .category-section__link,
 .product-section__link,
 .popular-section__link,
@@ -891,273 +701,195 @@ input[type=search]::-webkit-search-results-decoration {
   color: #f5f5f5;
   text-transform: none;
   font-family: "Montserrat", sans-serif;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 .product-section,
 .trending-section,
 .popular-section {
-  background-color: #090d28;
-}
-.product-section__list,
-.trending-section__list,
-.popular-section__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  -webkit-column-gap: 44px;
-     -moz-column-gap: 44px;
-          column-gap: 44px;
-}
-.product-section__item,
-.trending-section__item,
-.popular-section__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: normal;
-      -ms-flex-pack: normal;
-          justify-content: normal;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  border: 1px solid #d9d9d9;
-  border-radius: 5px;
-  width: 424px;
-  height: 539px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding-block: 52px;
-}
-.product-section__header,
-.trending-section__header,
-.popular-section__header {
-  margin: 0;
-  font-weight: 500;
-  font-size: 1.5rem;
-  color: #f5f5f5;
-  text-transform: none;
-  font-family: "Montserrat", sans-serif;
-}
-.product-section__price,
-.trending-section__price,
-.popular-section__price {
-  display: block;
-  font-weight: 500;
-  font-size: 1.5rem;
-  color: #f5f5f5;
-  text-transform: none;
-  font-family: "Montserrat", sans-serif;
-}
-.product-section__img, .product-section__header, .product-section__price,
-.trending-section__img,
-.trending-section__header,
-.trending-section__price,
-.popular-section__img,
-.popular-section__header,
-.popular-section__price {
-  margin-bottom: 20px;
-}
+  background-color: #090d28; }
+  .product-section__list,
+  .trending-section__list,
+  .popular-section__list {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    column-gap: 44px; }
+  .product-section__item,
+  .trending-section__item,
+  .popular-section__item {
+    display: flex;
+    justify-content: normal;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    width: 424px;
+    height: 539px;
+    box-sizing: border-box;
+    padding-block: 52px; }
+  .product-section__header,
+  .trending-section__header,
+  .popular-section__header {
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #f5f5f5;
+    text-transform: none;
+    font-family: "Montserrat", sans-serif; }
+  .product-section__price,
+  .trending-section__price,
+  .popular-section__price {
+    display: block;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #f5f5f5;
+    text-transform: none;
+    font-family: "Montserrat", sans-serif; }
+  .product-section__img, .product-section__header, .product-section__price,
+  .trending-section__img,
+  .trending-section__header,
+  .trending-section__price,
+  .popular-section__img,
+  .popular-section__header,
+  .popular-section__price {
+    margin-bottom: 20px; }
 
 .about-us-section,
 .choose-us-section {
-  background-color: #090d28;
-}
-.about-us-section__text, .about-us-section__main-header,
-.choose-us-section__text,
-.choose-us-section__main-header {
-  margin: 0;
-}
-.about-us-section__text,
-.choose-us-section__text {
-  font-weight: 400;
-  font-size: 1.5rem;
-  color: #aeafb7;
-  text-transform: none;
-  font-family: "Montserrat", sans-serif;
-  line-height: 2;
-}
-.about-us-section__img img,
-.choose-us-section__img img {
-  width: 654px;
-  height: 453px;
-  border: 1px solid #000;
-  border-radius: 12px;
-  margin-bottom: 10px;
-}
-.about-us-section__main-header,
-.choose-us-section__main-header {
-  margin-bottom: 15px;
-  font-weight: 600;
-  font-size: 2rem;
-  color: #f5f5f5;
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-}
-.about-us-section__description,
-.choose-us-section__description {
-  margin-right: 25px;
-}
+  background-color: #090d28; }
+  .about-us-section__text, .about-us-section__main-header,
+  .choose-us-section__text,
+  .choose-us-section__main-header {
+    margin: 0; }
+  .about-us-section__text,
+  .choose-us-section__text {
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #aeafb7;
+    text-transform: none;
+    font-family: "Montserrat", sans-serif;
+    line-height: 2; }
+  .about-us-section__img img,
+  .choose-us-section__img img {
+    width: 654px;
+    height: 453px;
+    border: 1px solid #000;
+    border-radius: 12px;
+    margin-bottom: 10px; }
+  .about-us-section__main-header,
+  .choose-us-section__main-header {
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 2rem;
+    color: #f5f5f5;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif; }
+  .about-us-section__description,
+  .choose-us-section__description {
+    margin-right: 25px; }
 
 .choose-us-section__container {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-.choose-us-section__container img {
-  margin-right: 25px;
-}
+  flex-direction: row-reverse; }
+  .choose-us-section__container img {
+    margin-right: 25px; }
 .choose-us-section__description {
-  margin-right: 0px;
-}
+  margin-right: 0px; }
 
 .facilities-section__link {
-  display: none;
-}
+  display: none; }
 .facilities-section__item img {
   padding-top: 25px;
   padding-bottom: 10px;
-  margin-top: 0;
-}
+  margin-top: 0; }
 .facilities-section__header {
   margin-bottom: 0;
-  padding-bottom: 25px;
-}
+  padding-bottom: 25px; }
 .facilities-section__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 52px;
-     -moz-column-gap: 52px;
-          column-gap: 52px;
+  column-gap: 52px;
   margin: 0;
   padding: 0;
-  list-style-type: none;
-}
+  list-style-type: none; }
 
 .footer {
-  background-color: #1b1f3e;
-}
-.footer__description {
-  font-weight: 400;
-  font-size: 1rem;
-  color: #a1a1a1;
-  text-transform: none;
-  font-family: "Montserrat", sans-serif;
-  line-height: 1.57;
-  margin: 0;
-}
-.footer__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.footer__social-list, .footer__list {
-  list-style-type: none;
-}
-.footer__gym-logo {
-  width: 224px;
-  height: 149px;
-}
-.footer__list, .footer__social-list, .footer__info {
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.footer__info, .footer__list {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.footer__company-list, .footer__support-list {
-  margin-right: 130px;
-}
-.footer__social-list {
-  -webkit-column-gap: 14px;
-     -moz-column-gap: 14px;
-          column-gap: 14px;
-}
-.footer__social-link {
-  display: block;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #4b4e68;
-  position: relative;
-}
-.footer__social-link svg {
-  position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-}
-.footer__header {
-  margin-top: 40px;
-  font-weight: 500;
-  font-size: 1.25rem;
-  color: #d9d9d9;
-  text-transform: none;
-  font-family: "Montserrat", sans-serif;
-  line-height: 1.57;
-}
-.footer__company-list h2 {
-  margin-bottom: 26px;
-}
-.footer__company-list ul {
-  width: 150px;
-}
-.footer__support-list h2 {
-  margin-bottom: 17px;
-}
-.footer__support-list ul {
-  width: 105px;
-}
-.footer__social h2 {
-  margin-bottom: 10px;
-}
-.footer__link {
-  font-weight: 400;
-  font-size: 1rem;
-  color: #a1a1a1;
-  text-transform: none;
-  font-family: "Montserrat", sans-serif;
-  text-decoration: none;
-  line-height: 1.57;
-  margin-bottom: 5px;
-}
-.footer__link:last-child {
-  margin-bottom: 0;
-}
-.footer__info {
-  margin-right: 130px;
-}
-.footer__info img {
-  margin-top: 40px;
-  margin-bottom: 25px;
-}
-.footer__link:hover {
-  color: #f5f5f5;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
+  background-color: #1b1f3e; }
+  .footer__description {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #a1a1a1;
+    text-transform: none;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.57;
+    margin: 0; }
+  .footer__container {
+    display: flex; }
+  .footer__social-list, .footer__list {
+    list-style-type: none; }
+  .footer__gym-logo {
+    width: 224px;
+    height: 149px; }
+  .footer__list, .footer__social-list, .footer__info {
+    padding: 0;
+    display: flex; }
+  .footer__info, .footer__list {
+    flex-direction: column; }
+  .footer__company-list, .footer__support-list {
+    margin-right: 130px; }
+  .footer__social-list {
+    column-gap: 14px; }
+  .footer__social-link {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #4b4e68;
+    position: relative; }
+    .footer__social-link svg {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%; }
+  .footer__header {
+    margin-top: 40px;
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #d9d9d9;
+    text-transform: none;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.57; }
+  .footer__company-list h2 {
+    margin-bottom: 26px; }
+  .footer__company-list ul {
+    width: 150px; }
+  .footer__support-list h2 {
+    margin-bottom: 17px; }
+  .footer__support-list ul {
+    width: 105px; }
+  .footer__social h2 {
+    margin-bottom: 10px; }
+  .footer__link {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #a1a1a1;
+    text-transform: none;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    line-height: 1.57;
+    margin-bottom: 5px; }
+  .footer__link:last-child {
+    margin-bottom: 0; }
+  .footer__info {
+    margin-right: 130px; }
+    .footer__info img {
+      margin-top: 40px;
+      margin-bottom: 25px; }
+  .footer__link:hover {
+    color: #f5f5f5;
+    transition: 0.3s; }
 
 .sport-section,
 .footer,
@@ -1169,8 +901,7 @@ input[type=search]::-webkit-search-results-decoration {
 .category-section,
 .facilities-section,
 .sport-section {
-  padding-bottom: 40px;
-}
+  padding-bottom: 40px; }
 
 @media (min-width: 1600px) {
   .sport-section__container,
@@ -1181,172 +912,94 @@ input[type=search]::-webkit-search-results-decoration {
   .about-us-section__container,
   .choose-us-section__container,
   .facilities-section__container {
-    max-width: 1500px;
-  }
+    max-width: 1500px; }
+
   .header__container-1,
   .footer__container-1 {
-    max-width: 1500px;
-  }
+    max-width: 1500px; }
+
   .header__li, .header__sign-in, .header__sign-up, .header__span, .header__link--active {
     font-weight: 500;
     font-size: 1.25rem;
     color: #fff;
     text-transform: uppercase;
-    font-family: "Montserrat", sans-serif;
-  }
+    font-family: "Montserrat", sans-serif; }
   .header__link--active {
-    color: #ea377b;
-  }
-  .header__input::-webkit-input-placeholder {
-    font-size: 1.25rem;
-  }
-  .header__input::-moz-placeholder {
-    font-size: 1.25rem;
-  }
-  .header__input:-ms-input-placeholder {
-    font-size: 1.25rem;
-  }
-  .header__input::-ms-input-placeholder {
-    font-size: 1.25rem;
-  }
+    color: #ea377b; }
   .header__input::placeholder {
-    font-size: 1.25rem;
-  }
+    font-size: 1.25rem; }
+
   .sport-section {
-    padding-top: 210px;
-  }
-  .sport-section__list {
-    -webkit-column-gap: 120px;
-       -moz-column-gap: 120px;
-            column-gap: 120px;
-    row-gap: 60px;
-  }
+    padding-top: 210px; }
+    .sport-section__list {
+      column-gap: 120px;
+      row-gap: 60px; }
+
   .category-section__list,
   .facilities-section__list {
-    -webkit-column-gap: 100px;
-       -moz-column-gap: 100px;
-            column-gap: 100px;
-  }
+    column-gap: 100px; }
+
   .product-section__list,
   .trending-section__list,
   .popular-section__list {
-    -webkit-column-gap: 114px;
-       -moz-column-gap: 114px;
-            column-gap: 114px;
-  }
+    column-gap: 114px; }
+
   .footer__company-list ul, .footer__support-list ul {
-    width: 190px;
-  }
+    width: 190px; }
   .footer__header {
-    width: 230px;
-  }
+    width: 230px; }
   .footer__description, .footer__link {
-    font-size: 1.25rem;
-  }
+    font-size: 1.25rem; }
   .footer__header {
-    font-size: 1.5rem;
-  }
+    font-size: 1.5rem; }
   .footer__info {
-    margin-right: 90px;
-  }
-}
+    margin-right: 90px; } }
 @media (max-width: 1439px) {
   .header__input-container, .header__input {
-    width: 200px;
-  }
+    width: 200px; }
   .header__logo, .header__nav {
-    margin-right: 30px;
-  }
+    margin-right: 30px; }
   .header__li, .header__sign-in, .header__sign-up, .header__span, .header__link--active {
     font-weight: 500;
     font-size: 0.9rem;
     color: #fff;
     text-transform: uppercase;
-    font-family: "Montserrat", sans-serif;
-  }
+    font-family: "Montserrat", sans-serif; }
   .header__link--active {
-    color: #ea377b;
-  }
-  .header__input::-webkit-input-placeholder {
-    font-size: 1rem;
-  }
-  .header__input::-moz-placeholder {
-    font-size: 1rem;
-  }
-  .header__input:-ms-input-placeholder {
-    font-size: 1rem;
-  }
-  .header__input::-ms-input-placeholder {
-    font-size: 1rem;
-  }
+    color: #ea377b; }
   .header__input::placeholder {
-    font-size: 1rem;
-  }
+    font-size: 1rem; }
+
   .advantages-section__condition-container {
-    max-width: 1200px;
-  }
+    max-width: 1200px; }
   .advantages-section__h3 {
-    font-size: 1rem;
-  }
+    font-size: 1rem; }
   .advantages-section__item {
-    margin-right: 15px;
-  }
+    margin-right: 15px; }
   .advantages-section__item:last-child {
     margin-left: 0;
-    margin-right: 30px;
-  }
+    margin-right: 30px; }
   .advantages-section__condition-list {
-    max-width: 1050px;
-  }
+    max-width: 1050px; }
+
   .advantages-section__condition-container .advantages-section__info {
-    font-size: 0.9rem;
-  }
+    font-size: 0.9rem; }
+
   .sport-section__header {
-    text-align: center;
-  }
+    text-align: center; }
   .sport-section__list {
-    -ms-grid-columns: minmax(0, 1fr) 50px minmax(0, 1fr);
-    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 столбца, равномерно распределенные */
-    -ms-grid-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* 2 столбца, равномерно распределенные */
     grid-template-rows: 1fr 1fr 1fr;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-column-gap: 50px;
-       -moz-column-gap: 50px;
-            column-gap: 50px;
-  }
-  .sport-section__list > *:nth-child(1) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-  }
-  .sport-section__list > *:nth-child(2) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-  }
-  .sport-section__list > *:nth-child(3) {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-  }
-  .sport-section__list > *:nth-child(4) {
-    -ms-grid-row: 2;
-    -ms-grid-column: 3;
-  }
-  .sport-section__list > *:nth-child(5) {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-  }
-  .sport-section__list > *:nth-child(6) {
-    -ms-grid-row: 3;
-    -ms-grid-column: 3;
-  }
+    justify-content: center;
+    column-gap: 50px; }
   .sport-section__item {
-    text-align: center;
-  }
+    text-align: center; }
+
   .about-us-section__text,
   .choose-us-section__text {
-    font-size: 1.25rem;
-  }
+    font-size: 1.25rem; }
+
   .product-section__container,
   .trending-section__container,
   .popular-section__container,
@@ -1355,9 +1008,111 @@ input[type=search]::-webkit-search-results-decoration {
   .sport-section__container,
   .about-us-section__container,
   .choose-us-section__container {
-    max-width: 1200px;
-  }
+    max-width: 1200px; }
+
   .footer__container-1 {
-    max-width: 1200px;
-  }
-}
+    max-width: 1200px; } }
+@media (max-width: 1280px) {
+  .about-us-section__container, .facilities-section__container, .choose-us-section__container, .advantages-section__condition-container, .category-section__container, .product-section__container, .popular-section__container, .trending-section__container {
+    max-width: 950px; }
+
+  .sport-section__list, .sport-section__container {
+    max-width: 870px; }
+
+  .main__btn {
+    font-size: 0.9rem;
+    padding: 14px;
+    max-width: 130px; }
+
+  .header__logo {
+    width: 75px;
+    height: 50px; }
+  .header__link, .header__sign-in, .header__sign-up, .header__span, .header__link--active {
+    font-size: 0.8rem; }
+  .header__circle {
+    width: 24px;
+    height: 24px; }
+    .header__circle svg {
+      width: 18px;
+      height: 18px; }
+  .header__input, .header__input-container {
+    width: 160px;
+    height: 30px; }
+  .header input[type="search"] {
+    font-size: 0.8rem; }
+  .header__input::placeholder {
+    font-size: 0.9rem; }
+  .header__search-icon {
+    bottom: 4px; }
+    .header__search-icon svg {
+      width: 14px;
+      height: 14px; }
+  .header__input-container, .header__nav, .header__logo {
+    margin-right: 20px; }
+
+  .advantages-section {
+    background-position: center, calc(50% + 260px) center; }
+    .advantages-section__name {
+      font-size: 2rem; }
+    .advantages-section__description {
+      font-size: 1rem; }
+    .advantages-section__condition-list {
+      max-width: 750px; }
+    .advantages-section__item svg {
+      width: 40px;
+      height: 40px; }
+    .advantages-section__condition-container, .advantages-section__info {
+      padding-inline: 10px;
+      padding-bottom: 15px; }
+    .advantages-section__h3 {
+      font-size: 0.9rem; }
+    .advantages-section__condition-container .advantages-section__info {
+      font-size: 0.8rem; }
+    .advantages-section__item {
+      margin-right: 15px;
+      padding-top: 15px;
+      margin-block: 18px; }
+    .advantages-section__item:first-child {
+      margin-left: 20px; }
+      .advantages-section__item:first-child svg {
+        padding-bottom: 10px; }
+    .advantages-section__item:last-child {
+      margin-right: 20px; }
+
+  .sport-section {
+    padding-top: 130px; }
+    .sport-section__header {
+      font-size: 1.75rem; }
+    .sport-section__h3 {
+      font-size: 1.5rem; }
+    .sport-section__list {
+      column-gap: 40px; }
+
+  .category-section__main-header, .category-section__link, .facilities-section__main-header, .facilities-section__link {
+    font-size: 1.75rem; }
+  .category-section__header, .facilities-section__header {
+    font-size: 1.25rem; }
+
+  .product-section__main-header, .product-section__link, .trending-section__main-header, .trending-section__link, .popular-section__main-header, .popular-section__link {
+    font-size: 1.75rem; }
+  .product-section__header, .product-section__price, .trending-section__header, .trending-section__price, .popular-section__header, .popular-section__price {
+    font-size: 1.25rem; }
+
+  .about-us-section__main-header, .choose-us-section__main-header {
+    font-size: 1.75rem; }
+  .about-us-section__text, .choose-us-section__text {
+    font-size: 1rem; }
+
+  .footer__container-1 {
+    max-width: 950px; }
+  .footer__gym-logo {
+    width: 155px;
+    height: 110px; }
+  .footer__description, .footer__link {
+    font-size: 0.9rem; }
+  .footer__header {
+    font-size: 1rem; }
+  .footer__info, .footer__company-list, .footer__support-list {
+    margin-right: 50px; } }
+
+/*# sourceMappingURL=App.css.map */
