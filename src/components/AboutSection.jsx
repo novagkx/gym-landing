@@ -1,4 +1,4 @@
-export default function AboutSection ({blockName, src, header, alt, children, isMediumScreen, isLargeScreen}) {
+export default function AboutSection ({blockName, src, header, alt, children, isMediumScreen, isLargeScreen, isSmallScreen}) {
     return(
 <section className={blockName}>
       <div className={blockName+ "__container"}>
@@ -11,6 +11,7 @@ export default function AboutSection ({blockName, src, header, alt, children, is
         <div className={blockName+"__img"}>
             {isLargeScreen && <img src={src} style={{width: "654px", height:"453px"}} alt={alt}/>}
             {isMediumScreen && <img src={src} style={{width: "420px", height:"291px"}} alt={alt}/>}
+            {isSmallScreen && <img src={src} style={{width: "320px", height:"222px"}} alt={alt}/>}
         </div>
       </div>
     </section>

@@ -11,7 +11,7 @@ import {useMediaQuery} from '@react-hook/media-query';
 
 // import AboutUs from "./components/AboutUs";
 function App() {
-    // const isSmallScreen = useMediaQuery('(max-width: 768px)');
+    const isSmallScreen = useMediaQuery('(max-width: 1024px)');
     const isMediumScreen = useMediaQuery('(min-width: 1024px) and (max-width: 1281px)');
     const isLargeScreen = useMediaQuery('(min-width: 1281px)');
 
@@ -20,7 +20,7 @@ function App() {
             <Header/>
             <main className="main">
                 <AdvantagesSection/>
-                <TrainingProgramsSection/>
+                <TrainingProgramsSection isSmall={isSmallScreen}/>
                 <CategorySection blockName={"category-section"} title={"category"} info={categoryInfo[0]}/>
                 <RegularSection
                     blockName={"product-section"}
@@ -37,10 +37,10 @@ function App() {
                     info={info[2]}
                     title={"popular product"}
                 />
-                {isLargeScreen && <AboutSection isLargeScreen={true} isMediumScreen={false}
+                {isLargeScreen && <AboutSection isLargeScreen={true}
                                                 blockName={"about-us-section"}
                                                 header={"about us"}
-                                                src={"src/images/fun-img420.jpg"}
+                                                src={"src/images/fun-img.jpg"}
                                                 alt={"Fun sports people talking to each other"}
                 >
                     Welcome to Our Gym, where fitness meets passion, and every drop of
@@ -51,10 +51,10 @@ function App() {
                     Whether you&apos;re a seasoned gym-goer or just starting, is here to
                     support you every step of the way.
                 </AboutSection>}
-                {isLargeScreen && <AboutSection isLargeScreen={true} isMediumScreen={false}
+                {isLargeScreen && <AboutSection isLargeScreen={true}
                                                 blockName={"choose-us-section"}
                                                 header={"why choose us"}
-                                                src={"src/images/choose-us420.jpg"}
+                                                src={"src/images/choose-us.jpg"}
                                                 alt={"Girl with rope at the gym"}
                 >
                     Welcome to Our Gym, where fitness meets passion, and every drop of
@@ -84,6 +84,37 @@ function App() {
                                   blockName={"choose-us-section"}
                                   header={"why choose us"}
                                   src={"src/images/choose-us420.jpg"}
+                                  alt={"Girl with rope at the gym"}
+                    >
+                        Welcome to Our Gym, where fitness meets passion, and every drop of
+                        sweat tells a story of dedication. Our gym isn&apos;t just a place to work
+                        out; it&apos;s a community, a lifestyle, and a commitment to your
+                        well-being.We are committe d to providing a safe, inclusive, and
+                        inspiring space for individuals of all ages and fitness levels.
+                        Whether you&apos;re a seasoned gym-goer or just starting, is here to
+                        support you every step of the way.
+                    </AboutSection>}
+
+
+                {isSmallScreen && <AboutSection isSmallScreen={true}
+                                                 blockName={"about-us-section"}
+                                                 header={"about us"}
+                                                 src={"src/images/fun-img320.jpg"}
+                                                 alt={"Fun sports people talking to each other"}
+                >
+                    Welcome to Our Gym, where fitness meets passion, and every drop of
+                    sweat tells a story of dedication. Our gym isn&apos;t just a place to
+                    work out; it&apos;s a community, a lifestyle, and a commitment to your
+                    well-being.We are committe d to providing a safe, inclusive, and
+                    inspiring space for individuals of all ages and fitness levels.
+                    Whether you&apos;re a seasoned gym-goer or just starting, is here to
+                    support you every step of the way.
+                </AboutSection>}
+                {isSmallScreen &&
+                    <AboutSection isSmallScreen={true}
+                                  blockName={"choose-us-section"}
+                                  header={"why choose us"}
+                                  src={"src/images/choose-us320.jpg"}
                                   alt={"Girl with rope at the gym"}
                     >
                         Welcome to Our Gym, where fitness meets passion, and every drop of
