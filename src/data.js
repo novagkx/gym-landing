@@ -138,3 +138,12 @@ export const sportsVarieties1024 = [
   { name: "workout", src: "src/images/workout300.jpg", alt:"picture of a girl doing deadlift"},
   { name: "bodybuilding", src: "src/images/bodybuilding300.jpg", alt:"picture of a man posing his muscles"},
 ];
+
+export const sportsVarieties360 = [
+  { name: "yoga", src:"src/images/yoga200.jpg", alt:"picture of a girl doing yoga" },
+  { name: "fitness", src: "src/images/fitness200.jpg", alt:"picture of a girl doing fitness" },
+  { name: "cardio", src: "src/images/cardio200.jpg", alt:"picture of a man doing cardio at the bicycle exercise machine"},
+  { name: "zumba", src: "src/images/zumba200.jpg", alt:"picture of many guys do zumba sport"},
+  { name: "workout", src: "src/images/workout200.jpg", alt:"picture of a girl doing deadlift"},
+  { name: "bodybuilding", src: "src/images/bodybuilding200.jpg", alt:"picture of a man posing his muscles"}
+];

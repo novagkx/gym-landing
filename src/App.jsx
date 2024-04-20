@@ -11,16 +11,18 @@ import {useMediaQuery} from '@react-hook/media-query';
 
 // import AboutUs from "./components/AboutUs";
 function App() {
-    const isSmallScreen = useMediaQuery('(max-width: 1024px)');
+    const isSmartphone = useMediaQuery('(max-width: 768px)');
+    const isSmallScreen = useMediaQuery('(min-width:769px) and (max-width: 1024px)');
     const isMediumScreen = useMediaQuery('(min-width: 1024px) and (max-width: 1281px)');
     const isLargeScreen = useMediaQuery('(min-width: 1281px)');
 
     return (
         <>
-            <Header/>
+            {!isSmartphone && <Header isSmartphone={false}/>}
+            {isSmartphone && <Header isSmartphone={true}/>}
             <main className="main">
                 <AdvantagesSection/>
-                <TrainingProgramsSection isSmall={isSmallScreen}/>
+                <TrainingProgramsSection isSmall={isSmallScreen} is360={isSmartphone}/>
                 <CategorySection blockName={"category-section"} title={"category"} info={categoryInfo[0]}/>
                 <RegularSection
                     blockName={"product-section"}
@@ -126,6 +128,35 @@ function App() {
                         support you every step of the way.
                     </AboutSection>}
 
+                {isSmartphone && <AboutSection isSmartphone={true}
+                                                blockName={"about-us-section"}
+                                                header={"about us"}
+                                                src={"src/images/fun-img200.jpg"}
+                                                alt={"Fun sports people talking to each other"}
+                >
+                    Welcome to Our Gym, where fitness meets passion, and every drop of
+                    sweat tells a story of dedication. Our gym isn&apos;t just a place to
+                    work out; it&apos;s a community, a lifestyle, and a commitment to your
+                    well-being.We are committe d to providing a safe, inclusive, and
+                    inspiring space for individuals of all ages and fitness levels.
+                    Whether you&apos;re a seasoned gym-goer or just starting, is here to
+                    support you every step of the way.
+                </AboutSection>}
+                {isSmartphone &&
+                    <AboutSection isSmartphone={true}
+                                  blockName={"choose-us-section"}
+                                  header={"why choose us"}
+                                  src={"src/images/choose-us200.jpg"}
+                                  alt={"Girl with rope at the gym"}
+                    >
+                        Welcome to Our Gym, where fitness meets passion, and every drop of
+                        sweat tells a story of dedication. Our gym isn&apos;t just a place to work
+                        out; it&apos;s a community, a lifestyle, and a commitment to your
+                        well-being.We are committe d to providing a safe, inclusive, and
+                        inspiring space for individuals of all ages and fitness levels.
+                        Whether you&apos;re a seasoned gym-goer or just starting, is here to
+                        support you every step of the way.
+                    </AboutSection>}
                 <CategorySection blockName={"facilities-section"} title={"facilities"} info={categoryInfo[1]}/>
 
             </main>
