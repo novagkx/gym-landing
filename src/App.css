@@ -1116,6 +1116,9 @@ input[type="search"]::-webkit-search-results-decoration {
   .category-section__main-header, .category-section__link, .facilities-section__main-header, .facilities-section__link {
     font-size: 1.35rem; }
 
+  .category-section__container, .facilities-section__container {
+    max-width: 700px; }
+
   .header__container-1 {
     position: relative;
     width: 100%;
@@ -1155,17 +1158,25 @@ input[type="search"]::-webkit-search-results-decoration {
   .facilities-section__item:last-child h3 {
     padding-bottom: 25px; }
 
-  .product-section__container, .trending-section__container, .popular-section__container, .category-section__container, .facilities-section__container {
+  .product-section__container, .trending-section__container, .popular-section__container {
     max-width: 700px; }
-  .product-section img, .trending-section img, .popular-section img, .category-section img, .facilities-section img {
+  .product-section img, .trending-section img, .popular-section img {
     width: 130px;
     height: 130px; }
-  .product-section__item, .trending-section__item, .popular-section__item, .category-section__item, .facilities-section__item {
+  .product-section__item, .trending-section__item, .popular-section__item {
     height: 100%; }
-  .product-section__header, .trending-section__header, .popular-section__header, .category-section__header, .facilities-section__header {
+  .product-section__header, .trending-section__header, .popular-section__header {
     font-size: 1rem; }
-  .product-section__price, .trending-section__price, .popular-section__price, .category-section__price, .facilities-section__price {
+  .product-section__price, .trending-section__price, .popular-section__price {
     font-size: 0.8rem; }
+
+  .category-section img {
+    width: 70px;
+    height: 70px; }
+
+  .facilities-section img {
+    width: 55px;
+    height: 55px; }
 
   .main__btn {
     max-width: 110px;
@@ -1196,5 +1207,157 @@ input[type="search"]::-webkit-search-results-decoration {
   .footer__social {
     position: absolute;
     transform: translateX(55%); } }
+@media (max-width: 768px) {
+  .product-section img, .trending-section img, .popular-section img, .category-section img {
+    width: 50px;
+    height: 70px; }
+
+  .facilities-section img {
+    width: 45px;
+    height: 45px; }
+
+  .header__logo {
+    width: 60px;
+    height: 40px;
+    margin-right: 5px; }
+  .header__links {
+    margin-right: 10px; }
+  .header__container {
+    margin-left: auto; }
+  .header__input, .header__input-container {
+    width: 130px;
+    height: 30px; }
+  .header__input-container {
+    margin-right: 10px; }
+  .header__input::placeholder {
+    font-size: 0.7rem; }
+  .header__sign-in, .header__sign-up, .header__span {
+    font-size: 0.6rem; }
+  .header__search-icon, .header__search-icon svg {
+    width: 10px;
+    height: 10px; }
+  .header__search-icon {
+    bottom: 14px; }
+  .header__circle {
+    width: 20px;
+    height: 20px; }
+  .header__basket, .header__favorites {
+    width: 14px;
+    height: 14px;
+    padding: 4px; }
+    .header__basket svg, .header__favorites svg {
+      width: 12px;
+      height: 12px;
+      position: relative;
+      bottom: 2px;
+      right: 1px; }
+  .header__favorites svg {
+    width: 12px;
+    height: 12px;
+    margin-left: 1px; }
+  .header__burger {
+    margin-left: 20px;
+    width: 18px;
+    height: 18px;
+    background-color: #1b1f3e;
+    border-radius: 50%; }
+    .header__burger-link {
+      display: inline-block;
+      width: 100%;
+      height: 100%; }
+
+  .advantages-section {
+    background-image: url("src/images/smoke768.png");
+    background-size: 1440px 500px;
+    background-position: top;
+    padding-top: 30px; }
+    .advantages-section__name {
+      font-size: 1.5rem; }
+    .advantages-section__description {
+      margin-top: 5px;
+      margin-bottom: 15px;
+      font-size: 0.75rem; }
+    .advantages-section .advantages-section__condition-container .advantages-section__info {
+      font-size: 0.7rem; }
+    .advantages-section__h3 {
+      font-size: 0.7rem; }
+    .advantages-section__container {
+      max-width: 350px;
+      margin-inline: auto;
+      text-align: center; }
+      .advantages-section__container .main__btn {
+        margin-inline: auto; }
+    .advantages-section__condition-container {
+      margin-top: 50px; }
+    .advantages-section__condition-list {
+      max-width: 450px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      column-gap: 15px; }
+    .advantages-section__item:nth-child(3) {
+      margin-left: 18px; }
+    .advantages-section svg {
+      width: 25px;
+      height: 25px; }
+
+  .sport-section {
+    padding-bottom: 20px;
+    padding-top: 70px; }
+    .sport-section__header {
+      font-size: 1.25rem;
+      margin-bottom: 15px; }
+    .sport-section__list {
+      max-width: 450px;
+      column-gap: 15px;
+      row-gap: 25px; }
+    .sport-section img {
+      width: 200px;
+      height: 112px; }
+    .sport-section__h3, .sport-section .sport-section__item:last-child h3 {
+      font-size: 1rem;
+      padding: 10px 20px 10px 20px; }
+
+  .category-section__info-container, .facilities-section__info-container {
+    margin-bottom: 15px; }
+  .category-section__main-header, .category-section__link, .facilities-section__main-header, .facilities-section__link {
+    font-size: 1.25rem; }
+  .category-section__container, .facilities-section__container {
+    max-width: 450px; }
+  .category-section__item, .facilities-section__item {
+    text-align: center; }
+  .category-section__item:nth-child(2) img, .category-section__item:nth-child(3) img, .facilities-section__item:nth-child(2) img, .facilities-section__item:nth-child(3) img {
+    padding-bottom: 10px; }
+  .category-section__header, .facilities-section__header {
+    font-size: 0.7rem; }
+  .category-section__img, .facilities-section__img {
+    padding-top: 0; }
+
+  .main__btn {
+    padding: 8px;
+    font-size: 0.6rem; }
+
+  .product-section__container, .trending-section__container, .popular-section__container {
+    max-width: 450px; }
+  .product-section__info-container, .trending-section__info-container, .popular-section__info-container {
+    margin-bottom: 15px; }
+  .product-section__list, .trending-section__list, .popular-section__list {
+    column-gap: 15px; }
+  .product-section__item, .trending-section__item, .popular-section__item {
+    padding-block: 20px; }
+  .product-section__header, .trending-section__header, .popular-section__header {
+    font-size: 0.7rem;
+    margin-bottom: 10px; }
+  .product-section__price, .trending-section__price, .popular-section__price {
+    font-size: 0.6rem; }
+
+  .about-us-section__container, .choose-us-section__container {
+    max-width: 450px; }
+  .about-us-section__img, .choose-us-section__img {
+    margin-block: auto; }
+  .about-us-section__main-header, .choose-us-section__main-header {
+    font-size: 1.25rem; }
+  .about-us-section__text, .choose-us-section__text {
+    font-size: 0.6rem; } }
 
 /*# sourceMappingURL=App.css.map */
