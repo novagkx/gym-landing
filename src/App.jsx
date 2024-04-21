@@ -13,8 +13,9 @@ import {useMediaQuery} from '@react-hook/media-query';
 function App() {
     const isSmartphone = useMediaQuery('(max-width: 768px)');
     const isSmallScreen = useMediaQuery('(min-width:769px) and (max-width: 1024px)');
-    const isMediumScreen = useMediaQuery('(min-width: 1024px) and (max-width: 1281px)');
-    const isLargeScreen = useMediaQuery('(min-width: 1281px)');
+    const isMediumScreen = useMediaQuery('(min-width: 1025px) and (max-width: 1281px)');
+    const isLargeScreen = useMediaQuery('(min-width: 1282px)');
+
 
     return (
         <>
@@ -22,7 +23,7 @@ function App() {
             {isSmartphone && <Header isSmartphone={true}/>}
             <main className="main">
                 <AdvantagesSection/>
-                <TrainingProgramsSection isSmall={isSmallScreen} is360={isSmartphone}/>
+                <TrainingProgramsSection isMediumScreen={isMediumScreen} isLargeScreen={isLargeScreen} isSmallScreen={isSmallScreen} isSmartphone={isSmartphone}/>
                 <CategorySection blockName={"category-section"} title={"category"} info={categoryInfo[0]}/>
                 <RegularSection
                     blockName={"product-section"}

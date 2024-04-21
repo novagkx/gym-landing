@@ -132,7 +132,7 @@ export const sportsVarieties = [
 ];
 export const sportsVarieties1024 = [
   { name: "yoga", src:"src/images/yoga300.jpg", alt:"picture of a girl doing yoga" },
-  { name: "fitness", src: "src/images/fitness360.jpg", alt:"picture of a girl doing fitness" },
+  { name: "fitness", src: "src/images/fitness300.jpg", alt:"picture of a girl doing fitness" },
   { name: "cardio", src: "src/images/cardio300.jpg", alt:"picture of a man doing cardio at the bicycle exercise machine"},
   { name: "zumba", src: "src/images/zumba300.jpg", alt:"picture of many guys do zumba sport"},
   { name: "workout", src: "src/images/workout300.jpg", alt:"picture of a girl doing deadlift"},

@@ -2,8 +2,8 @@ import NavbarItem from "./NavbarItem";
 
 const Navbar = ({blockName}) => {
   return (
-    <nav className="header__nav">
-      <ul className="header__ul">
+    <nav className={blockName + "__nav"}>
+      <ul className={blockName + "__ul"}>
         <NavbarItem blockName={blockName} isActive={true}>home</NavbarItem>
         <NavbarItem blockName={blockName}>about us</NavbarItem>
         <NavbarItem blockName={blockName}>packages</NavbarItem>
