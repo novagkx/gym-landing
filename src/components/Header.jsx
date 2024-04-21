@@ -1,7 +1,11 @@
 import Navbar from "./Navbar";
 import SearchInput from "./SerchInput";
+import Modal from "../Modal/Modal.jsx";
+import {useState} from "react";
 
 const Header = ({isSmartphone}) => {
+    const [modalActive, setModalActive] = useState(false);
+    const [visibility, setVisibility] = useState(true);
     return (
         <>
             {!isSmartphone && (<header className="header">
@@ -154,7 +158,7 @@ const Header = ({isSmartphone}) => {
                         </div>
                     </div>
                     <div className="header__burger">
-                        <a href="#" className="header__burger-link">
+                        <a href="#" className="header__burger-link" onClick={()=>setModalActive(true)}>
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                             <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
@@ -167,9 +171,8 @@ const Header = ({isSmartphone}) => {
                         </a>
                     </div>
                 </div>
-
             </header>}
-
+        <Modal active={modalActive} setActive={setModalActive}/>
         </>
     );
 };
