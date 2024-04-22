@@ -26,9 +26,12 @@
 .modal-content__ul {
     list-style-type: none;
     padding: 0;
+    padding-inline: 10px;
     margin: 0;
     margin-right: 10px;
 }
+
+
 .modal-content__link {
     font-size: 0.6rem;
     color: #fff;
