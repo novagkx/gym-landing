@@ -11,7 +11,8 @@ import {useMediaQuery} from '@react-hook/media-query';
 
 // import AboutUs from "./components/AboutUs";
 function App() {
-    const isSmartphone = useMediaQuery('(max-width: 768px)');
+    const isSmallestScreen = useMediaQuery('(max-width: 480px)');
+    const isSmartphone = useMediaQuery('(min-width: 481px) and (max-width: 768px)');
     const isSmallScreen = useMediaQuery('(min-width:769px) and (max-width: 1024px)');
     const isMediumScreen = useMediaQuery('(min-width: 1025px) and (max-width: 1281px)');
     const isLargeScreen = useMediaQuery('(min-width: 1282px)');
@@ -19,11 +20,11 @@ function App() {
 
     return (
         <>
-            {!isSmartphone && <Header isSmartphone={false}/>}
-            {isSmartphone && <Header isSmartphone={true}/>}
+            {!isSmartphone && !isSmallestScreen && <Header isSmallestScreen={isSmallestScreen} isSmartphone={false}/>}
+            {(isSmartphone || isSmallestScreen) && <Header isSmallestScreen={isSmallestScreen} isSmartphone={true}/>}
             <main className="main">
                 <AdvantagesSection/>
-                <TrainingProgramsSection isMediumScreen={isMediumScreen} isLargeScreen={isLargeScreen} isSmallScreen={isSmallScreen} isSmartphone={isSmartphone}/>
+                <TrainingProgramsSection isSmallestScreen={isSmallestScreen} isMediumScreen={isMediumScreen} isLargeScreen={isLargeScreen} isSmallScreen={isSmallScreen} isSmartphone={isSmartphone}/>
                 <CategorySection blockName={"category-section"} title={"category"} info={categoryInfo[0]}/>
                 <RegularSection
                     blockName={"product-section"}
@@ -148,6 +149,35 @@ function App() {
                                   blockName={"choose-us-section"}
                                   header={"why choose us"}
                                   src={"src/images/choose-us200.jpg"}
+                                  alt={"Girl with rope at the gym"}
+                    >
+                        Welcome to Our Gym, where fitness meets passion, and every drop of
+                        sweat tells a story of dedication. Our gym isn&apos;t just a place to work
+                        out; it&apos;s a community, a lifestyle, and a commitment to your
+                        well-being.We are committe d to providing a safe, inclusive, and
+                        inspiring space for individuals of all ages and fitness levels.
+                        Whether you&apos;re a seasoned gym-goer or just starting, is here to
+                        support you every step of the way.
+                    </AboutSection>}
+                {isSmallestScreen && <AboutSection isSmallestScreen={true}
+                                               blockName={"about-us-section"}
+                                               header={"about us"}
+                                               src={"src/images/fun-img320.jpg"}
+                                               alt={"Fun sports people talking to each other"}
+                >
+                    Welcome to Our Gym, where fitness meets passion, and every drop of
+                    sweat tells a story of dedication. Our gym isn&apos;t just a place to
+                    work out; it&apos;s a community, a lifestyle, and a commitment to your
+                    well-being.We are committe d to providing a safe, inclusive, and
+                    inspiring space for individuals of all ages and fitness levels.
+                    Whether you&apos;re a seasoned gym-goer or just starting, is here to
+                    support you every step of the way.
+                </AboutSection>}
+                {isSmallestScreen &&
+                    <AboutSection isSmallestScreen={true}
+                                  blockName={"choose-us-section"}
+                                  header={"why choose us"}
+                                  src={"src/images/choose-us320.jpg"}
                                   alt={"Girl with rope at the gym"}
                     >
                         Welcome to Our Gym, where fitness meets passion, and every drop of

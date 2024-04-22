@@ -1824,24 +1824,28 @@ input[type="search"]::-webkit-search-results-decoration {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      column-gap: 15px;
+      column-gap: 0;
     }
-
-    &__item:nth-child(3) {
-      margin-left: 18px;
+    &__item:last-child {
+      margin-right: 10px;
     }
-
+    &__item:nth-child(2) {
+      margin-left: 0;
+    }
     &__item {
+      margin: 10px;
       svg {
         @include size(30px, 30px);
       }
+    }
+    &__item:first-child {
+      margin-left: 10px;
     }
   }
 
   .sport-section {
     padding-bottom: 20px;
-    padding-top: 100px;
-
+    padding-top: 50px;
     &__item {
       img {
         @include size(200px, 112px);
@@ -1988,5 +1992,210 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 
-
 //adaptive for 320 < x < 480
+@media (max-width: 480px) {
+  $maxWidthContainer: 320px;
+  .header {
+    padding-inline: 15px;
+    &__container-1 {
+      max-width: $maxWidthContainer;
+    }
+    &__input, &__sign-in, &__sign-up, &__span {
+      display: none;
+    }
+    &__input-container {
+
+    }
+    &__search-icon {
+      background-color: $light-purple;
+      margin-right: 0;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      top: 6px;
+      left: 120px;
+      svg {
+        position: relative;
+        left: 3px;
+        top: 0;
+        @include size (11px, 11px);
+      }
+    }
+    &__burger {
+      margin-left: 14px;
+    }
+  }
+  .advantages-section {
+    .main__btn {
+      padding: 10px;
+    }
+    &__container {
+      max-width: $maxWidthContainer;
+    }
+    &__item {
+      svg {
+        @include size (20px, 20px);
+      }
+    }
+    &__name {
+      font-size: 1.25rem;
+    }
+    &__info {
+      font-size: 0.6rem;
+    }
+    &__condition-container {
+      max-width: $maxWidthContainer;
+    }
+    &__condition-list {
+      column-gap: 0;
+      row-gap: 0;
+      grid-template-columns: 1fr 1fr;
+    }
+    &__item:nth-child(3), &__item:nth-child(4) {
+      margin-top: 0px;
+    }
+    &__condition-container {
+      margin-top: 30px;
+    }
+  }
+  .sport-section{
+    padding-inline: 10px;
+    padding-top: 20px;
+    &__container {
+      max-width: $maxWidthContainer;
+    }
+    &__header {
+      font-size: 1rem;
+    }
+    &__item  {
+      img {
+        @include size(150px, 84px);
+      }
+    }
+    &__list {
+      column-gap: 5px;
+    }
+    &__h3 {
+      padding-inline: 10px;
+      font-size: 0.75rem;
+    }
+    &__item:last-child {
+      h3 {
+        padding-inline: 10px;
+      }
+    }
+  }
+  .category-section, .facilities-section {
+    padding-bottom: 20px;
+    &__container {
+      max-width: $maxWidthContainer;
+    }
+    &__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      row-gap: 15px;
+    }
+    &__item {
+      width: 100%;
+    }
+    &__header {
+      font-size: 0.8rem;
+    }
+    &__main-header, &__link {
+      font-size: 1rem;
+    }
+    &__info-container {
+      margin-bottom: 15px;
+    }
+  }
+  .product-section, .trending-section, .popular-section {
+    &__container {
+      max-width: $maxWidthContainer;
+    }
+    &__list {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 15px;
+    }
+    &__item {
+      @include size(300px, 100%);
+    }
+    &__main-header, &__link {
+      font-size: 1rem;
+    }
+    &__img {
+      @include size(90px, 90px);
+    }
+  }
+  .about-us-section, .choose-us-section {
+    padding-bottom: 15px;
+    &__container {
+      max-width: $maxWidthContainer;
+      flex-direction: column-reverse;
+      align-items: center;
+      row-gap: 15px;
+      div:first-child {
+        order: 1;
+      }
+    }
+    &__main-header, &__text {
+      text-align: center;
+    }
+    &__text {
+      font-size: 0.7rem;
+    }
+    &__description {
+      margin-right: 0;
+    }
+  }
+  .choose-us-section__container img {
+    margin-right: 0;
+  }
+  .footer {
+    &__container-1 {
+      max-width: $maxWidthContainer;
+    }
+    &__gym-logo {
+      @include size(80px, 50px);
+      margin-top: 15px;
+    }
+    &__header{
+      margin-top: 15px;
+    }
+    &__company-list {
+      margin-right: 0;
+      h2 {
+        margin-bottom: 10px;
+      }
+    }
+    &__link {
+      font-size: 0.7rem;
+    }
+    &__header {
+      font-size: 0.8rem;
+    }
+    &__social {
+      top: 120px;
+      left: -33px;
+    }
+    &__support-list, &__company-list {
+      margin-right: 0;
+      ul {
+        width: 100%;
+      }
+    }
+    &__company-list {
+      margin-right: 15px;
+    }
+    &__info {
+      margin-right: 0;
+    }
+  }
+  .facilities-section {
+    &__info-container {
+      justify-content: center;
+    }
+  }
+}
+

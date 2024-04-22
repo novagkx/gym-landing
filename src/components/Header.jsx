@@ -3,7 +3,7 @@ import SearchInput from "./SerchInput";
 import Modal from "../Modal/Modal.jsx";
 import {useState} from "react";
 
-const Header = ({isSmartphone}) => {
+const Header = ({isSmartphone, isSmallestScreen}) => {
     const [modalActive, setModalActive] = useState(false);
     const [visibility, setVisibility] = useState(true);
     return (
@@ -172,7 +172,7 @@ const Header = ({isSmartphone}) => {
                     </div>
                 </div>
             </header>}
-        <Modal active={modalActive} setActive={setModalActive}/>
+        <Modal isSmallestScreen={isSmallestScreen} active={modalActive} setActive={setModalActive}/>
         </>
     );
 };

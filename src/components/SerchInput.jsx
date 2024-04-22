@@ -1,7 +1,10 @@
+import {useState} from "react";
+
 const SearchInput = ({ blockName }) => {
+    const [inputText, setInputText] = useState('');
   return (
     <>
-      <input
+      <input value={inputText} onChange={e => setInputText(e.target.value)}
         className={blockName + "__input"}
         type="search"
         placeholder="Search"

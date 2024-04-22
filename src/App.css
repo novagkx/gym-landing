@@ -1752,13 +1752,13 @@ input[type=search]::-webkit-search-results-decoration {
   .advantages-section__condition-list {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 15px 1fr;
+    -ms-grid-columns: 1fr 0 1fr;
     grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    -webkit-column-gap: 15px;
-       -moz-column-gap: 15px;
-            column-gap: 15px;
+    -webkit-column-gap: 0;
+       -moz-column-gap: 0;
+            column-gap: 0;
   }
   .advantages-section__condition-list > *:nth-child(1) {
     -ms-grid-row: 1;
@@ -1776,16 +1776,25 @@ input[type=search]::-webkit-search-results-decoration {
     -ms-grid-row: 2;
     -ms-grid-column: 3;
   }
-  .advantages-section__item:nth-child(3) {
-    margin-left: 18px;
+  .advantages-section__item:last-child {
+    margin-right: 10px;
+  }
+  .advantages-section__item:nth-child(2) {
+    margin-left: 0;
+  }
+  .advantages-section__item {
+    margin: 10px;
   }
   .advantages-section__item svg {
     width: 30px;
     height: 30px;
   }
+  .advantages-section__item:first-child {
+    margin-left: 10px;
+  }
   .sport-section {
     padding-bottom: 20px;
-    padding-top: 100px;
+    padding-top: 50px;
   }
   .sport-section__item img {
     width: 200px;
@@ -1898,5 +1907,236 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .footer__company-list {
     z-index: 5;
+  }
+}
+@media (max-width: 480px) {
+  .header {
+    padding-inline: 15px;
+  }
+  .header__container-1 {
+    max-width: 320px;
+  }
+  .header__input, .header__sign-in, .header__sign-up, .header__span {
+    display: none;
+  }
+  .header__search-icon {
+    background-color: #1b1f3e;
+    margin-right: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    top: 6px;
+    left: 120px;
+  }
+  .header__search-icon svg {
+    position: relative;
+    left: 3px;
+    top: 0;
+    width: 11px;
+    height: 11px;
+  }
+  .header__burger {
+    margin-left: 14px;
+  }
+  .advantages-section .main__btn {
+    padding: 10px;
+  }
+  .advantages-section__container {
+    max-width: 320px;
+  }
+  .advantages-section__item svg {
+    width: 20px;
+    height: 20px;
+  }
+  .advantages-section__name {
+    font-size: 1.25rem;
+  }
+  .advantages-section__info {
+    font-size: 0.6rem;
+  }
+  .advantages-section__condition-container {
+    max-width: 320px;
+  }
+  .advantages-section__condition-list {
+    -webkit-column-gap: 0;
+       -moz-column-gap: 0;
+            column-gap: 0;
+    row-gap: 0;
+    -ms-grid-columns: 1fr 0 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  .advantages-section__item:nth-child(3), .advantages-section__item:nth-child(4) {
+    margin-top: 0px;
+  }
+  .advantages-section__condition-container {
+    margin-top: 30px;
+  }
+  .sport-section {
+    padding-inline: 10px;
+    padding-top: 20px;
+  }
+  .sport-section__container {
+    max-width: 320px;
+  }
+  .sport-section__header {
+    font-size: 1rem;
+  }
+  .sport-section__item img {
+    width: 150px;
+    height: 84px;
+  }
+  .sport-section__list {
+    -webkit-column-gap: 5px;
+       -moz-column-gap: 5px;
+            column-gap: 5px;
+  }
+  .sport-section__h3 {
+    padding-inline: 10px;
+    font-size: 0.75rem;
+  }
+  .sport-section__item:last-child h3 {
+    padding-inline: 10px;
+  }
+  .category-section, .facilities-section {
+    padding-bottom: 20px;
+  }
+  .category-section__container, .facilities-section__container {
+    max-width: 320px;
+  }
+  .category-section__list, .facilities-section__list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 15px 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 15px;
+  }
+  .category-section__list > *:nth-child(1), .facilities-section__list > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .category-section__list > *:nth-child(2), .facilities-section__list > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .category-section__list > *:nth-child(3), .facilities-section__list > *:nth-child(3) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .category-section__list > *:nth-child(4), .facilities-section__list > *:nth-child(4) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .category-section__item, .facilities-section__item {
+    width: 100%;
+  }
+  .category-section__header, .facilities-section__header {
+    font-size: 0.8rem;
+  }
+  .category-section__main-header, .category-section__link, .facilities-section__main-header, .facilities-section__link {
+    font-size: 1rem;
+  }
+  .category-section__info-container, .facilities-section__info-container {
+    margin-bottom: 15px;
+  }
+  .product-section__container, .trending-section__container, .popular-section__container {
+    max-width: 320px;
+  }
+  .product-section__list, .trending-section__list, .popular-section__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    row-gap: 15px;
+  }
+  .product-section__item, .trending-section__item, .popular-section__item {
+    width: 300px;
+    height: 100%;
+  }
+  .product-section__main-header, .product-section__link, .trending-section__main-header, .trending-section__link, .popular-section__main-header, .popular-section__link {
+    font-size: 1rem;
+  }
+  .product-section__img, .trending-section__img, .popular-section__img {
+    width: 90px;
+    height: 90px;
+  }
+  .about-us-section, .choose-us-section {
+    padding-bottom: 15px;
+  }
+  .about-us-section__container, .choose-us-section__container {
+    max-width: 320px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    row-gap: 15px;
+  }
+  .about-us-section__container div:first-child, .choose-us-section__container div:first-child {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .about-us-section__main-header, .about-us-section__text, .choose-us-section__main-header, .choose-us-section__text {
+    text-align: center;
+  }
+  .about-us-section__text, .choose-us-section__text {
+    font-size: 0.7rem;
+  }
+  .about-us-section__description, .choose-us-section__description {
+    margin-right: 0;
+  }
+  .choose-us-section__container img {
+    margin-right: 0;
+  }
+  .footer__container-1 {
+    max-width: 320px;
+  }
+  .footer__gym-logo {
+    width: 80px;
+    height: 50px;
+    margin-top: 15px;
+  }
+  .footer__header {
+    margin-top: 15px;
+  }
+  .footer__company-list {
+    margin-right: 0;
+  }
+  .footer__company-list h2 {
+    margin-bottom: 10px;
+  }
+  .footer__link {
+    font-size: 0.7rem;
+  }
+  .footer__header {
+    font-size: 0.8rem;
+  }
+  .footer__social {
+    top: 120px;
+    left: -33px;
+  }
+  .footer__support-list, .footer__company-list {
+    margin-right: 0;
+  }
+  .footer__support-list ul, .footer__company-list ul {
+    width: 100%;
+  }
+  .footer__company-list {
+    margin-right: 15px;
+  }
+  .footer__info {
+    margin-right: 0;
+  }
+  .facilities-section__info-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
