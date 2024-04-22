@@ -2,7 +2,7 @@
 Project name: "Gym store main page"
 
 **#Main technologies and tools**
-Core technologies: 
+- Core technologies: 
 - React.js 
 - SCSS preprocessor 
 - HTML5 
@@ -11,9 +11,9 @@ Core technologies:
 - GitHub
 
 **#Additional tools**
-**W3C** validator for HTML 
-**BrowserStack** for cross-browser testing
-**CodePen** is the tool to validate CSS and SASS
+- **W3C** validator for HTML 
+- **BrowserStack** for cross-browser testing
+- **CodePen** is the tool to validate CSS and SASS
 
 **#Developer**
 This work has been developed by novagkx as a pet-project.
